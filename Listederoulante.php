@@ -12,19 +12,19 @@
 
     <form method="GET" action="Panier.php">
     <?php
-        require 'connexion.php';
+        require 'connection.php';
 
-				$sql = 'SELECT *  FROM produit WHERE pdt_categorie="ros"' ;
+				$sql = 'SELECT *  FROM produit WHERE code_de_la_categorie="ros"' ;
 				$table = $connection->query($sql);
 				while ($ligne = $table->fetch()) {
                     ?>
                         <form method="GET" action="Panier.php">
                     <?php
-						echo "<br/><td><img src=\"images/".$ligne["pdt_image"].".jpg\">"."<br/>";
-                        echo "Référence: ".$ligne["pdf_ref"]."<br/>";
-						echo "Nom: ".$ligne["pdt_designation"]."<br/>";
-						echo "Prix: ".$ligne["pdt_prix"]."<br/>";
-                        echo "Quantité : <br/>";
+						echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\">"."<br/>";
+                        echo "Référence: ".$ligne["reference"]."<br/>";
+						echo "Nom: ".$ligne["designation"]."<br/>";
+						echo "Prix: ".$ligne["prix"]."<br/>";
+                        echo "Quantité : <br/>".$ligne["quantite_en_stock"]."<br/>";
                     ?>
                         <button type="submit">Ajouter au panier</button>
                         <br/>
