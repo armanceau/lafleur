@@ -1,84 +1,67 @@
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css.css" rel="stylesheet">
-        <title>Document</title>
-    </head>
-    <body>
+include ("header/header.html");
+session_start();
+include "connection.php";
 
-        <?php
+if (!isset($_SESSION['login'])){
+    header("location: accueil.php");
+} else{
 
-        if (isset($_SESSION['login'])){
-            header("location: accueil.php");
-        } else{
+    $liste_produit = array();
+    
+    $sql = "SELECT `reference`,`quantite_d_article` FROM pannier WHERE mail_login = '".$_SESSION['login']."'";
+    $table = $connection->query($sql);
 
-            $liste_produit = array();
-            
-            $sql = "SELECT `panier` FROM user WHERE mail = ".$_SESSION['login'];
-            $table = $connection->query($sql);
+    while ($ligne = $table->fetch()){
+        array_push($liste_produit, $ligne['reference']);
+        array_push($liste_produit, $ligne['quantite_d_article']);
+    }
 
-            $ligne = $table->fetch();
-            $panier = $ligne['panier'];
+    echo '
+    <main>
+        <div class="p-4">
+            <div class="panier-content row">
+                <hr>
+                ';
+                for ($i = 0; $i < count($liste_produit); $i += 2){
 
-            $objet = "";
-
-            for ($i = 1; $i < strlen($panier); $i++){
-                if (strcmp($panier[$i], " ")){
-                    array_push($liste_produit, $objet);
-                    $objet = "";
-                }
-                elseif (strcmp($panier[$i], ",")){
-                    array_push($liste_produit, $objet);
-                    $objet = "";
-                }
-                else{
-                    $objet .= $panier[$i];
-                }
-            }
-
-
-
-            echo '
-            <div class="row p-4">
-                <div class="panier-content">
-                    <hr>
-                    ';
-                    for ($i = 1; $i < count($liste_produit); $i++){
-
-                        $sql = "SELECT * FROM produit WHERE reference = ".$liste_produit[$i];
-                        $table = $connection->query($sql);
-            
-                        $ligne = $table->fetch();
-
-
-
+                    $sql = "SELECT * FROM produit WHERE reference = '".$liste_produit[$i]."'";
+                    $table = $connection->query($sql);
+        
+                    while ($ligne = $table->fetch()){
                         echo '
-                        <div class="col-1">
-                            <img src="'.$ligne['photo'].'" alt="photo">
-                        </div><
-                        <div class="col-10">
-                            <h5>'.$ligne['designation'].'</h5>
-                            <p>'.$ligne['reference'].'</p>
+                        <div class="col-2">
+                            <img src="IMG/'.$ligne['photo'].'.jpg" alt="'.$ligne['photo'].'" height="150" width="auto">
                         </div>
-                        <div class="col-10">
-                            <h5>'.$ligne['prix'].'</h5>
+                        <div class="col-8">
+                            <figure>
+                                <blockquote class="blockquote">
+                                    <a>'.$ligne['designation'].'</a>
+                                <figcaption class="blockquote-footer">
+                                    '.$ligne['reference'].'
+                                </figcaption>
+                            </figure>
                         </div>
+                        <div class="col-2">
+                            <h5>'.$ligne['prix'].' €</h5>
+                        </div>
+                        <hr>
                         ';
-                        
                     }
-                        
-                    echo '
-                </div>
+                    
+                }
+                    
+                echo '
             </div>
-            ';
-        }
+        </div>
+    </main>
+    ';
 
-        ?>
+    include "footer.html";
+}
+
+?>
         
     </body>
 </html>
