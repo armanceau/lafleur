@@ -24,7 +24,7 @@
                         echo "Référence: ".$ligne["reference"]."<br/>";
 						echo "Nom: ".$ligne["designation"]."<br/>";
 						echo "Prix: ".$ligne["prix"]."<br/>";
-                        echo "Quantité : <br/>".$ligne["quantite_en_stock"]."<br/>";
+                        echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
                     ?>
                         <button type="submit">Ajouter au panier</button>
                         <br/>
