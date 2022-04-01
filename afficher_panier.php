@@ -23,7 +23,6 @@ if (!isset($_SESSION['login'])){
         <div class="p-4">
             <div class="panier-content">
                 <hr>
-                <div class="row">
                 ';
                 for ($i = 0; $i < count($liste_produit); $i += 2){
 
@@ -32,23 +31,26 @@ if (!isset($_SESSION['login'])){
         
                     while ($ligne = $table->fetch()){
                         echo '
-                        <div class="col-2-md col-3">
-                            <img class="photo_produit_panier" src="IMG/'.$ligne['photo'].'.jpg" alt="'.$ligne['photo'].'">
+                        <br/>
+                        <div class="row">
+                            <div class="col-2-md col-3">
+                                <img class="photo_produit_panier" src="IMG/'.$ligne['photo'].'.jpg" alt="'.$ligne['photo'].'">
+                            </div>
+                            <div class="col-8-md col-7">
+                                <figure>
+                                    <blockquote class="blockquote">
+                                        <p class="main_color title_prod">'.$ligne['designation'].'</p>
+                                    <figcaption class="blockquote-footer">
+                                        '.$ligne['reference'].'
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-2-md col-2">
+                                <h4 class="main_color title_prod">'.$ligne['prix'].' €</h4>
+                                <input class="number_bag" type="number" value="'.$liste_produit[$i+1].'">
+                            </div>
                         </div>
-                        <div class="col-8-md col-7">
-                            <figure>
-                                <blockquote class="blockquote">
-                                    <p class="main_color title_prod">'.$ligne['designation'].'</p>
-                                <figcaption class="blockquote-footer">
-                                    '.$ligne['reference'].'
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-2-md col-2">
-                            <h4 class="main_color title_prod">'.$ligne['prix'].' €</h4>
-                            <input class="number_bag" type="number" value="'.$liste_produit[$i+1].'">
-                        </div>
-                        </div>
+                        <br/>
                         <hr>
                         ';
                     }
