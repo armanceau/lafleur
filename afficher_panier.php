@@ -21,8 +21,9 @@ if (!isset($_SESSION['login'])){
     echo '
     <main>
         <div class="p-4">
-            <div class="panier-content row">
+            <div class="panier-content">
                 <hr>
+                <div class="row">
                 ';
                 for ($i = 0; $i < count($liste_produit); $i += 2){
 
@@ -31,20 +32,22 @@ if (!isset($_SESSION['login'])){
         
                     while ($ligne = $table->fetch()){
                         echo '
-                        <div class="col-2">
-                            <img src="IMG/'.$ligne['photo'].'.jpg" alt="'.$ligne['photo'].'" height="150" width="auto">
+                        <div class="col-2-md col-3">
+                            <img class="photo_produit_panier" src="IMG/'.$ligne['photo'].'.jpg" alt="'.$ligne['photo'].'">
                         </div>
-                        <div class="col-8">
+                        <div class="col-8-md col-7">
                             <figure>
                                 <blockquote class="blockquote">
-                                    <a>'.$ligne['designation'].'</a>
+                                    <p class="main_color title_prod">'.$ligne['designation'].'</p>
                                 <figcaption class="blockquote-footer">
                                     '.$ligne['reference'].'
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="col-2">
-                            <h5>'.$ligne['prix'].' €</h5>
+                        <div class="col-2-md col-2">
+                            <h4 class="main_color title_prod">'.$ligne['prix'].' €</h4>
+                            <input class="number_bag" type="number" value="'.$liste_produit[$i+1].'">
+                        </div>
                         </div>
                         <hr>
                         ';
@@ -53,6 +56,13 @@ if (!isset($_SESSION['login'])){
                 }
                     
                 echo '
+                <div class="row">
+                    <div class="col-9-md col-0">
+                    </div>
+                    <div class="col-3-md col-12">
+                        test
+                    </div>
+                </div>
             </div>
         </div>
     </main>
