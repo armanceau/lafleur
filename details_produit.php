@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
+<?php include "header/header.hmtl"; ?>
     <div class="row">
         <div class="col-4 text-center">
             <div class="photo">
@@ -33,5 +34,6 @@
 
         </div>
     </div>
+    <?php include "footer.hmtl";?>
 </body>
 </html>
