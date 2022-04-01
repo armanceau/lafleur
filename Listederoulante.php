@@ -20,7 +20,7 @@
                     ?>
                         <form method="GET" action="Panier.php">
                     <?php
-						echo "<br/><td><img src=\"images/".$ligne["photo"].".jpg\">"."<br/>";
+						echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\">"."<br/>";
                         echo "Référence: ".$ligne["reference"]."<br/>";
 						echo "Nom: ".$ligne["designation"]."<br/>";
 						echo "Prix: ".$ligne["prix"]."<br/>";
