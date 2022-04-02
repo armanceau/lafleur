@@ -5,7 +5,7 @@ session_start();
 include "connection.php";
 
 if (!isset($_SESSION['login'])){
-    header("location: accueil.php");
+    header("location: Authentification.php");
 } else{
 
     $liste_produit = array();
