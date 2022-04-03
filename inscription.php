@@ -51,10 +51,12 @@
         <input type="number" name="tel" maxlength="10" minlength="10" required ><br/>
         <br>
         <button type="submit">Créer</button>
+<br>
+        <button type="reset"> Annuler </button>
 
     </form>
-<br>
-    <button type="reset"> Annuler </button>
+
+   
 
 </body>
 </html>
