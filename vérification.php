@@ -27,4 +27,10 @@ echo "Login ou mot de passe incorect" ;
 }
 ?>
 
+<html>
+<br>
+<br>
+ <button> <a href="Authentification.php">réessayer</a> </button>
+</html>
+
 
