@@ -34,10 +34,10 @@
     
     </form>
 
-    
+    <p>Si vous n'avez pas encore de compte nous vous invitons à vous inscrire</p>
 
     <button>
-        <a href="inscription.php"> Si  </a>
+        <a href="inscription.php">  S'inscrire </a>
     </button>
     
 
