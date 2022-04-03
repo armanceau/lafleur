@@ -53,6 +53,8 @@
         <button type="submit">Créer</button>
 
     </form>
+<br>
+    <button type="reset"> Annuler </button>
 
 </body>
 </html>
