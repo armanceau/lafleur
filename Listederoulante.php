@@ -7,7 +7,7 @@
 <?php
     require 'connection.php';
 
-            $sql = 'SELECT *  FROM produit WHERE code_de_la_categorie="ros"' ;
+            $sql = 'SELECT *  FROM produit WHERE code_de_la_categorie="'.$_REQUEST["code"].'"' ;
             $table = $connection->query($sql);
             while ($ligne = $table->fetch()) {
                 ?>
