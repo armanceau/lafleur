@@ -37,6 +37,10 @@ footer {
         width: 24px;
         font-size: 10px;
     }
+    .poubelle-panier{
+        width: 15px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -56,6 +60,10 @@ footer {
         width: 50px;
         font-size: 18px;
     }
+    .poubelle-panier{
+        width: 25px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -74,6 +82,10 @@ footer {
     .number_bag{
         width: 70px;
         font-size: 18px;
+    }
+    .poubelle-panier{
+        width: 35px;
+        height: auto;
     }
 }
 
