@@ -9,7 +9,7 @@ $mdp=SHA1($_REQUEST['mdp']);
 
 $sql=$connection ->prepare('SELECT * FROM `administrateur` WHERE username_admin="'.$login.'" AND mot_de_passe_admin="'.$mdp.'"') ;
 $sql->bindParam('[{.1}]', $login, PDO::PARAM_INT) ;
-var_dump($sql);
+
 $sql->execute();
 
 $ligne = $sql->fetch();
