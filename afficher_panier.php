@@ -49,7 +49,8 @@ if (!isset($_SESSION['login'])){
                             </div>
                             <div class="col-2-md col-2">
                                 <h4 class="main_color title_prod">'.number_format($ligne['prix'], 2, ',', ' ').' €</h4>
-                                <input class="number_bag" type="number" value="'.$liste_produit[$i+1].'">
+                                <input class="number_bag" type="number" value="'.$liste_produit[$i+1].'" style="text-align: right; border-radius: 20px;"><br/>
+                                <a class="btn" href="destroy-bag.php"><img class="poubelle-panier" src="header/images/poubelle.png"></a>
                             </div>
                         </div>
                         <br/>
@@ -70,9 +71,7 @@ if (!isset($_SESSION['login'])){
                     <div class="col-9-sm col-10">
                     </div>
                     <div class="col-3-sm col-2">
-                        <button>
-                            <a class="btn" href="valide.php">Confirmer le panier</a>
-                        </button>
+                        <a class="btn btn-success" href="valide.php">Confirmer</a>
                     </div>
                 </div>
             </div>
