@@ -65,7 +65,14 @@ if (!isset($_SESSION['login'])){
                     <div class="col-9-sm col-10">
                     </div>
                     <div class="col-3-sm col-2">
-                        <p class="main_color title_prod">'.number_format($price, 2, ',', ' ').' €</p>
+                        <p class="title_prod">Total : <b>'.number_format($price, 2, ',', ' ').' €</b></p>
+                    </div>
+                    <div class="col-9-sm col-10">
+                    </div>
+                    <div class="col-3-sm col-2">
+                        <button>
+                            <a class="btn" href="valide.php">Confirmer le panier</a>
+                        </button>
                     </div>
                 </div>
             </div>
