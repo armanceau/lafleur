@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-    <link href="css.css" rel="stylesheet" >
-    <meta charset="UTF-8">
-    <title>Lafleur Infos Perso</title>
-</head>
-<body>
-    <header>
+<?php require 'header/header.html'; ?>
 
-    </header>
-    <main>
+<main>
+    <div class="container-info">
         <div class="line">
-            <img src="../lafleur/" width="70" height="70px">
+            <img src="./img/Icone_Profil.png" width="70" height="70px">
             <p>Nom</p>
             <!-- <?php $NomClient ?> -->
         </div>
@@ -41,10 +32,8 @@
             <p>Adresse De Livraison</p>
             <!-- <?php $NomClient ?> -->
         </div>
-    </main>
-    <footer>
+    </div>
+</main>
+<?php require 'footer.html'; ?>
 
-    </footer>
-    
-</body>
 </html>
