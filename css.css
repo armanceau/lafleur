@@ -76,30 +76,59 @@ footer {
         font-size: 18px;
     }
 }
-
+/*details_produit*/
 
 .photo {
-    margin-top: 25%;
+    margin-top: 15%;
+}
+.photo img {
+    width: 90%;
 }
 .previ {
-    position: absolute;
-    top: 60%; left: 4%;
+ margin-top: 10%;
 }
 .previ img {
     margin-left: 10px;
     margin-right: 10px;
     border: 1px solid black;
     border-radius: 2px;
-    height: 82px;
+    height: 80px;
 }
 .previ img:hover {
     box-shadow: 0 0 4px 3px rgba(0, 140, 186, 0.5);
     background: gray;
 }
-.btn {
-    margin-top: 20%;
+.description {
+    margin-top: 4%;
+    border: 1px solid black;
+    height: 700px;
 }
+.btn {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 40px;
+}
+.commentaire {
+    margin-top: 10%;
+    border: 1px solid black;
+    height :60%;
+}
+.com_titre{
+background-color: silver;
+margin-top: -20px;
+margin-left: 25%;
+font-size: 40px;
+border-radius: 50px;
+width: 250px;
 
+}
+.commentaire_cont {
+    
+    background-color: silver;
+    height: auto;
+    width: 95%; 
+}
+position 
 
 
 /* InfosPerso */
