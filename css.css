@@ -82,3 +82,23 @@
 .btn {
     margin-top: 20%;
 }
+
+
+
+/* InfosPerso */
+
+.container-info{
+    border: solid red;
+    width: 700px;
+    margin-left: 540px;
+}
+
+.line{
+    display: flex;
+    border: solid green;
+}
+.line p{
+    margin-top: 25px;
+    margin-left: 25px;
+    border: solid yellow;
+}
