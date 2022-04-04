@@ -106,9 +106,10 @@ footer {
 
 .container-info{
     margin-top: 60px;
-    border: solid red;
+    /* border: solid red; */
     width: 700px;
-    margin-left: 100px;
+    margin-left: 600px;
+    
 }
 
 .line{
