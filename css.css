@@ -5,6 +5,13 @@ body{
     font-family: 'italianno'; 
     font-size: 40px; 
     font-weight: bold;
+    
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+    }
+footer {
+    margin-top:auto; 
 }
     
 
