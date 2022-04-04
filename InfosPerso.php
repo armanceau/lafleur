@@ -1,21 +1,18 @@
 <?php require 'header/header.html'; ?>
 <script>
-    function OnclickCrayon(Status)
-    {
 
-    if (OnclickCrayon(Status)) {
-        <p>fsejdifgjsdifgjdsifjdisfjdsij</p>
-    }
-
-// var Status = $(this).val();
+    function OnclickCrayon1(Status)
+{   
+    
+    $( "div.line-1" ).replaceWith( ' <img src="./img/Icone_Profil.png" width="70" height="70"><input type="text" placeholder="<php $NClient ?>" >' );
 }
     </script>
 <main>
     <div class="container-info">
         <div class="line">
             <img src="./img/Icone_Profil.png" width="70" height="70">
-            <input type="text" placeholder="<php $NClient ?>" >
-            <img src="./IMG/Icone_Crayon.png" width="80" height="70" onclick="OnclickCrayon()">
+            <p>Nom</p>
+            <img src="./IMG/Icone_Crayon.png" width="80" height="70" onclick="OnclickCrayon1()">
            
         </div>
         <div class="line">
