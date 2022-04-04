@@ -1,3 +1,20 @@
+/* Police italiano */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+body{
+    /* font-family: 'italianno';  */
+    font-size: 40px; 
+    font-weight: bold;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+footer {
+    margin-top:auto; 
+}
+    
+
 .main_color{
     color : #006430;
 }
@@ -20,6 +37,10 @@
         width: 24px;
         font-size: 10px;
     }
+    .poubelle-panier{
+        width: 15px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -39,6 +60,10 @@
         width: 50px;
         font-size: 18px;
     }
+    .poubelle-panier{
+        width: 25px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -57,6 +82,10 @@
     .number_bag{
         width: 70px;
         font-size: 18px;
+    }
+    .poubelle-panier{
+        width: 35px;
+        height: auto;
     }
 }
 
@@ -79,6 +108,37 @@
     box-shadow: 0 0 4px 3px rgba(0, 140, 186, 0.5);
     background: gray;
 }
-.btn {
+.btn-test {
     margin-top: 20%;
 }
+
+
+
+/* InfosPerso */
+
+.container-info{
+    margin-top: 60px;
+    /* border: solid red; */
+    width: 700px;
+    margin-left: 600px;
+    
+}
+
+.line{
+    display: flex;
+    /* border: solid green; */
+}
+.line input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-left: 25px;
+    /* border: solid yellow; */
+}
+
+.line img{
+    margin-top: 20px;
+}
+
+
+
