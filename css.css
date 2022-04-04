@@ -105,22 +105,26 @@ footer {
 /* InfosPerso */
 
 .container-info{
-    position: ;
-    border: solid red;
+    margin-top: 60px;
+    /* border: solid red; */
     width: 700px;
-    margin-left: 540px;
+    margin-left: 30%;
 }
 
 .line{
     display: flex;
-    border: solid green;
+    /* border: solid green; */
 }
-.line p{
+.line input{
     margin-top: 20px;
     margin-bottom: 20px;
-
+    border-radius: 15px;
     margin-left: 25px;
-    border: solid yellow;
+    /* border: solid yellow; */
+}
+
+.line img{
+    margin-top: 20px;
 }
 
 
