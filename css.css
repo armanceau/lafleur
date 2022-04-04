@@ -2,14 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 body{
-    font-family: 'italianno'; 
-    font-size: 40px; 
-    font-weight: bold;
     
-        min-height:100vh;
-        display:flex;
-        flex-direction:column;
-    }
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
 footer {
     margin-top:auto; 
 }
@@ -37,6 +34,10 @@ footer {
         width: 24px;
         font-size: 10px;
     }
+    .poubelle-panier{
+        width: 15px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -56,6 +57,10 @@ footer {
         width: 50px;
         font-size: 18px;
     }
+    .poubelle-panier{
+        width: 25px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -74,6 +79,10 @@ footer {
     .number_bag{
         width: 70px;
         font-size: 18px;
+    }
+    .poubelle-panier{
+        width: 35px;
+        height: auto;
     }
 }
 /*details_produit*/
@@ -103,7 +112,7 @@ footer {
     border: 1px solid black;
     height: 700px;
 }
-.btn {
+.btn-test {
     margin-left: 10%;
     margin-top: 20%;
     font-size: 40px;
