@@ -39,10 +39,13 @@
     <button>
         <a href="inscription.php">  S'inscrire </a>
     </button>
-    
 
-    
+</br>
+</br>
 
+   <button>
+       <a href="AuthentificationAdmin.php"> S'identifier en tant qu'administrateur </a>
+   </button>
 
     
 </body>
