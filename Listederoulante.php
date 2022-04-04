@@ -19,7 +19,7 @@
                     echo "Prix: ".$ligne["prix"]."<br/>";
                     echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
                 ?>
-                    <button type="submit">Ajouter au panier</button>
+                    <button type="submit" class="btn">Ajouter au panier</button>
                     <br/>
         <?php
             }
@@ -28,7 +28,7 @@
     
     
 </form>
-<button>Retour</button>
+<button class="btn">Retour</button>
 
 <?php require 'footer.html'; ?>
 
