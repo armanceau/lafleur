@@ -28,8 +28,9 @@
     
     
 </form>
-
-
 <button>Retour</button>
 
-</html>
+<?php require 'footer.html'; ?>
+
+
+
