@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page d'identification</title>
-</head>
-
-
-<body>
+<?php include "header/header.html"; ?>
 
         <h2> veuillez vous identifiez : </h2>
 
@@ -34,16 +24,13 @@
     
     </form>
 
-    
+    <p>Si vous n'avez pas encore de compte nous vous invitons à vous inscrire</p>
 
     <button>
-        <a href="inscription.php"> Si  </a>
+        <a href="inscription.php">  S'inscrire </a>
     </button>
     
 
     
 
-
-    
-</body>
-</html>
+<?php include "footer"; ?>
