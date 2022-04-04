@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 body{
-    font-family: 'italianno'; 
+    /* font-family: 'italianno';  */
     font-size: 40px; 
     font-weight: bold;
     min-height:100vh;
