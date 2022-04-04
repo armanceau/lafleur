@@ -106,21 +106,22 @@ footer {
 
 .container-info{
     margin-top: 60px;
-    border: solid red;
+    border: solid green;
     width: 700px;
-    margin-left: 100px;
+    margin-left: 600px;
+    
 }
 
 .line{
     display: flex;
-    /* border: solid green; */
+    border: solid green;
 }
 .line input{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
     margin-left: 25px;
-    /* border: solid yellow; */
+    border: solid yellow;
 }
 
 .line img{
