@@ -1,17 +1,3 @@
-
-body {
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-}
-.panier-content{
-    margin-right: 100px;
-    margin-left: 100px;
-}
-.description {
-    margin-top: 5%;
-    border: 1px solid black;
-}
 .main_color{
     color : #006430;
 }
@@ -34,7 +20,6 @@ body {
         width: 24px;
         font-size: 10px;
     }
-
 }
 
 @media screen and (min-width: 576px){
@@ -80,8 +65,8 @@ body {
     margin-top: 25%;
 }
 .previ {
- margin-top: 10%;
- margin-bottom: 20%;
+    position: absolute;
+    top: 60%; left: 4%;
 }
 .previ img {
     margin-left: 10px;
@@ -97,6 +82,23 @@ body {
 .btn {
     margin-top: 20%;
 }
-footer {
-    margin-top:auto; 
+
+
+
+/* InfosPerso */
+
+.container-info{
+    border: solid red;
+    width: 700px;
+    margin-left: 540px;
+}
+
+.line{
+    display: flex;
+    border: solid green;
+}
+.line p{
+    margin-top: 25px;
+    margin-left: 25px;
+    border: solid yellow;
 }
