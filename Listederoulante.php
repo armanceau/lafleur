@@ -20,12 +20,12 @@
                     ?>
                         <form method="GET" action="Panier.php">
                     <?php
-						echo "<br/><td><img src=\"images/".$ligne["photo"].".jpg\">"."<br/>";
+						echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo indisposible\">"."<br/>";
                         echo "Référence: ".$ligne["reference"]."<br/>";
 						echo "Nom: ".$ligne["designation"]."<br/>";
                         echo "Quantité en stock: ".$ligne["quantite_en_stock"]."<br/>";
 						echo "Prix: ".$ligne["prix"]."<br/>";
-                        echo "Quantité : <br/>";
+                        echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
                     ?>
                         <button type="submit">Ajouter au panier</button>
                         <br/>
