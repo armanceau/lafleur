@@ -3,13 +3,14 @@ body {
     min-height:100vh;
     display:flex;
     flex-direction:column;
+
 }
 .panier-content{
     margin-right: 100px;
     margin-left: 100px;
 }
 .description {
-    margin-top: 5%;
+    margin-top: 6%;
     border: 1px solid black;
 }
 .main_color{
@@ -75,12 +76,12 @@ body {
     }
 }
 
-
+/*affiche produit*/
 .photo {
-    margin-top: 25%;
+    margin-top: 17%;
 }
 .previ {
- margin-top: 10%;
+ margin-top: 15%;
  margin-bottom: 20%;
 }
 .previ img {
@@ -97,6 +98,7 @@ body {
 .btn {
     margin-top: 20%;
 }
+
 footer {
     margin-top:auto; 
 }

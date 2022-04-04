@@ -17,10 +17,26 @@ include ("header/header.html");
             </div>
         </div>
         <div class="col-5 text-center description">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi veniam ratione error quia, molestias explicabo praesentium doloremque, voluptatibus suscipit blanditiis, quod accusamus. Maiores, beatae modi. Labore eos perspiciatis cupiditate.</p>
+             <h2><?php /* $sql = 'SELECT designation  FROM produit WHERE ;
+				$table = $connection->query($sql);
+				while ($ligne = $table->fetch()) {
+                    ?>
+                        <form method="GET" action="Panier.php">
+                    <?php
+						echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\">"."<br/>";
+                        echo "Référence: ".$ligne["reference"]."<br/>";
+						echo "Nom: ".$ligne["designation"]."<br/>";
+						echo "Prix: ".$ligne["prix"]."<br/>";
+                        echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
+                    ?>
+                        <button type="submit">Ajouter au panier</button>
+                        <br/>
+            <?php
+                }*/?> 
+                </h2>
         </div>
         <div class="col-3">
-        <button type="button" class="btn btn-success btn-lg btn-block" style="border-radius: 20px;height:80px;width:400px;"><h1>15€</h1></button>
+        <button type="button" class="btn btn-success btn-lg btn-block" style="border-radius: 50px;height:80px;width:400px;"><h1>15€</h1></button>
 
         </div>
     </div>
