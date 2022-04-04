@@ -148,6 +148,13 @@ position
     margin-left: 25px;
     border: solid yellow;
 }
+.line input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-left: 25px;
+    /* border: solid yellow; */
+}
 
 
 
