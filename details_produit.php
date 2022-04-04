@@ -36,7 +36,7 @@ include ("header/header.html");
                 </h2>
         </div>
         <div class="col-3">
-        <button type="button" class="btn btn-success btn-lg btn-block" style="border-radius: 50px;height:80px;width:400px;"><h1>15€</h1></button>
+        <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius: 50px;height:80px;width:400px;"><h1>15€</h1></button>
 
         </div>
     </div>
