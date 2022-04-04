@@ -1,3 +1,12 @@
+/* Police italiano */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+body{
+    color: white;
+    font-family: italianno;  
+}
+    
+
 .main_color{
     color : #006430;
 }
@@ -103,9 +112,5 @@
     border: solid yellow;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
-
-    color: white;
-    font-family: italianno; */
 
