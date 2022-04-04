@@ -24,7 +24,7 @@ if (!isset($_SESSION['login'])){
     <main>
         <div class="p-4">
             <div class="panier-content">
-                <hr>
+                <hr style="border: solid 1px;">
                 ';
                 for ($i = 0; $i < count($liste_produit); $i += 2){
 
@@ -53,7 +53,7 @@ if (!isset($_SESSION['login'])){
                             </div>
                         </div>
                         <br/>
-                        <hr>
+                        <hr style="border: solid 1px;">
                         ';
                         $price += $ligne['prix'] * $liste_produit[$i+1];
                     }
