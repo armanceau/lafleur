@@ -18,8 +18,8 @@
                     echo "Nom: ".$ligne["designation"]."<br/>";
                     echo "Prix: ".$ligne["prix"]."<br/>";
                     echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
+                    echo '<a href="addbag.php?ref='.$ligne['reference'].'" class="btn btn-success">Ajouter au panier</a>';
                 ?>
-                    <button type="submit" class="btn">Ajouter au panier</button>
                     <br/>
         <?php
             }
