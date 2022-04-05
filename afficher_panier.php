@@ -70,7 +70,7 @@ if (!isset($_SESSION['login'])){
                     <div class="col-9-sm col-10">
                     </div>
                     <div class="col-3-sm col-2">
-                        <a class="btn btn-success" href="valide.php">Confirmer</a>
+                        <a class="btn btn-success" href="commande.php">Confirmer</a>
                     </div>
                 </div>
             </div>
