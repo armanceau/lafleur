@@ -85,6 +85,129 @@ footer {
         height: auto;
     }
 }
+
+/* Validation commande */
+
+.champ-text-commande{
+        text-align: center;
+        border-radius: 5px;
+        border: solid 1px;
+}
+
+@media screen and (max-width: 576px){
+
+    .card-img {
+        height: 50px;
+        width: auto;
+        margin-left: 150%;
+    }
+
+    .ccv-img {
+        height: 45px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+        padding-left: 5px;
+    }
+
+    .profil-img{
+        height: 50px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+    }
+
+    .livraison-img{
+        height: 50px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+    }
+
+    .total-price{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 576px){
+
+    .card-img {
+        height: 75px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .ccv-img {
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .profil-img{
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .livraison-img{
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .champ-text-commande{
+        width: 250px;
+    }
+
+    .total-price{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .card-img {
+        height: 100px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .ccv-img {
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .profil-img{
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .livraison-img{
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .champ-text-commande{
+        width: 500px;
+    }
+
+    .total-price{
+        font-size: 24px;
+    }
+}
+
 /*details_produit*/
 
 .photo {

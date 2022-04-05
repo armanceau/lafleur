@@ -61,18 +61,22 @@ if (!isset($_SESSION['login'])){
                 }
                     
                 echo '
-                <div class="row">
-                    <div class="col-9-sm col-10">
+                
+                <form action="commande.php" method="post">
+                    <div class="row">
+                        <div class="col-9-sm col-10">
+                        </div>
+                        <div class="col-3-sm col-2">
+                            <p class="title_prod">Total : <b>'.number_format($price, 2, ',', ' ').' €</b></p>
+                            <input type="text" name="total" value="'.$price.'" hidden>
+                        </div>
+                        <div class="col-9-sm col-10">
+                        </div>
+                        <div class="col-3-sm col-2">
+                            <input type="submit" value="Confirmer">
+                        </div>
                     </div>
-                    <div class="col-3-sm col-2">
-                        <p class="title_prod">Total : <b>'.number_format($price, 2, ',', ' ').' €</b></p>
-                    </div>
-                    <div class="col-9-sm col-10">
-                    </div>
-                    <div class="col-3-sm col-2">
-                        <a class="btn btn-success" href="valide.php">Confirmer</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </main>
@@ -80,7 +84,6 @@ if (!isset($_SESSION['login'])){
 
     include "footer.html";
 }
-
 ?>
         
     </body>
