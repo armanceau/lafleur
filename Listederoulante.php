@@ -1,4 +1,4 @@
-<?php require 'header/header.html'; ?>
+<?php require 'header/header.php'; ?>
 
 <h1>La liste deroulante</h1>
 

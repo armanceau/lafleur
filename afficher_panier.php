@@ -1,7 +1,6 @@
 <?php
 
-include ("header/header.html");
-session_start();
+include ("header/header.php");
 include "connection.php";
 
 if (!isset($_SESSION['login'])){
