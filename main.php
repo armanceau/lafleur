@@ -9,7 +9,7 @@
         $sql = 'SELECT * FROM categorie';
         $table = $connection->query($sql);
         while ($ligne = $table->fetch()) {
-            echo "<option value=".$ligne['code_de_la_categorie'].">".$ligne['nom_de_la_categorie']."</a></option>";
+            echo "<option value=".$ligne['code_de_la_categorie'].">".$ligne['nom_de_la_categorie']."</option>";
         }
             ?>
     </select>
