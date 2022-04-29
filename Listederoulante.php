@@ -16,7 +16,7 @@
                     echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\">"."<br/>";
                     echo "Référence: ".$ligne["reference"]."<br/>";
                     echo "Nom: ".$ligne["designation"]."<br/>";
-                    echo "Prix: ".$ligne["prix"]."<br/>";
+                    echo "Prix: ".$ligne["prix"]."€<br/>";
                     echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
                 ?>
                     <button type="submit" class="btn">Ajouter au panier</button>

@@ -16,8 +16,23 @@
     <button type="submit">Rechercher</button>
 </form>
 
+<!-- 3 fleurs les plus chère -->
+
+<h2>Nos produit du moment</h2>
+
+<?php
+    require 'connection.php';
+    $sql='SELECT * FROM produit ORDER BY prix';
+    $table = $connection->query($sql);
+    while ($ligne = $table->fetch()) {
+        echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\" width='200px' height='200px'>"."<br/>";
+        echo "Nom de la fleur: ".$ligne["designation"]."<br/>";
+        echo "Son prix: ".$ligne["prix"]."€<br/>";
+    }
 
 
+
+?>
 
 
 
