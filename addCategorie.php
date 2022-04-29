@@ -5,12 +5,10 @@ include 'connection.php';
 
 
 
-$stmt = $bdh->prepare("INSERT categorie VALUES (:codeCateg, :nomCateg)");
-$stmt->bindParam(':nomCateg', $nomCateg);
-$stmt->bindParam(':codeCateg', $codeCateg);
+$stmt = $connection->prepare("INSERT categorie VALUES (:codeCateg, :nomCateg)");
+$stmt->bindParam(':nomCateg', $_REQUEST["nomCategorie"]);
+$stmt->bindParam(':codeCateg', $_REQUEST["codeCategorie"]);
 
-$nomCateg = $_REQUEST["nomCategorie"];
-$codeCateg = $_REQUEST["codeCategorie"];
 
 $stmt->execute();
 
