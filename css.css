@@ -272,30 +272,32 @@ width: 250px;
     height: auto;
     width: 95%; 
 }
-position 
+
 
 
 /* InfosPerso */
 
 .container-info{
     border: solid red;
-    width: 700px;
-    margin-left: 540px;
+    width: 300px;
+    margin-left: 800px;
+    margin-top: 100px;
 }
+
 
 .line{
     display: flex;
-    border: solid green;
+    /* margin-top: 20px; */
+    /* border: solid green; */
 }
 .line p{
     margin-top: 25px;
     margin-left: 25px;
-    border: solid yellow;
+    /* border: solid yellow; */
 }
 .line input{
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 15px;
     margin-left: 25px;
     /* border: solid yellow; */
 }
