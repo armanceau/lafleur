@@ -1,4 +1,4 @@
-<?php require 'header/header.html'; ?>
+<?php require 'header/header.php'; ?>
 
 <form method="GET"action="addProduit.php">
 
