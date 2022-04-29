@@ -24,10 +24,22 @@
         <?php
             }
         ?>
+            <form method="GET" action="Panier.php">
+        <?php
+            echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\">"."<br/>";
+            echo "Référence: ".$ligne["reference"]."<br/>";
+            echo "Nom: ".$ligne["designation"]."<br/>";
+            echo "Prix: ".$ligne["prix"]."€<br/>";
+            echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
+        
+            echo "<a href=\"Panier.php?ref=".$ligne["reference"]." style=\"color:black;\"><button type=\"submit\" class=\"btn\">Ajouter au panier</button></a><br/>";
 
     
-    
-</form>
+?>
+
+
+
+
 <button class="btn">Retour</button>
 
 <?php require 'footer.html'; ?>
