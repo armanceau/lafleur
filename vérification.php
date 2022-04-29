@@ -18,7 +18,7 @@ if ($login==$ligne['mail_login'] && $mdp==$ligne['mot_de_passe_user'] ) {
     
         $_SESSION['login'] = $login;
         $_SESSION['mdp'] = $mdp;
-        //header("Location: ");
+        header("Location: main.php");
        
 }else{
 
