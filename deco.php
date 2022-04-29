@@ -3,6 +3,6 @@
 session_start();
 session_destroy();
 
-header('location: Authentification.php');
+header('location: main.php');
 
 ?>

@@ -3,15 +3,12 @@
 
 body{
     /* font-family: 'italianno';  */
-    font-size: 40px; 
-    font-weight: bold;
-    font-family: 'italianno';
+
     min-height:100vh;
     display:flex;
     flex-direction:column;
     
 }
-
 footer {
     margin-top:auto; 
 }
@@ -43,6 +40,10 @@ footer {
         width: 15px;
         height: auto;
     }
+    .quantite-control{
+        width: 10px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -66,11 +67,15 @@ footer {
         width: 25px;
         height: auto;
     }
+    .quantite-control{
+        width: 15px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 992px){
     .photo_produit_panier {
-        width: 250px;
+        width: 200px;
         height: auto;
         border: solid;
     }
@@ -89,7 +94,134 @@ footer {
         width: 35px;
         height: auto;
     }
+    .quantite-control{
+        width: 25px;
+        height: auto;
+    }
 }
+
+/* Validation commande */
+
+.champ-text-commande{
+        text-align: center;
+        border-radius: 5px;
+        border: solid 1px;
+}
+
+@media screen and (max-width: 576px){
+
+    .card-img {
+        height: 50px;
+        width: auto;
+        margin-left: 150%;
+    }
+
+    .ccv-img {
+        height: 45px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+        padding-left: 5px;
+    }
+
+    .profil-img{
+        height: 50px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+    }
+
+    .livraison-img{
+        height: 50px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+    }
+
+    .total-price{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 576px){
+
+    .card-img {
+        height: 75px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .ccv-img {
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .profil-img{
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .livraison-img{
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .champ-text-commande{
+        width: 250px;
+    }
+
+    .total-price{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .card-img {
+        height: 100px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .ccv-img {
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .profil-img{
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .livraison-img{
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .champ-text-commande{
+        width: 500px;
+    }
+
+    .total-price{
+        font-size: 24px;
+    }
+}
+
 /*details_produit*/
 
 
@@ -113,11 +245,16 @@ footer {
 .description {
 
     border: 1px solid black;
-    height: 100%x;
+    height: 100%;
 }
 .bouton_produit {
   
     font-size: 50px;
+}
+.btn-test {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 40px;
 }
 .commentaire {
    
@@ -149,12 +286,7 @@ width: 250px;
     background-color: silver;
     height: auto;
     width: 95%;
-   
 }
-
-
-
-
 
 
 /* InfosPerso */
@@ -164,11 +296,16 @@ width: 250px;
     /* border: solid red; */
     width: 700px;
     margin-left: 600px;
-    
+    border: solid red;
+    width: 300px;
+    margin-left: 800px;
+    margin-top: 100px;
 }
+
 
 .line{
     display: flex;
+    /* margin-top: 20px; */
     /* border: solid green; */
 }
 .line input{
@@ -181,6 +318,13 @@ width: 250px;
 
 .line img{
     margin-top: 20px;
+}
+
+.line input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    /* border: solid yellow; */
 }
 
 

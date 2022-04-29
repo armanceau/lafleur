@@ -12,7 +12,7 @@
 
         <h2> S'identifiez : </h2>
 
-    <form method='GET' action='vérification.php'>
+    <form method='GET' action='verificationAdmin.php'>
 
         <label>login :
         <input type="text" name="login"  placeholder="votre adresse email" required>
@@ -32,6 +32,7 @@
 
     <input type="submit" value="s'identifier">
 
+    </form>
     
 </body>
 </html>

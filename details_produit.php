@@ -1,7 +1,7 @@
 
 <?php 
 require 'connection.php';
-include ("header/header.html"); 
+include ("header/header.php"); 
 ?>
 <div class="container-fluid">
     <br/>
