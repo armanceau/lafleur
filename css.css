@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 body{
-    
+    /* font-family: 'italianno';  */
+
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    
 }
 footer {
     margin-top:auto; 
@@ -222,9 +224,7 @@ footer {
 
 /*details_produit*/
 
-.photo {
-    margin-top: 15%;
-}
+
 .photo img {
     width: 90%;
 }
@@ -233,7 +233,7 @@ footer {
 }
 .previ img {
     margin-left: 10px;
-    margin-right: 10px;
+
     border: 1px solid black;
     border-radius: 2px;
     height: 80px;
@@ -243,41 +243,55 @@ footer {
     background: gray;
 }
 .description {
-    margin-top: 4%;
+    
     border: 1px solid black;
-    height: 700px;
+  
 }
-.btn-test {
-    margin-left: 10%;
-    margin-top: 20%;
+.bouton_produit {
+  
     font-size: 40px;
 }
+
 .commentaire {
+   
     margin-top: 10%;
     border: 1px solid black;
-    height :60%;
+    height:500px;
+
 }
 .com_titre{
 background-color: silver;
 margin-top: -20px;
 margin-left: 25%;
+font-family: italianno;
 font-size: 40px;
 border-radius: 50px;
 width: 250px;
 
 }
+.com-deroul {
+    height:460px;
+    width: 100%;
+    overflow-y:auto;
+}
 .commentaire_cont {
     
+    margin-top: 20px;
+    margin-left:10px;
+   font-size: 20px;
     background-color: silver;
     height: auto;
-    width: 95%; 
+    width: 95%;
 }
-
 
 
 /* InfosPerso */
 
 .container-info{
+    margin-top: 60px;
+    /* border: solid red; */
+    width: 700px;
+    margin-left: 600px;
     border: solid red;
     width: 300px;
     margin-left: 800px;
@@ -290,11 +304,18 @@ width: 250px;
     /* margin-top: 20px; */
     /* border: solid green; */
 }
-.line p{
-    margin-top: 25px;
+.line input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
     margin-left: 25px;
     /* border: solid yellow; */
 }
+
+.line img{
+    margin-top: 20px;
+}
+
 .line input{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -303,4 +324,8 @@ width: 250px;
 }
 
 
-
+.btn-test {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 20px;
+}
