@@ -1,9 +1,8 @@
 <?php
 
-
 include 'connection.php';
 
-$stmt = $connection->prepare("INSERT produit VALUES (:referenceProduit, :designationProduit,
+$stmt = $connection->prepare("INSERT INTO 'produit' VALUES (:referenceProduit, :designationProduit,
  :photoProduit, :prixProduit, :quantite_stock_Produit, :code_categorie_Produit)");
 $stmt->bindParam(':referenceProduit', $_REQUEST["referenceProduit"]);
 $stmt->bindParam(':designationProduit', $_REQUEST["designationProduit"]);
