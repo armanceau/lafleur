@@ -25,7 +25,7 @@
     $sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 3';
     $table = $connection->query($sql);
     while ($ligne = $table->fetch()) {
-            echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\" height=\"200px\" width=\"200px\">"."<br/>";
+            echo "<br/><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\" height=\"200px\" width=\"200px\">"."<br/>";
             echo "Référence: ".$ligne["reference"]."<br/>";
             echo "Nom: ".$ligne["designation"]."<br/>";
             echo "Prix: ".$ligne["prix"]."€<br/>";
