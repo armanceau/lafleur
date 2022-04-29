@@ -38,6 +38,10 @@ footer {
         width: 15px;
         height: auto;
     }
+    .quantite-control{
+        width: 10px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -61,11 +65,15 @@ footer {
         width: 25px;
         height: auto;
     }
+    .quantite-control{
+        width: 15px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 992px){
     .photo_produit_panier {
-        width: 250px;
+        width: 200px;
         height: auto;
         border: solid;
     }
@@ -82,6 +90,10 @@ footer {
     }
     .poubelle-panier{
         width: 35px;
+        height: auto;
+    }
+    .quantite-control{
+        width: 25px;
         height: auto;
     }
 }
