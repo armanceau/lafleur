@@ -1,3 +1,5 @@
+<?php require 'header/header.html'; ?>
+
 <h1>La liste deroulante</h1>
 
 
