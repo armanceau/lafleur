@@ -9,13 +9,16 @@
         $sql = 'SELECT * FROM categorie';
         $table = $connection->query($sql);
         while ($ligne = $table->fetch()) {
-            echo "<option value=".$ligne['code_de_la_categorie'].">".$ligne['nom_de_la_categorie']."</option>";
+            echo "<option value=".$ligne['code_de_la_categorie'].">".$ligne['nom_de_la_categorie']."</a></option>";
         }
             ?>
     </select>
     <button type="submit">Rechercher</button>
 </form>
 
+<!-- 3 fleurs les plus chère -->
+
+<h2>Nos produit du moment</h2>
 
 <?php
 
@@ -31,10 +34,8 @@
             echo "<a href=\"Panier.php?ref=".$ligne["reference"]." style=\"color:black;\"><button type=\"submit\" class=\"btn\">Ajouter au panier</button></a><br/>";
 
     }
-?>
 
 
 
 
-<?php require 'footer.html'; ?>
-
+require 'footer.html';
