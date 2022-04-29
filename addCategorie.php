@@ -3,10 +3,16 @@
 
 include 'connection.php';
 
-$sql = "INSERT categorie VALUES ('".$_REQUEST["codeCategorie"]."','".$_REQUEST["nomCategorie"]."');";
 
-$connection->exec($sql);
 
+$stmt = $bdh->prepare("INSERT categorie VALUES (:codeCateg, :nomCateg)");
+$stmt->bindParam(':nomCateg', $nomCateg);
+$stmt->bindParam(':codeCateg', $codeCateg);
+
+$nomCateg = $_REQUEST["nomCategorie"];
+$codeCateg = $_REQUEST["codeCategorie"];
+
+$stmt->execute();
 
 header("location: BackOffice.php");       
 ?>
