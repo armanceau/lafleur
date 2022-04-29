@@ -1,12 +1,19 @@
-<?php require 'header/header.php'; 
-      require "connection.php";
+<?php
 
-$ref=$_REQUEST['reference'] ;
-$design=$_RQUEST['designation'] ;
+include 'connection.php';
 
-$sql = $connection->prepare("DELETE FROM 'produit' WHERE reference=".$ref." AND designation=".$design." ") ;
-$sql->bindParam('[{.$ref}]', $ref, PDO::PARAM_INT) ;
+    try{
+        $sql = "DELETE FROM produit WHERE reference =:ref";
+        echo $sql;
+        $stmt = $connection->prepare($sql);
+            $stmt->bindValue(':ref', $_REQUEST["ref"], PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            header("location: BackOffice.php");
+
+    }catch (PDOException $e){
+        echo "Erreur: ".$e->getMessage();
+    }
 
 ?>
-    
-<?php require 'footer.html'; ?>
