@@ -2,41 +2,29 @@
 <?php 
 require 'connection.php';
 include ("header/header.php"); 
+$ref = $_REQUEST['categ'];
+$sql = 'SELECT *  FROM produit WHERE reference like "%' . $ref . '%"' ;
+$table = $connection->query($sql);
+$ligne = $table->fetch();
+$photo = $ligne['photo'];
+$titre = $ligne['designation'];
 ?>
-<div class="container-fluid">
-    <br/>
-    <br/>
-    
-    <br>
-    <div class="row">
+<div class="container-fluid" style="margin-top:125px;">
+
+    <div class="row detail-produit">
         <div class="col-4 text-center">
             <div class="photo">
-                <img src="img/exemple.jpg">
+                <?php echo "<img src='img/$photo.jpg'>";?>
             </div>
             <div class="previ text-center">
-            <img src="img/exemple.jpg">
-            <img src="img/exemple.jpg">
-            <img src="img/exemple.jpg">
-            <img src="img/exemple.jpg">
+            <?php echo "<img src='img/$photo.jpg'>";
+            echo "<img src='img/$photo.jpg'>";
+            echo "<img src='img/$photo.jpg'>";
+            echo "<img src='img/$photo.jpg'>";?>
             </div>
         </div>
         <div class="col-5 description" >
-             <h2><?php /* $sql = 'SELECT designation  FROM produit WHERE ;
-				$table = $connection->query($sql);
-				while ($ligne = $table->fetch()) {
-                    ?>
-                        <form method="GET" action="Panier.php">
-                    <?php
-						echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\">"."<br/>";
-                        echo "Référence: ".$ligne["reference"]."<br/>";
-						echo "Nom: ".$ligne["designation"]."<br/>";
-						echo "Prix: ".$ligne["prix"]."<br/>";
-                        echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
-                    ?>
-                        <button type="submit">Ajouter au panier</button>
-                        <br/>
-            <?php
-                }*/?> 
+             <h2><?php echo $titre ;?>
                 </h2>
         </div>
         <div class="col-3">

@@ -224,6 +224,9 @@ footer {
 
 /*details_produit*/
 
+.detail-produit {
+    margin-top: 80x;
+}
 
 .photo img {
     width: 90%;
