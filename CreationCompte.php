@@ -1,16 +1,16 @@
 <?php
 include "header/header.php";
 require "connection.php" ;
-$email=$_REQUEST['email'] ;
-$motDePasse=SHA1($_REQUEST['motDePasse']) ;
-$nom=$_REQUEST['nom'] ;
-$prenom=$_REQUEST['prenom'] ;
-$adresse=$_REQUEST['adresse'] ;
-$tel=$_REQUEST['tel'] ;
 
-$sql=$connection ->prepare('INSERT INTO utilisateur VALUES 
-("'.$email.'", "'.$motDePasse.'", "'.$nom.'", "'.$prenom.'","'.$adresse.'", '.$tel.')') ;
-$sql->bindParam('[{.2}]', $motDePasse, PDO::PARAM_INT) ;
+
+$sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel) ');
+
+$sql->bindParam(':mail_login', $_REQUEST['email']);
+$sql->bindParam(':motDePasse', SHA1($_REQUEST['motDePasse']));
+$sql->bindParam(':nom', $_REQUEST['nom']);
+$sql->bindParam(':prenom', $_REQUEST['prenom']);
+$sql->bindParam(':adresse', $_REQUEST['adresse']);
+$sql->bindParam(':tel', $_REQUEST['tel']);
 
 $sql->execute();
 
