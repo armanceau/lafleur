@@ -8,7 +8,7 @@ $prenom=$_REQUEST['prenom'] ;
 $adresse=$_REQUEST['adresse'] ;
 $tel=$_REQUEST['tel'] ;
 
-$sql=$connection ->prepare('INSERT INTO utilisateur VALUES 
+$sql=$connection ->prepare('INSERT INTO utilisateur (`mail_login`, `mot_de_passe_user`, `nom`, `prenom`, `adresse`, `tel`) VALUES 
 ("'.$email.'", "'.$motDePasse.'", "'.$nom.'", "'.$prenom.'","'.$adresse.'", '.$tel.')') ;
 $sql->bindParam('[{.2}]', $motDePasse, PDO::PARAM_INT) ;
 
