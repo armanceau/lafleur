@@ -75,7 +75,14 @@ if (!isset($_SESSION['login'])){
                         <div class="col-9-sm col-10">
                         </div>
                         <div class="col-3-sm col-2">
-                            <input type="submit" value="Confirmer">
+                            ';
+                            if ($price == 0){
+                                echo '<a class="btn btn-success" href="main.php">Chercher un produit</a>';
+                            } else{
+                                echo '<input class="btn btn-success" type="submit" value="Confirmer" style="margin-bottom: 10px">';
+                                echo '<a class="btn btn-success" href="main.php">Chercher un produit</a>';
+                            }
+                            echo '
                         </div>
                     </div>
                 </form>
