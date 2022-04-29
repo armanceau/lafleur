@@ -60,7 +60,7 @@
                     <p>Si vous n'avez pas encore de compte, nous vous invitons à vous inscrire.</p>
 
                     <button class="rounded-pill" style = "background-color: #006430;">
-                        <a href="inscription.php"style = "color : white;">  S'inscrire </a>
+                        <a href="inscription.php" style = "color : white;">  S'inscrire </a>
                     </button>
 
                     </br>
