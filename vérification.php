@@ -7,6 +7,7 @@ $login=$_REQUEST['login'] ;
 $mdp=SHA1($_REQUEST['mdp']);
 
 
+
 $sql=$connection ->prepare('SELECT * FROM `utilisateur` WHERE mail_login="'.$login.'" AND mot_de_passe_user="'.$mdp.'"') ;
 $sql->bindParam('[{.1}]', $login, PDO::PARAM_INT) ;
 
@@ -18,7 +19,8 @@ if ($login==$ligne['mail_login'] && $mdp==$ligne['mot_de_passe_user'] ) {
     
         $_SESSION['login'] = $login;
         $_SESSION['mdp'] = $mdp;
-        header("Location: main.php");
+             
+        
        
 }else{
 

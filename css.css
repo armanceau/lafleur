@@ -278,28 +278,43 @@ width: 250px;
 /* InfosPerso */
 
 .container-info{
-    border: solid red;
-    width: 300px;
-    margin-left: 800px;
-    margin-top: 100px;
+    /* border: solid red; */
+    margin-top: 70px;
+
 }
 
 
 .line{
     display: flex;
-    /* margin-top: 20px; */
+    padding-top: 10px;
+    margin-top: 10px;
     /* border: solid green; */
 }
 .line p{
-    margin-top: 25px;
+ 
     margin-left: 25px;
+    padding-top: 20px;
     /* border: solid yellow; */
 }
-.line input{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 25px;
-    /* border: solid yellow; */
+
+.info
+{
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+}
+
+hr{
+    border: solid 1px;
+}
+
+.crayon
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
 }
 
 
