@@ -1,4 +1,4 @@
-<?php require 'header/header.html'; ?>
+<?php require 'header/header.php'; ?>
 <script>
 
     function OnclickCrayon1(Status)
@@ -48,5 +48,3 @@
     </div>
 </main>
 <?php require 'footer.html'; ?>
-
-</html>
