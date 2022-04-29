@@ -11,6 +11,7 @@ $ref = $_REQUEST['ref'];
 $sql = "SELECT reference, quantite_d_article FROM pannier WHERE mail_login = '".$user."'
 AND reference = '".$ref."'";
 $table = $connection->query($sql);
+echo $sql;
 
 while ($ligne = $table->fetch()){
 
@@ -20,27 +21,17 @@ while ($ligne = $table->fetch()){
 }
 
 if ($quantite != 0){
-    $sql = "UPDATE `pannier` SET `quantite_d_article`= :quantite
-    WHERE mail_login = ':user' AND reference = ':ref'";
-    $sql_ready = $connection->prepare($sql);
-    $sql_ready->bindParam(':user', $user, PDO::PARAM_STR);
-    $sql_ready->bindParam(':ref', $ref, PDO::PARAM_STR);
-    $sql_ready->bindParam(':quantite', $quantite, PDO::PARAM_INT);
+    $sql = "UPDATE `pannier` SET `quantite_d_article`= ".$quantite."
+    WHERE mail_login = '".$user."' AND reference = '".$ref."'";
 
 }else {
     $quantite = 1;
     $sql = "INSERT INTO `pannier` (`mail_login`, `reference`, `quantite_d_article`)
-    VALUES (':user', ':ref', :quantite)";
-    $sql_ready = $connection->prepare($sql);
-    $sql_ready->bindParam(':user', $user, PDO::PARAM_STR);
-    $sql_ready->bindParam(':ref', $ref, PDO::PARAM_STR);
-    $sql_ready->bindParam(':quantite', $quantite, PDO::PARAM_INT);
+    VALUES ('".$user."', '".$ref."', ".$quantite.")";
 }
 
-$sql_ready->execute();
+$connection->exec($sql);
 
-var_dump($sql_ready);
-
-//header("location: afficher_panier.php");
+header("location: afficher_panier.php");
 
 ?>

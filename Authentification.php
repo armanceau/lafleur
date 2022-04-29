@@ -1,4 +1,7 @@
-<?php include "header/header.html"; ?>
+<?php include "header/header.php"; ?>
+
+
+<body>
 
         <h2> veuillez vous identifiez : </h2>
 
@@ -29,8 +32,14 @@
     <button>
         <a href="inscription.php">  S'inscrire </a>
     </button>
-    
+
+</br>
+</br>
+
+   <button>
+       <a href="AuthentificationAdmin.php"> S'identifier en tant qu'administrateur </a>
+   </button>
 
     
-
-<?php include "footer"; ?>
+</body>
+<?php include "footer.html";?>

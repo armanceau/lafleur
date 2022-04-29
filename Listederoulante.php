@@ -1,4 +1,4 @@
-<?php require 'header/header.html'; ?>
+<?php require 'header/header.php'; ?>
 
 <h1>La liste deroulante</h1>
 
@@ -7,7 +7,7 @@
 <?php
     require 'connection.php';
 
-            $sql = 'SELECT *  FROM produit WHERE code_de_la_categorie="ros"' ;
+            $sql = 'SELECT *  FROM produit WHERE code_de_la_categorie="'.$_REQUEST["code"].'"' ;
             $table = $connection->query($sql);
             while ($ligne = $table->fetch()) {
                 ?>
@@ -18,8 +18,8 @@
                     echo "Nom: ".$ligne["designation"]."<br/>";
                     echo "Prix: ".$ligne["prix"]."<br/>";
                     echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
+                    echo '<a href="addbag.php?ref='.$ligne['reference'].'" class="btn btn-success">Ajouter au panier</a>';
                 ?>
-                    <button type="submit" class="btn">Ajouter au panier</button>
                     <br/>
         <?php
             }

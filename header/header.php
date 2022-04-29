@@ -27,8 +27,25 @@
 
                     <div class="col-4" style="text-align: right;" >
                         <!-- Changer les redirections : -->
-                        <a href="deco.php"><img src="header/images/deco.png"  height="50" width="50"></a>
-                        <a href="Authentification.php"><img src="header/images/util.PNG"  height="50" width="50"></a>
+                        <?php 
+                        
+                        session_start();
+
+                        if (isset($_SESSION['login'])){
+                            echo '
+                            <a href="deco.php"><img src="header/images/deco.png"  height="50" width="50"></a>';
+                        }
+                        
+                        ?>
+                        <a href="<?php
+
+                        if (isset($_SESSION['login'])){
+                            echo 'infosPerso.php';
+                        } else {
+                            echo 'Authentification.php';
+                        }
+                        
+                        ?>"><img src="header/images/util.PNG"  height="50" width="50"></a>
                         <a href="afficher_panier.php"><img src="header/images/shop.PNG" height="45" width="45" class="rounded float-end"></a>
                     </div>
 
