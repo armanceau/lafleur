@@ -1,4 +1,4 @@
-<?php require 'header/header.html'; ?>
+<?php require 'header/header.php'; ?>
 
 <!-- Liste déroulante catégories -->
 <form method="GET" action="Listederoulante.php">
