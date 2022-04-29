@@ -8,7 +8,7 @@ $mdp=SHA1($_REQUEST['mdp']);
 
 
 $sql=$connection ->prepare('SELECT * FROM `utilisateur` WHERE mail_login="'.$login.'" AND mot_de_passe_user="'.$mdp.'"') ;
-$sql->bindParam('[{.1}]', $login, PDO::PARAM_INT) ;
+$sql->bindParam('[{.$login}]', $login, PDO::PARAM_INT) ;
 
 $sql->execute();
 
