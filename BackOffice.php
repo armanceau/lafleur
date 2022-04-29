@@ -28,6 +28,7 @@ require 'connection.php';?>
             ?>
 
     </select><br/>
+    <br>
     <button type="submit">Modifier</button>
 </form>
 
@@ -49,6 +50,7 @@ require 'connection.php';?>
             ?>
 
     </select><br/>
+    <br>
     <button type="submit">Modifier</button>
 </form>
 <br/><br/>
@@ -68,6 +70,7 @@ require 'connection.php';?>
             ?>
 
     </select><br/>
+    <br>
     <button type="submit">Supprimer</button>
 </form>
 
@@ -75,11 +78,11 @@ require 'connection.php';?>
 
 
 <label>Supprimer un produit</label>
+
 <form method="GET" action="supprimerProduit.php">
     <select name="ref">
         <?php
         
-
         $sql = 'SELECT * FROM produit';
         $table = $connection->query($sql);
         while ($ligne = $table->fetch()) {
@@ -88,6 +91,7 @@ require 'connection.php';?>
             ?>
 
     </select><br/>
+    <br>
     <button type="submit">Supprimer</button>
 </form>
 
