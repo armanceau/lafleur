@@ -1,4 +1,4 @@
-<?php require 'header/header.html'; 
+<?php require 'header/header.php'; 
 require 'connection.php';?>
 
 <label>Ajouter une catégorie</label>
