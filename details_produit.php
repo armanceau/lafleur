@@ -4,12 +4,14 @@ require 'connection.php';
 include ("header/header.html"); 
 ?>
 <div class="container-fluid">
-    <div class="row ">
+    <br/>
+    <br/>
+    <div class="row">
         <div class="col-4 text-center">
             <div class="photo">
                 <img src="img/exemple.jpg">
             </div>
-            <div class="previ">
+            <div class="previ text-center">
             <img src="img/exemple.jpg">
             <img src="img/exemple.jpg">
             <img src="img/exemple.jpg">
@@ -36,15 +38,51 @@ include ("header/header.html");
                 </h2>
         </div>
         <div class="col-3">
-        <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius: 50px;height:80px;width:400px;"><p>15€</p></button>
-                <div class="commentaire text-center">
-                    <h2 class="com_titre">Commentaires</h2>
-                    <div class="commentaire_cont text-left">
-                    <img src="img/exemple.jpg" style="height: 80px;">
-                    <h3>nom</h3>
-                    <h4>poster il y a ....</h4>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ab molestiae dolores consequuntur debitis quaerat quas saepe ducimus dolorem minima cumque, repellendus eaque et sunt quidem animi eligendi, odio fuga.</h3>
-                </div>
+        <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius:45px;height:auto;width:100%;"><p>15€</p></button>
+                <div class="commentaire">
+                    <h2 class="com_titre text-center">Commentaires</h2>
+                    <div class="com-deroul">
+                    <div class="commentaire_cont">
+                        <div class="row">
+                            <div class="col-4">
+                                 <img src="img/exemple.jpg" style="height:110px;">
+                            </div>
+                            <div class="col-8">
+                         <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
+                         </div></div>
+                            <p>locale_filter_matchesvnuiqvqivlqilbfd</p>
+                    </div>
+                    <div class="commentaire_cont">
+                        <div class="row">
+                            <div class="col-4">
+                                 <img src="img/exemple.jpg" style="height:110px;">
+                            </div>
+                            <div class="col-8">
+                         <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
+                         </div></div>
+                            <p>locale_filter_matchesvnuiqvqivlqilbfd</p>
+                    </div>
+                    <div class="commentaire_cont">
+                        <div class="row">
+                            <div class="col-4">
+                                 <img src="img/exemple.jpg" style="height:110px;">
+                            </div>
+                            <div class="col-8">
+                         <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
+                         </div></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, laudantium ipsum magni, rerum aperiam dolore reiciendis eum a animi exercitationem temporibus excepturi sunt necessitatibus dicta, rem sit eaque dignissimos facilis.</p>
+                    </div>
+                    <div class="commentaire_cont">
+                        <div class="row">
+                            <div class="col-4">
+                                 <img src="img/exemple.jpg" style="height:110px;">
+                            </div>
+                            <div class="col-8">
+                         <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
+                         </div></div>
+                            <p>locale_filter_matchesvnuiqvqivlqilbfd</p>
+                    </div>
+            </div>
                 </div>
 
         </div>
