@@ -243,19 +243,15 @@ footer {
     background: gray;
 }
 .description {
-
+    
     border: 1px solid black;
-    height: 100%;
+  
 }
 .bouton_produit {
   
-    font-size: 50px;
-}
-.btn-test {
-    margin-left: 10%;
-    margin-top: 20%;
     font-size: 40px;
 }
+
 .commentaire {
    
     margin-top: 10%;
@@ -267,6 +263,7 @@ footer {
 background-color: silver;
 margin-top: -20px;
 margin-left: 25%;
+font-family: italianno;
 font-size: 40px;
 border-radius: 50px;
 width: 250px;
@@ -281,8 +278,7 @@ width: 250px;
     
     margin-top: 20px;
     margin-left:10px;
-   font-size: 30px;
-   font-style:rial;
+   font-size: 20px;
     background-color: silver;
     height: auto;
     width: 95%;
@@ -328,4 +324,8 @@ width: 250px;
 }
 
 
-
+.btn-test {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 20px;
+}

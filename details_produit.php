@@ -6,6 +6,8 @@ include ("header/header.php");
 <div class="container-fluid">
     <br/>
     <br/>
+    
+    <br>
     <div class="row">
         <div class="col-4 text-center">
             <div class="photo">
@@ -18,7 +20,7 @@ include ("header/header.php");
             <img src="img/exemple.jpg">
             </div>
         </div>
-        <div class="col-5 text-center description">
+        <div class="col-5 description" >
              <h2><?php /* $sql = 'SELECT designation  FROM produit WHERE ;
 				$table = $connection->query($sql);
 				while ($ligne = $table->fetch()) {
