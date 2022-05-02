@@ -20,6 +20,50 @@
 
 <h2>Nos produit du moment</h2>
 
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-4">
+            <div class="row">
+                <div class="col-">
+                    <img src="IMG/bulbes_begonia.jpg">
+                </div>
+                
+                <div class="col-">
+                Ceci est une caractéristique
+Son prix : 100 €
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="row">
+                <div class="col-">
+                    <img src="IMG/bulbes_begonia.jpg">
+                </div>
+                
+                <div class="col-">
+                Ceci est une caractéristique
+Son prix : 100 €
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="row">
+                <div class="col-">
+                    <img src="IMG/bulbes_begonia.jpg">
+                </div>
+                
+                <div class="col-">
+                Ceci est une caractéristique
+Son prix : 100 €
+                </div>
+            </div>
+        </div>
+   
+    </div>
+</div>
+
 <?php
 
     $sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 3';
