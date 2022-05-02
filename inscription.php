@@ -1,3 +1,5 @@
+<?php include "header/header.php"; ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,57 +9,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Création du comtpe</title>
 </head>
+
+
+
 <body>
-    <h2>   Ajoutez vos informations</h2>
-    <form method="GET" action="CreationCompte.php">
-        <!-- Adresse mail (login) -->
-        <label>Email:</label>
-        <br>
-        <input type="email" name="email" required ><br/>
 
-<br>
+        <div class="container-fluid" style = "padding-top: 30px;">
+                <div class="row">
 
-        <!-- Mot de passe -->
-        <label>Mot de passe:</label>
-        <br>
-        <input type="password" name="motDePasse" maxlength="30" minlength="9" required><br/>
+                        <div class="col-3"></div>
 
-<br>
+                        <div class="col-6 rounded row" style = "text-align : center; background-color : #C4C4C4; padding-top : 20px; font-family: lobster;">
 
-        <!-- Nom -->
-        <label>Nom:</label>
-        <br>
-        <input type="text" name="nom" required ><br/>
+                                <div class="col-1"></div>
+                    
 
-<br>
+                                <div class="col-10">
+                                        <h2>   Ajoutez vos informations</h2>
+                                        <form method="GET" action="CreationCompte.php">
+                                                <br>
+                                                <!-- Adresse mail (login) -->
+                                                <div class ="rounded-pill" style="font-size: 20px;font-family: lobster; color : white;background-color: #006430;">
+                                                        <label>Email:</label>
+                                                        <br>
+                                                        <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                                                <input style ="text-align : center;" type="email" name="email" placeholder="Votre adresse mail" required ><br/>
+                                                        </div>
+                                                </div>
+                                        <br>
 
-        <!-- Prénom -->
-        <label>Prénom:</label>
-        <br>
-        <input type="text" name="prenom" required ><br/>
+                                                <!-- Mot de passe -->
+                                                <div class ="rounded-pill" style="font-size: 20px;font-family: lobster; color : white;background-color: #006430;">
+                                                        <label>Mot de passe:</label>
+                                                        <br>
+                                                        <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                                                <input style ="text-align : center;" type="password" name="motDePasse" maxlength="30" minlength="9" placeholder="Votre mot de passe"required><br/>
+                                                        </div>
+                                                </div>
+                                        <br>
 
-<br>
+                                                <!-- Nom -->
+                                                <div class ="rounded-pill" style="font-size: 20px;font-family: lobster; color : white;background-color: #006430;">
+                                                        <label>Nom:</label>
+                                                        <br>
+                                                        <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                                                <input style ="text-align : center;" type="text" name="nom" placeholder="Votre nom" required ><br/>
+                                                        </div>
+                                                </div>
 
-        <!-- Adresse -->
-        <label>Adresse:</label>
-        <br>
-        <input type="text" name="adresse" required ><br/>
+                                        <br>
 
-<br>
+                                                <!-- Prénom -->
+                                                <div class ="rounded-pill" style="font-size: 20px;font-family: lobster; color : white;background-color: #006430;">
+                                                        <label>Prénom:</label>
+                                                        <br>
+                                                        <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                                                <input style ="text-align : center;" type="text" name="prenom" placeholder="Votre prénom" required ><br/>
+                                                        </div>
+                                                </div>
 
-        <!-- Téléphone -->
-        <label>Téléphone:</label>
-        <br>
-        <input type="number" name="tel" maxlength="10" minlength="10" required ><br/>
-        <br>
-        <button type="submit">Créer</button>
-<br>
-<br>
-        <button type="reset"> Annuler </button>
+                                        <br>
 
-    </form>
+                                                <!-- Adresse -->
+                                                <div class ="rounded-pill" style="font-size: 20px;font-family: lobster; color : white;background-color: #006430;">
+                                                        <label>Adresse:</label>
+                                                        <br>
+                                                        <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                                                <input style ="text-align : center;" type="text" name="adresse" placeholder="Votre adresse" required ><br/>
+                                                        </div>
+                                                </div>
+                                        <br>
 
-   
+                                                <!-- Téléphone -->
+                                                <div class ="rounded-pill" style="font-size: 20px;font-family: lobster; color : white;background-color: #006430;">
+                                                        <label>Téléphone:</label>
+                                                        <br>
+                                                        <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                                                <input style ="text-align : center;" type="number" name="tel" maxlength="10" minlength="10" placeholder="Votre téléphone" required ><br/>
+                                                        </div>
+                                                </div>
+                                        <br>
 
-</body>
-</html>
+                                                <div style = "margin-bottom : 20px"> 
+                                                        <button type="submit">Créer</button>
+                                                        <button type="reset"> Annuler </button>
+                                                </div>  
+                                        </form>
+                                </div>
+
+                                <div class="col-1" ></div>
+
+                                <div class="col-3" ></div>
+                        </div>
+                </div>
+        </div>
+
+<?php include "footer.html";?>
