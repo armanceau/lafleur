@@ -18,7 +18,7 @@
 
 <!-- 3 fleurs les plus chère -->
 
-<h2>Nos produit du moment</h2>
+<h2>Nos produits du moment</h2>
 
 <?php
 
