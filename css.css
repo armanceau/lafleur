@@ -223,9 +223,9 @@ footer {
 }
 
 /*details_produit*/
-
-.detail-produit {
-    margin-top: 80x;
+.detail-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .photo img {
@@ -245,7 +245,6 @@ footer {
     background: gray;
 }
 .description {
-    
     border: 1px solid black;
     
   
@@ -265,7 +264,6 @@ footer {
 .com_titre{
     background-color: silver ;
     margin-top: -25px ;
-    margin-left: 10px;
     font-family: italianno;
     font-size: 40px;
     border-radius: 50px;
@@ -275,7 +273,7 @@ footer {
 .com-deroul {
     height:465px;
     width: 100%;
-    overflow-y:scroll;
+    overflow-y:auto;
 }
 .commentaire_cont {
     
@@ -284,17 +282,54 @@ footer {
     font-size: 20px;
     background-color:silver;
     height: auto;
-    width: 95%;
+    width:500px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
 .description {
     width: 90%;
+    margin-top: 5%;
     margin-left: 5%;
     margin-right:5%;
+    
 }
+.bouton_produit {
+    margin-top:50px;
+    font-size: 40px;
+}
+.photo img {
+    width: 60%;
+}
+.previ img {
 
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 50px;
+}
+.previ {
+    margin-top: 5%;
 
+   }
+   .commentaire_cont {
+    
+    margin-top: 20px;
+    margin-left:10px;
+    font-size: 20px;
+    background-color:silver;
+    height: auto;
+    width:680px;
+}
+}
+@media screen and (max-width: 768px){
+    .commentaire_cont {
+    
+        margin-top: 20px;
+        margin-left:10px;
+        font-size: 20px;
+        background-color:silver;
+        height: auto;
+        width:680px;
+    }
 
 }
 
