@@ -18,9 +18,9 @@ $sql = 'SELECT * FROM categorie WHERE code_de_la_categorie="'.$_REQUEST["code"].
 $table = $connection->query($sql);
 while ($ligne = $table->fetch()) {
     echo'<label>Code Catégorie:</label><br/>';
-    echo '<input type=\"text\" name=\"newCodeCategorie\" value='.$ligne["code_de_la_categorie"].' required><br/><br/>';
+    echo '<input type="text" name="newCodeCategorie" value='.$ligne["code_de_la_categorie"].' required><br/><br/>';
     echo'<label>Nom Catégorie:</label><br/>';
-    echo '<input type=\"text\" name=\"newNomCategorie\" value='.$ligne["nom_de_la_categorie"].' required><br/><br/>';
+    echo '<input type="text" name="newNomCategorie" value='.$ligne["nom_de_la_categorie"].' required><br/><br/>';
 }
 ?>
 
