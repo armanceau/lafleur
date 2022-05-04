@@ -2,7 +2,7 @@
     require 'connection.php';
 ?>
 
-<form method="get" action="modifCategorie">
+<form method="get" action="modifCategorie.php">
 
 
 
