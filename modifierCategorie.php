@@ -21,6 +21,7 @@ while ($ligne = $table->fetch()) {
     echo '<input type="text" name="newCodeCategorie" value='.$ligne["code_de_la_categorie"].' required><br/><br/>';
     echo'<label>Nom Catégorie:</label><br/>';
     echo '<input type="text" name="newNomCategorie" value='.$ligne["nom_de_la_categorie"].' required><br/><br/>';
+    echo '<input type"text" name="ancienCodeCateg" value="'.$_REQUEST["code"].'" hidden>';
 }
 ?>
 
