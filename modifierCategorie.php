@@ -4,7 +4,7 @@
 
 <form method="get" action="modifCategorie.php">
 
-
+<!--slt c slt-->
 
 <?php
 $sql = 'SELECT nom_de_la_categorie FROM categorie WHERE code_de_la_categorie="'.$_REQUEST["code"].'"';
@@ -31,3 +31,6 @@ while ($ligne = $table->fetch()) {
 </form>
 
 <?php require 'footer.html'; ?>
+
+
+

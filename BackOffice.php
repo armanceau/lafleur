@@ -38,7 +38,7 @@ require 'connection.php';?>
 
 <label>Modifier un produit</label>
 <form method="GET" action="modifierProduit.php">
-    <select name="ref">
+    <select name="reference">
         <?php
         
 
