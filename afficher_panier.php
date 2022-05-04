@@ -66,7 +66,12 @@ if (!isset($_SESSION['login'])){
                 
                 <form action="commande.php" method="post">
                     <div class="row">
-                        <div class="col-9-sm col-10">
+                        <div class="col-6-sm col-5">
+                            <label class="title_prod" for="bon">Bon de réduction :</label>
+                            <input type="text" name="bon" style="margin-left: 10px; border-radius: 5px;">
+                            <a href="bon_de_reduction.php"><img src="IMG\Icone_validé.png" height=50></a>
+                        </div>
+                        <div class="col-3-sm col-5">
                         </div>
                         <div class="col-3-sm col-2">
                             <p class="title_prod">Total : <b>'.number_format($price, 2, ',', ' ').' €</b></p>
@@ -75,7 +80,14 @@ if (!isset($_SESSION['login'])){
                         <div class="col-9-sm col-10">
                         </div>
                         <div class="col-3-sm col-2">
-                            <input type="submit" value="Confirmer">
+                            ';
+                            if ($price == 0){
+                                echo '<a class="btn btn-success" href="main.php">Chercher un produit</a>';
+                            } else{
+                                echo '<input class="btn btn-success" type="submit" value="Confirmer" style="margin-bottom: 10px">';
+                                echo '<a class="btn btn-success" href="main.php">Chercher un produit</a>';
+                            }
+                            echo '
                         </div>
                     </div>
                 </form>
