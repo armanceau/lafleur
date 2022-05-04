@@ -11,6 +11,8 @@
         <link href='css.css' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <link rel="icon" type="image/png" href="IMG\logolafleur.png">
+        <title>La Fleur</title>
     </head>
 
     <body>

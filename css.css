@@ -247,6 +247,7 @@ footer {
 .description {
     
     border: 1px solid black;
+    
   
 }
 .bouton_produit {
@@ -262,12 +263,13 @@ footer {
 
 }
 .com_titre{
-background-color: silver ;
-margin-top: -25px ;
-font-family: italianno;
-font-size: 40px;
-border-radius: 50px;
-width: 225px;
+    background-color: silver ;
+    margin-top: -25px ;
+    margin-left: 10px;
+    font-family: italianno;
+    font-size: 40px;
+    border-radius: 50px;
+    width: 225px;
 
 }
 .com-deroul {
@@ -279,12 +281,22 @@ width: 225px;
     
     margin-top: 20px;
     margin-left:10px;
-   font-size: 20px;
+    font-size: 20px;
     background-color:silver;
     height: auto;
     width: 95%;
 }
 
+@media screen and (max-width: 768px){
+.description {
+    width: 90%;
+    margin-left: 5%;
+    margin-right:5%;
+}
+
+
+
+}
 
 /* InfosPerso */
 

@@ -12,19 +12,19 @@ $prix = $ligne['prix'];
 ?>
 <div class="container-fluid" style="margin-top:125px;">
 
-    <div class="row detail-produit">
-        <div class="col-4 text-center">
+    <div class="row">
+        <div class="col-md-4 col-xs-12 text-center">
             <div class="photo">
                 <?php echo "<img src='img/$photo.jpg'>";?>
             </div>
             <div class="previ text-center">
-            <?php echo "<img src='img/$photo.jpg'>";
-            echo "<img src='img/$photo.jpg'>";
-            echo "<img src='img/$photo.jpg'>";
-            echo "<img src='img/$photo.jpg'>";?>
+                <?php echo "<img src='img/$photo.jpg'>";
+                echo "<img src='img/$photo.jpg'>";
+                echo "<img src='img/$photo.jpg'>";
+                echo "<img src='img/$photo.jpg'>";?>
             </div>
         </div>
-        <div class="col-5 description" >
+        <div class="col-md-5 col-xs-12 description">
             <br/>
              <h2 style="color: green;"><?php echo "<strong>". $titre . "</strong>" ;?>
                 </h2>
@@ -32,8 +32,8 @@ $prix = $ligne['prix'];
                     <h2>-adipisicing elit. Beatae at totam quibusdam cupiditate nobis esse quas odio. </h2>
                         <h2>-Natus aut a amet ad tenetur nobis sapiente, autem consectetur odit rem fuga?</h2>
         </div>
-        <div class="col-3">
-        <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius:45px;height:auto;width:100%;"><p> <?php echo $prix ; ?>€</p></button>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius:45px;height:auto;width:100%;"><p> <?php echo $prix ; ?>€</p></button>
                 <div class="commentaire">
                     <div class="row">
                         <div class="col-3">
@@ -44,8 +44,8 @@ $prix = $ligne['prix'];
                     <div class="col-2"></div>
                     </div>
                     <div class="com-deroul">
-                        <div class="row"><hr><div class="col-6">
-                        <boutton  type="button" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;">Ajouter un comment<boutton>
+                        <div class="row"><hr><div class="col-8">
+                        <boutton  type="button" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;">Ajouter un commentaire<boutton>
                         </div></div>
                     <div class="commentaire_cont">
                         <div class="row">
@@ -77,7 +77,7 @@ $prix = $ligne['prix'];
                          </div></div>
                             <p>locale_filter_matchesvnuiqvqivlqilbfd</p>
                     </div>
-            </div>
+                     </div>
                 </div>
 
         </div>

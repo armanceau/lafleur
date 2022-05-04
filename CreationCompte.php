@@ -6,7 +6,7 @@ require "connection.php" ;
 $sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel) ');
 
 $sql->bindParam(':mail_login', $_REQUEST['email']);
-$sql->bindParam(':motDePasse', SHA1($_REQUEST['motDePasse']));
+$sql->bindParam(':motDePasse', SHA1($motDePasse));
 $sql->bindParam(':nom', $_REQUEST['nom']);
 $sql->bindParam(':prenom', $_REQUEST['prenom']);
 $sql->bindParam(':adresse', $_REQUEST['adresse']);
