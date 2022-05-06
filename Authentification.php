@@ -26,7 +26,7 @@
                         <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
                             <label>Entrez votre identifiant :
                                 <br>
-                                <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;">
+                                <div class ="rounded" style="font-size: 15px;  padding-bottom : 10px;">
                                     <input style = "text-align: center;" type="text" name="login"  placeholder="Votre identifiant" required>
                                 
                                 </div>
@@ -41,7 +41,7 @@
                             <label>Entrez votre mot de passe :
                                 <br>
 
-                                <div class ="rounded" style="font-size: 15px; background-color: background-color: lightgray; padding-bottom : 10px;" >
+                                <div class ="rounded" style="font-size: 15px;  padding-bottom : 10px;" >
                                     <input  style = "text-align: center;"type="password" name="mdp" placeholder="Entrez votre mot de passe" required>
                                     
                                 </div>
@@ -66,7 +66,7 @@
                     </br>
                     </br>
 
-                    <button class="rounded-pill" style = "margin-bottom : 70px;background-color: #006430;">
+                    <button class="rounded-pill" style = "margin-bottom : 20px;background-color: #006430;">
                         <a href="AuthentificationAdmin.php" style = "color : white;"> S'identifier en tant qu'administrateur </a>
                     </button>
                 </div>

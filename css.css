@@ -246,11 +246,12 @@ footer {
 }
 .description {
     border: 1px solid black;
-    
+    height: 100%;
   
 }
 .bouton_produit {
-  
+    border-radius:45px;
+    width:100%;
     font-size: 40px;
 }
 
@@ -284,45 +285,107 @@ footer {
     height: auto;
     width:500px;
 }
+@media screen and (max-width: 1200px){
+    .bouton_produit {
+  
+        font-size: 25px; 
+    } 
+    .com_titre {
+        display:block;
+        margin-left:0%;
+    }
+
+}
 
 @media screen and (max-width: 992px){
-.description {
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right:5%;
-    
-}
-.bouton_produit {
-    margin-top:50px;
-    font-size: 40px;
-}
-.photo img {
-    width: 60%;
-}
-.previ img {
+    .description {
+        margin-left:3%;
+        width:95%;
+    }
 
-    border: 1px solid black;
-    border-radius: 2px;
-    height: 50px;
-}
-.previ {
-    margin-top: 5%;
-
-   }
-   .commentaire_cont {
+    .bouton_produit {
+        margin-top:50px;
+        font-size: 40px;
+        
+    }
+    .photo img {
+        width: 100%;
+    }
+    .previ img {
+        margin-bottom:50px;
+        border: 1px solid black;
+        border-radius: 2px;
+        width: 30%;
+        height: 30%;
+    }
+    .previ {
+        margin-top: 10%;
     
-    margin-top: 20px;
-    margin-left:10px;
-    font-size: 20px;
-    background-color:silver;
-    height: auto;
-    width:680px;
+       }
+       .commentaire {
+   
+        margin-top: 10%;
+        border: 1px solid black;
+        height:600px;
+        width:100%;
+    }
+       .com-deroul {
+    height:565px;
+    width: 100%;
+    overflow-y:auto;
 }
+       .commentaire_cont {
+        
+        margin-top: 20px;
+        margin-left:10px;
+        font-size: 20px;
+        background-color:silver;
+        height: auto;
+        width:800px;
+    }
+
 }
 @media screen and (max-width: 768px){
-    .commentaire_cont {
+    .description {
+        width: 90%;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right:5%;
+        
+    }
+    .bouton_produit {
+        margin-top:50px;
+        margin-left:0px;
+        font-size: 40px;
+    }
+    .photo img {
+        width: 80%;
+    }
+    .previ img {
     
+        border: 1px solid black;
+        border-radius: 2px;
+        height: 20%;
+        width: 20%;
+    }
+    .previ {
+        margin-top: 5%;
+    
+       }
+       .commentaire {
+   
+        margin-top: 10%;
+        border: 1px solid black;
+        height:600px;
+        width: 100%;
+    }
+    .com-deroul {
+        height:565px;
+        width: 100%;
+        overflow-y:auto;
+    }
+       .commentaire_cont {
+        
         margin-top: 20px;
         margin-left:10px;
         font-size: 20px;

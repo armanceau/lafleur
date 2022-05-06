@@ -32,10 +32,17 @@
     <input type="text" name="quantite_stock_Produit" required><br/>
 <br>
     <label>Ajouter le code de la catégorie du produit :</label><br/>
-    <input type="text" name="code_categorie_Produit" required><br/>
-<br>
+<?php
+    echo'<select name="code_categorie_Produit">';
+    $sql = 'SELECT * FROM categorie';
+    $table = $connection->query($sql);
+    while ($ligne = $table->fetch()) {
+        echo "<option value=".$ligne['code_de_la_categorie'].">".$ligne['nom_de_la_categorie']."</option>";
+    }
+    echo'</select><br/><br/>';
+?>
 
-    <button type="submit">Ajouter le produit</button>
+    <button type="submit" class="btn btn-success">Ajouter le produit</button>
 
 </form>
 
