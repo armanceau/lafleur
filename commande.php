@@ -1,9 +1,29 @@
 <?php 
 include 'header/header.php'; 
 include 'check-connection.php';
+include 'connection.php';
 
 if (!isset($_REQUEST['total'])){
     header("location: afficher_panier.php");
+}
+
+if (!empty($_REQUEST['bon'])){
+    header('location: bon_de_reduction.php?code='.$_REQUEST['bon']);
+}
+
+$total = $_REQUEST['total'];
+
+$sql = 'SELECT * FROM utiliser WHERE mail_login ="'.$_SESSION["login"].'"' ;
+$table = $connection->query($sql);
+$ligne = $table->fetch();
+
+if (!empty($ligne)){
+    $sqlv2 = 'SELECT * FROM bon_de_reduction WHERE code_de_reduction ="'.$ligne["code_de_reduction"].'"' ;
+    $tablev2 = $connection->query($sqlv2);
+    $lignev2 = $tablev2->fetch();
+    $reduction = $lignev2['valeur_de_renduction_en_pourcentage'];
+    $reduction = $total * $reduction / 100;
+    $total -= $reduction;
 }
 ?>
 
@@ -35,7 +55,7 @@ if (!isset($_REQUEST['total'])){
 
                     <div class="row" style="margin-top: 20px;">
                         <div class="col-8">
-                            <p class="total-price main_color" style="padding-top: 10px;">Total : <b><?php echo number_format($_REQUEST['total'], 2, ',', ' ');?>€</b></p>
+                            <p class="total-price main_color" style="padding-top: 10px;">Total : <b><?php echo number_format($total, 2, ',', ' ');?>€</b></p>
                         </div>
                         <div class="col-4">
                             <input type="submit" class="btn btn-dark" value="Confirmer">
