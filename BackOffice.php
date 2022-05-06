@@ -52,7 +52,7 @@ require 'connection.php';?>
 
 <div class='col-10'>
 
-    <div  class='col-4 border' style =''>
+    <div  class='col-4 border' style ='margin-top: 10px;'>
         <label>Ajouter un produit</label><br/><br/>
         <a href="ajouterProduit.php"><button class="btn btn-success">Ajouter</button></a>
     </div>
