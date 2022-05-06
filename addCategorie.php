@@ -12,7 +12,8 @@ $stmt->bindParam(':codeCateg', $_REQUEST["codeCategorie"]);
 
 $estValide = $stmt->execute();
 
-header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterCategorie");       
+header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterCategorie"); 
+
 ?>
 
 

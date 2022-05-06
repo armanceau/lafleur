@@ -9,6 +9,6 @@ $stmt = $connection->prepare($sql);
 
     $estValide = $stmt->execute();
 
-header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterCategorie");
+header("location: verificationRequete.php?estValide=".$estValide."&type=supprimerProduit");
 
 ?>
