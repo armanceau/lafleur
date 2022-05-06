@@ -9,9 +9,9 @@
     $stmt->bindParam(':ancienCodeCateg', $_REQUEST["ancienCodeCateg"], PDO::PARAM_STR);
 
 
-    $stmt->execute();
-    
-    header("location: BackOffice.php");   
+    $estValide = $stmt->execute();
+
+    header("location: verificationRequete.php?estValide=".$estValide."&type=modifierCategorie"); 
 
 
 

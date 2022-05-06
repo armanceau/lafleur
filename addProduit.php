@@ -11,11 +11,9 @@ $stmt->bindParam(':prixProduit', $_REQUEST["prixProduit"],PDO::PARAM_STR);
 $stmt->bindParam(':quantite_stock_Produit', $_REQUEST["quantite_stock_Produit"],PDO::PARAM_INT);
 $stmt->bindParam(':code_categorie_Produit', $_REQUEST["code_categorie_Produit"],PDO::PARAM_STR);
 
-$stmt->execute();
+$estValide = $stmt->execute();
 
-
-header("location: BackOffice.php");   
-
+header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterProduit"); 
 ?>
 
 

@@ -2,27 +2,16 @@
 
     include 'connection.php';
 
-    try{
-        $sql = "DELETE FROM categorie WHERE code_de_la_categorie =:codeCateg";
-        echo $sql;
-        $stmt = $connection->prepare($sql);
-            $stmt->bindValue(':codeCateg', $_REQUEST["code"], PDO::PARAM_STR);
 
-            $stmt->execute();
+    $sql = "DELETE FROM categorie WHERE code_de_la_categorie =:codeCateg";
+    echo $sql;
+    $stmt = $connection->prepare($sql);
+    $stmt->bindValue(':codeCateg', $_REQUEST["code"], PDO::PARAM_STR);
 
-            header("location: BackOffice.php");
+    $estValide = $stmt->execute();
 
-    }catch (PDOException $e){
-        echo "Erreur: ".$e->getMessage();
-        echo"<a href =\"BackOffice.php\">Retour au BackOffice</a>";
-    }
+    header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterCategorie"); 
 
     
-        
-
-
-
-
-
 
 ?>
