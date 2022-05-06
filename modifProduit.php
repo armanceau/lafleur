@@ -2,8 +2,8 @@
     require 'connection.php';
 
 
-    $stmt = $connection->prepare("UPDATE produit SET reference = ':newReference', designation = ':newDesignation', photo = ':newPhoto', prix = :newPrix,
-    quantite_en_stock = :newQuantite, code_de_la_categorie = ':newCode' WHERE reference = ':ancienReference'");
+    $stmt = $connection->prepare("UPDATE produit SET reference = ':newReference', designation = ':newDesignation', photo = ':newPhoto', prix = ':newPrix',
+    quantite_en_stock = ':newQuantite', code_de_la_categorie = ':newCode' WHERE reference = ':ancienReference'");
     
     echo 'UPDATE produit SET reference = "'.$_REQUEST["newReference"].'", designation = "'.$_REQUEST["newDesignation"].'", 
     photo = "'.$_REQUEST["newPhoto"].'", prix = '. $_REQUEST["newPrix"].', quantite_en_stock = '.$_REQUEST["newQuantite"].', 
@@ -18,14 +18,8 @@
     
     $stmt->bindParam(':ancienReference', $_REQUEST["ancienReference"], PDO::PARAM_STR);
 
-
-    if($stmt->execute()){
-        echo'réussis';
-    }else{
-        echo '<br/><br/>raté';
-    }
     
-    //header("location: BackOffice.php");   
+    header("location: BackOffice.php");   
 
 
 
