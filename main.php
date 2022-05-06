@@ -1,4 +1,5 @@
-<?php require 'header/header.php'; ?>
+<?php require 'header/header.php';
+require 'navbarre.php' ?>
 
 <!-- Liste déroulante catégories -->
 <form method="GET" action="Listederoulante.php">
