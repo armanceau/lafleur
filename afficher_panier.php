@@ -61,6 +61,20 @@ if (!isset($_SESSION['login'])){
                     }
                     
                 }
+
+                $pricet = $price;
+                $sql = 'SELECT * FROM utiliser WHERE mail_login ="'.$_SESSION["login"].'"' ;
+                $table = $connection->query($sql);
+                $ligne = $table->fetch();
+
+                if (!empty($ligne)){
+                    $sqlv2 = 'SELECT * FROM bon_de_reduction WHERE code_de_reduction ="'.$ligne["code_de_reduction"].'"' ;
+                    $tablev2 = $connection->query($sqlv2);
+                    $lignev2 = $tablev2->fetch();
+                    $reduction = $lignev2['valeur_de_renduction_en_pourcentage'];
+                    $reduction = $price * $reduction / 100;
+                    $pricet -= $reduction;
+                }
                     
                 echo '
                 
@@ -69,12 +83,11 @@ if (!isset($_SESSION['login'])){
                         <div class="col-6-sm col-5">
                             <label class="title_prod" for="bon">Bon de réduction :</label>
                             <input type="text" name="bon" style="margin-left: 10px; border-radius: 5px;">
-                            <a href="bon_de_reduction.php"><img src="IMG\Icone_validé.png" height=50></a>
                         </div>
                         <div class="col-3-sm col-5">
                         </div>
                         <div class="col-3-sm col-2">
-                            <p class="title_prod">Total : <b>'.number_format($price, 2, ',', ' ').' €</b></p>
+                            <p class="title_prod">Total : <b>'.number_format($pricet, 2, ',', ' ').' € (-'.number_format($reduction, 2, ',', ' ').'€)</b></p>
                             <input type="text" name="total" value="'.$price.'" hidden>
                         </div>
                         <div class="col-9-sm col-10">

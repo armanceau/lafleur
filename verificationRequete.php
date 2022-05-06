@@ -1,5 +1,9 @@
-<?php require 'header/header.php';
+<?php require 'header/header.php';?>
 
+<div class = 'col-4 border' style ='padding-right : 10px; margin-top : auto; margin-right : auto; margin-left: auto;  margin-bottom : auto;'>
+<p style="margin-top : 20px; margin-bottom : 20px; margin-left : 20px; margin-right : 20px; text-align: center;">
+
+<?php
 if($_REQUEST['estValide']){
     
     switch($_REQUEST['type']){
@@ -63,7 +67,10 @@ if($_REQUEST['estValide']){
 
     
 }
-echo'<br/><a class="btn btn-success" href="BackOffice.php">Retourner au BackOffice</a><br/>';
-
+    echo'<br/><br/><br/><a class="btn btn-success" href="BackOffice.php">Retourner au BackOffice</a><br/>';
+?>
+</p>
+</div>
+<?php
 require 'footer.html';
 ?>

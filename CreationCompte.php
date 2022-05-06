@@ -2,7 +2,6 @@
 include "header/header.php";
 require "connection.php" ;
 
-
 $sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel) ');
 
 $sql->bindParam(':mail_login', $_REQUEST['email']);
