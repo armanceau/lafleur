@@ -27,15 +27,15 @@ $prix = $ligne['prix'];
         </div>
         <div class="col-md-5 col-sm-12 col-xs-12 description">
             <br/>
-             <h2 style="color: green;"><?php echo "<strong>". $titre . "</strong>" ;?>
-                </h2>
+            
+             <h1 style="color: green;"><?php echo "<strong>".$prix ;?>€ - <?php echo "". $titre . "</strong>" ;?></h1>
                 <p class="texte-description">
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aut perspiciatis sit nobis quidem eveniet commodi nisi dolor! Nostrum provident voluptates quos. Ab voluptates officiis nobis placeat illo consequatur suscipit! Lorem ipsum dolor sit amet consectetur </h2>
                     <h2>-adipisicing elit. Beatae at totam quibusdam cupiditate nobis esse quas odio. </h2>
                         <h2>-Natus aut a amet ad tenetur nobis sapiente, autem consectetur odit rem fuga?</h2><p>
         </div>
         <div class="col-md-3 col-sm-12">
-           <?php echo '<a href="addbag.php?ref='.$ref.'"> <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius:45px;height:auto;width:100%;">';?><p> <?php echo $prix ; ?>€</p></button></a>
+           <?php echo '<a href="addbag.php?ref='.$ref.'"> <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius:45px;height:auto;width:100%;">';?><p>Ajoutez au panier </p></button></a>
                 <div class="commentaire">
                     <div class="row">
                         <div class="col-3">
