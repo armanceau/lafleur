@@ -73,36 +73,42 @@ require 'header/header.php';
     imgUrl="./img/Icone_Profil.png"
     type='type="text"'
     id="a"
+    categ="nom"
     break;
   case "#b":
     name="<?php echo $_SESSION['prenom'] ?>"
     imgUrl="./img/Icone_Profil.png"
     type='type="text"'
     id="b"
+    categ="prenom"
     break;
   case "#c":
     name="<?php echo $_SESSION['mail'] ?>"
     imgUrl="./img/Icone_Mail.png"
     type='type="text"'
     id="c"
+    categ="mail"
     break;
   case "#d":
     name="secret"
     imgUrl="./img/Icone_Mot_De_Passe.png"
     type='type="password"'
     id="d"
+    categ="secret"
     break;
   case "#e":
     name="<?php echo $_SESSION['tel'] ?>"
     imgUrl="./img/Icone_Telephone.png"
     type='type="text"'
     id="e"
+    categ="tel"
     break;
   case "#f":
     name="<?php echo $_SESSION['livraison'] ?>"
     imgUrl="./img/Icone_Livraison.png"
     type='type="text"'
     id="f"
+    categ="livraison"
     break;
 
 }
@@ -110,10 +116,11 @@ require 'header/header.php';
   
 
     
-    $(data).replaceWith('<div class="line" id="'+id+'"><img src="'+imgUrl+'" width="70" height="70"><p>'+name+'</p><img class="crayon" src="./IMG/Icone_Crayon.png" width="80" height="70" onclick="OnclickCrayon1(\''+data+'\')"</div>');
+    $(data).replaceWith('<div class="line" id="'+id+'"><img src="'+imgUrl+'" width="70" height="70"><p>'+name+'</p><img class="crayon" src="./IMG/Icone_Crayon.png" width="80" height="70" onclick="OnclickCrayon1(\''+data+'\') "</div>');
     
-
+   
 }
+
 
              
    
