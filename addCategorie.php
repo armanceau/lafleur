@@ -10,9 +10,10 @@ $stmt->bindParam(':nomCateg', $_REQUEST["nomCategorie"]);
 $stmt->bindParam(':codeCateg', $_REQUEST["codeCategorie"]);
 
 
-$stmt->execute();
+$estValide = $stmt->execute();
 
-header("location: BackOffice.php");       
+header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterCategorie"); 
+
 ?>
 
 
