@@ -2,13 +2,13 @@
 require 'connection.php';?>
 
 <label>Ajouter une catégorie</label>
-<a href="ajouterCategorie.php"><button>Ajouter</button></a>
+<a href="ajouterCategorie.php"><button class="btn btn-success">Ajouter</button></a>
 
 <br/><br/>
 
 
 <label>Ajouter un produit</label>
-<a href="ajouterProduit.php"><button>Ajouter</button></a>
+<a href="ajouterProduit.php"><button class="btn btn-success">Ajouter</button></a>
 
 <br/><br/>
 
@@ -29,7 +29,7 @@ require 'connection.php';?>
 
     </select><br/>
     <br>
-    <button type="submit">Modifier</button>
+    <button class="btn btn-success" type="submit">Modifier</button>
 </form>
 
 
@@ -38,7 +38,7 @@ require 'connection.php';?>
 
 <label>Modifier un produit</label>
 <form method="GET" action="modifierProduit.php">
-    <select name="ref">
+    <select name="reference">
         <?php
         
 
@@ -51,14 +51,14 @@ require 'connection.php';?>
 
     </select><br/>
     <br>
-    <button type="submit">Modifier</button>
+    <button class="btn btn-success" type="submit">Modifier</button>
 </form>
 <br/><br/>
 
 
 <label>Supprimer une catégorie</label>
 <form method="GET" action="supprimerCategorie.php">
-    <select name="code">
+    <select  name="code">
         <?php
         
 
@@ -71,7 +71,7 @@ require 'connection.php';?>
 
     </select><br/>
     <br>
-    <button type="submit">Supprimer</button>
+    <button class="btn btn-success" type="submit">Supprimer</button>
 </form>
 
 <br/><br/>
@@ -92,7 +92,7 @@ require 'connection.php';?>
 
     </select><br/>
     <br>
-    <button type="submit">Supprimer</button>
+    <button class="btn btn-success" type="submit">Supprimer</button>
 </form>
 
 
