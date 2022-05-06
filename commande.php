@@ -5,6 +5,10 @@ include 'check-connection.php';
 if (!isset($_REQUEST['total'])){
     header("location: afficher_panier.php");
 }
+
+if (isset($_REQUEST['bon'])){
+    header('location: bon_de_reduction.php?code=?'.$_REQUEST['bon']);
+}
 ?>
 
 <main>

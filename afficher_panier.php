@@ -69,7 +69,6 @@ if (!isset($_SESSION['login'])){
                         <div class="col-6-sm col-5">
                             <label class="title_prod" for="bon">Bon de réduction :</label>
                             <input type="text" name="bon" style="margin-left: 10px; border-radius: 5px;">
-                            <a href="bon_de_reduction.php"><img src="IMG\Icone_validé.png" height=50></a>
                         </div>
                         <div class="col-3-sm col-5">
                         </div>
