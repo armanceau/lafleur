@@ -2,6 +2,7 @@
 <?php 
 require 'connection.php';
 include ("header/header.php"); 
+require 'navbarre.php';
 $ref = $_REQUEST['categ'];
 $sql = 'SELECT *  FROM produit WHERE reference like "%' . $ref . '%"' ;
 $table = $connection->query($sql);
@@ -12,9 +13,9 @@ $prix = $ligne['prix'];
 ?>
 <div class="container-fluid detail-container">
 
-    <div class="row">
-    <div class="col-lg-4 col-md-5 col-xs-12 text-center">
-            <div class="photo">
+    <div class="row mx-auto">
+    <div class="col-lg-4 col-md-5 col-xs-12 my-auto text-center">
+            <div class="photo ">
                 <?php echo "<img src='img/$photo.jpg'>";?>
             </div>
             <div class="previ text-center">
@@ -27,13 +28,15 @@ $prix = $ligne['prix'];
         <div class="col-lg-5 col-md-7 col-xs-12"><div class="description">            
              <h1 style="color: green;"><?php echo "<strong>".$prix ;?>€ - <?php echo "". $titre . "</strong>" ;?></h1>
                 <p class="texte-description">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aut perspiciatis sit nobis quidem eveniet commodi nisi dolor! Nostrum provident voluptates quos. Ab voluptates officiis nobis placeat illo consequatur suscipit! Lorem ipsum dolor sit amet consectetur </h2>
-                    <h2>-adipisicing elit. Beatae at totam quibusdam cupiditate nobis esse quas odio. </h2>
-                        <h2>-Natus aut a amet ad tenetur nobis sapiente, autem consectetur odit rem fuga?</h2><p>
+                <h2>Nos fleurs sont élever et ceuillit dans nos locaux avec le plus grand soins, chaque bouquet est le fruit de plusieur heures de travaille ainsi que la coordination de toute notre équipe afin de vous satisfaire.</h2>
+                    <h2>- Nous n'utilison pas de pesticide pour garantir que nos plantes reste natuelle.</h2>
+                        <h2>- Nos fleurs mature dans nos serre</h2>
+                        <h2>- Nos plants sont ceuillis a pleine maturation affin que vous puissiez le garder le plus longtemps possible</h2>
+                        <h2>je sais plus quoi dire mais bon c'est pas grave je vais parler</h2><p>
 </div> </div>
         <div class="col-lg-3 col-md-12">
-           <?php echo '<a href="addbag.php?ref='.$ref.'"> <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" >';?><p>Ajoutez au panier </p></button></a>
-                <div class="commentaire">
+           <?php echo '<a href="addbag.php?ref='.$ref.'"> <button type="button" class="btn btn-success btn-lg btn-block mx-auto bouton_produit" >';?><p>Ajoutez au panier </p></button></a>
+                <div class="commentaire mx-auto">
                     <div class="row">
 
                         <div class="col-12 text-center">
@@ -42,8 +45,9 @@ $prix = $ligne['prix'];
 
                     </div>
                     <div class="com-deroul"> <hr/>
+                    <marquee>cettez partie n'est pas finit</marquee>
                         <div class="row"><div class="col-8">
-
+                        
                         <boutton  type="button" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;">Ajouter un commentaire<boutton>
                         </div></div>
                                                                                         <div class="commentaire_cont">

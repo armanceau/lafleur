@@ -24,10 +24,10 @@
 
             <div class="col-0"></div>
 
-            <div class="col-12 rounded-pill row" style = "padding-top : 10px;padding-bottom : 10px; background-color : #006430;">
+            <div class="col-12 mx-auto rounded-pill row" style = "padding-top : 10px;padding-bottom : 10px; background-color : #006430;">
                 
 
-                <div class="col-4">
+                <div class="col-6">
                     <!-- Liste déroulante catégories -->
                     <form method="GET" action="Listederoulante.php" style ="margin-left : 10px;border-top-radius: 10px; border-bottom-radius: 10px;">
                         <select name="code">
@@ -47,12 +47,8 @@
                     
                 </div>
 
-                <div class="col-4" style = "text-align : end;">
-                    
-                    
-                </div>
                 
-                <div class="col-4 rounded-pill" style="text-align: end;">  
+                <div class="col-6 rounded-pill" style="text-align: end;">  
                     <div style="font-size: 15px;font-family: lobster; color : white;background-color: #006430;">                 
                         <input type="text" name="recherche" placeholder="Rechercher :" required >
                         <button type="submit">Rechercher</button>
