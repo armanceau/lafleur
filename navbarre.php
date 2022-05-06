@@ -27,7 +27,7 @@
                                 }
                             ?>
                         </select>
-                        
+                        <button type="submit">Rechercher</button>
                     </form>
                     
                 </div>
