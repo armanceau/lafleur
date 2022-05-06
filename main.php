@@ -1,9 +1,6 @@
 <?php require 'header/header.php'; 
 require 'navbarre.php';?>
 
-
-
-<h2>Nos produits du moment</h2>
 <div class="row">
 <div class="container-fluid">
 
