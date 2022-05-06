@@ -3,12 +3,17 @@
 
 include 'connection.php';
 
-$sql = "INSERT categorie VALUES ('".$_REQUEST["codeCategorie"]."','".$_REQUEST["nomCategorie"]."');";
-
-$connection->exec($sql);
 
 
-header("location: BackOffice.php");       
+$stmt = $connection->prepare("INSERT categorie VALUES (:codeCateg, :nomCateg)");
+$stmt->bindParam(':nomCateg', $_REQUEST["nomCategorie"]);
+$stmt->bindParam(':codeCateg', $_REQUEST["codeCategorie"]);
+
+
+$estValide = $stmt->execute();
+
+header("location: verificationRequete.php?estValide=".$estValide."&type=ajouterCategorie"); 
+
 ?>
 
 
