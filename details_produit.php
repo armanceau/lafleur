@@ -13,7 +13,7 @@ $prix = $ligne['prix'];
 <div class="container-fluid detail-container">
 
     <div class="row">
-    <div class="col-md-4 col-xs-12 text-center">
+    <div class="col-lg-4 col-md-5 col-xs-12 text-center">
             <div class="photo">
                 <?php echo "<img src='img/$photo.jpg'>";?>
             </div>
@@ -23,27 +23,23 @@ $prix = $ligne['prix'];
                 echo "<img src='img/$photo.jpg'>";
                 echo "<img src='img/$photo.jpg'>";?>
             </div>
-
         </div>
-        <div class="col-md-5 col-sm-12 col-xs-12 description">
-            <br/>
-            
+        <div class="col-lg-5 col-md-7 col-xs-12"><div class="description">            
              <h1 style="color: green;"><?php echo "<strong>".$prix ;?>€ - <?php echo "". $titre . "</strong>" ;?></h1>
                 <p class="texte-description">
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aut perspiciatis sit nobis quidem eveniet commodi nisi dolor! Nostrum provident voluptates quos. Ab voluptates officiis nobis placeat illo consequatur suscipit! Lorem ipsum dolor sit amet consectetur </h2>
                     <h2>-adipisicing elit. Beatae at totam quibusdam cupiditate nobis esse quas odio. </h2>
                         <h2>-Natus aut a amet ad tenetur nobis sapiente, autem consectetur odit rem fuga?</h2><p>
-        </div>
-        <div class="col-md-3 col-sm-12">
-           <?php echo '<a href="addbag.php?ref='.$ref.'"> <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" style="border-radius:45px;height:auto;width:100%;">';?><p>Ajoutez au panier </p></button></a>
+</div> </div>
+        <div class="col-lg-3 col-md-12">
+           <?php echo '<a href="addbag.php?ref='.$ref.'"> <button type="button" class="btn btn-success btn-lg btn-block bouton_produit" >';?><p>Ajoutez au panier </p></button></a>
                 <div class="commentaire">
                     <div class="row">
-                        <div class="col-3">
-                        </div>
-                        <div class="col-6">
-                    <h2 class="com_titre text-center">Commentaires</h2>
+
+                        <div class="col-12 text-center">
+                    <h2 class="com_titre mx-auto">Commentaires</h2>
                     </div>
-                    <div class="col-3"></div>
+
                     </div>
                     <div class="com-deroul"> <hr/>
                         <div class="row"><div class="col-8">

@@ -19,20 +19,20 @@
 <!-- 3 fleurs les plus chère -->
 
 <h2>Nos produits du moment</h2>
-
+<div class="row">
 <?php
 
     $sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 3';
     $table = $connection->query($sql);
     while ($ligne = $table->fetch()) {
             $ref = $ligne['reference'];
-            echo " <a href='details_produit.php?categ=$ref'style='text-decoration:none;color:black;'><br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\" height=\"200px\" width=\"200px\">"."<br/>";
+            echo "<div class='col-3'><a href='details_produit.php?categ=$ref'style='text-decoration:none;color:black;'><br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Innexistante\" height=\"200px\" width=\"200px\">"."<br/>";
             echo "Référence: ".$ligne["reference"]."<br/>";
             echo "Nom: ".$ligne["designation"]."<br/>";
             echo "Prix: ".$ligne["prix"]."€<br/>";
             echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
         
-            echo "<a href=\"Panier.php?ref=".$ligne["reference"]." style=\"color:black;\"><button type=\"submit\" class=\"btn\">Ajouter au panier</button></a><br/></a>";
+            echo "<a href=\"Panier.php?ref=".$ligne["reference"]." style=\"color:black;\"><button type=\"submit\" class=\"btn\">Ajouter au panier</button></a><br/></a></div>";
 
     }
 
