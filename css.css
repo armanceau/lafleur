@@ -412,15 +412,39 @@ footer {
 
 .line{
     display: flex;
-    /* margin-top: 20px; */
+    padding-top: 10px;
+    margin-top: 10px;
     /* border: solid green; */
 }
+
 .line input{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 15px;
     margin-left: 25px;
+    padding-top: 20px;
     /* border: solid yellow; */
+}
+
+
+.info
+{
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+}
+
+hr{
+    border: solid 1px;
+}
+
+.crayon
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
 }
 
 .line img{
@@ -432,6 +456,7 @@ footer {
     margin-bottom: 20px;
     margin-left: 25px;
     /* border: solid yellow; */
+
 }
 
 
