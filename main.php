@@ -33,7 +33,7 @@ require 'navbarre.php';?>
                                 echo "Prix : ".$ligne["prix"]."€ <br/>";
                                 echo "Quantité disponible : ".$ligne["quantite_en_stock"]."<br/><br>";
                                 echo "<a href=\"addbag.php?ref=".$ligne["reference"]."\" style=\"color:black; margin-right :10px;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Ajouter au panier</button></a>";
-                                echo "<a href=\"details_produit.php?categ='$ref\" style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Détails</button></a><br/>";
+                                echo "<a href='details_produit.php?categ=$ref' style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Détails</button></a><br/>";
                             echo "</div>";
 
                         echo "</div>";
