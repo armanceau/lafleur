@@ -1,5 +1,7 @@
 <?php require 'header/header.php';
-require 'navbarre.php' ?>
+require 'navbarre.php'; 
+require 'connection.php';
+?>
 
 
 <div class="container-fluid">
@@ -12,7 +14,14 @@ require 'navbarre.php' ?>
             <div class="col-3"></div>
 
             <div class="col-6">
-                <h2 class = "rounded-pill" style ="background-color : white; font-family : lobster;">Nos produits du moment</h2>
+                <h2 class = "rounded-pill" style ="background-color : white; font-family : lobster;"><?php  
+                $sql = 'SELECT *  FROM categorie WHERE code_de_la_categorie="'.$_REQUEST["code"].'"' ;
+                $table = $connection->query($sql);
+                while ($ligne = $table->fetch()) {
+                    echo $ligne['nom_de_la_categorie'];
+                }
+                ?>
+            </h2>
             </div>
 
             <div class="col-3"></div>
@@ -20,13 +29,13 @@ require 'navbarre.php' ?>
 
                 <?php
 
-                    require 'connection.php';
+                    
 
                     $sql = 'SELECT *  FROM produit WHERE code_de_la_categorie="'.$_REQUEST["code"].'"' ;
                     $table = $connection->query($sql);
                     while ($ligne = $table->fetch()) {
                 ?>
-                <form method="GET" action="addbag.php">
+    
                     <?php
                         echo "<div class = 'col-4 border border-dark rounded' style ='padding-right : 10px; margin-right : auto; margin-left: auto; background-color : white; margin-bottom : 10px'>";
                             echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
@@ -39,16 +48,18 @@ require 'navbarre.php' ?>
                             echo "</div>";
                         echo "</div>";
                     }
-                    ?>       
+                    ?>  
                     
-                </form>
+                    
+                    <button style = "background-color : #006430; margin-bottom : 10px;" class="btn rounded-pill"><a style ="color: white" href ="main.php">Retour</button></a>   
+
         </div>
 
         <div class="col-1"></div>
     </div>          
 </div>
             
-<button class="btn">Retour</button>
+
 
 <?php require 'footer.html'; ?>
 
