@@ -2,6 +2,7 @@
 
 <div class = 'col-4 border' style ='padding-right : 10px; margin-top : auto; margin-right : auto; margin-left: auto;  margin-bottom : auto;'>
 <p style="margin-top : 20px; margin-bottom : 20px; margin-left : 20px; margin-right : 20px; text-align: center;">
+
 <?php
 if($_REQUEST['estValide']){
     
