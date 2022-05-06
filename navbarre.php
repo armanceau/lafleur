@@ -20,12 +20,11 @@
 
 
 <body>
-    <div class="container-fluid" style = "padding-top: 30px; margin-top : -20px; ">
-        <div class="row">
+    <div class="container-fluid" style = "padding-top: 30px; margin-top : -20px; margin-right : auto; margin-left: auto;">
 
-            <div class="col-1"></div>
+            <div class="col-0"></div>
 
-            <div class="col-10 rounded-pill row" style = "padding-top : 10px;padding-bottom : 10px; background-color : #006430;">
+            <div class="col-12 rounded-pill row" style = "padding-top : 10px;padding-bottom : 10px; background-color : #006430;">
                 
 
                 <div class="col-4">
@@ -62,6 +61,6 @@
                 </div>
             </div>
 
-            <div class="col-1"></div>
+            <div class="col-0"></div>
         </div>
     </div>
