@@ -1,11 +1,12 @@
-<?php 
-include 'header/header.php'; 
+<?php
+include 'header/header.php';
 include 'check-connection.php';
 include 'connection.php';
 
 if (!isset($_REQUEST['total'])){
     header("location: afficher_panier.php");
 }
+
 
 if (!empty($_REQUEST['bon'])){
     header('location: bon_de_reduction.php?code='.$_REQUEST['bon']);
@@ -32,25 +33,38 @@ if (!empty($ligne)){
         <form action="#" method="post">
             <div class="row">
                 <div class="col-3"></div>
-                <div class="col-6">
-                    <label for="card"><img class="card-img" src="header/images/card.png" alt="carte bancaire"></label>
-                    <input class="champ-text-commande" type="text" name="card" id="card" placeholder="Numero De Carte">
+                    <div class="col-6" style = "text-align : center; background-color : #C4C4C4; padding-top : 30px;">
+
+                        <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
+
+                            <label for="card"><img class="card-img" src="header/images/card.png" alt="carte bancaire"></label>
+                            <input class="champ-text-commande col-12 col-md-12 col-md-12 col-lg-12 col-xl-12" type="text" name="card" id="card" placeholder="Numero De Carte">
+                        </div>
 
                     <br/>
 
-                    <label for="ccv"><img class="ccv-img" src="header/images/ccv.png" alt="ccv"></label>
-                    <input class="champ-text-commande" type="text" name="ccv" id="ccv" placeholder="CCV">
 
+                        <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
+                           
+                            <label for="ccv"><img class="ccv-img" src="header/images/ccv.png" alt="ccv"></label>
+                            <input class="champ-text-commande col-12 col-md-12 col-md-12 col-lg-12 col-xl-12" type="text" name="ccv" id="ccv" placeholder="CCV">
+                        </div>
                     <br/>
 
-                    <label for="id"><img class="profil-img" src="header/images/card-profil.png" alt="id"></label>
-                    <input class="champ-text-commande" type="text" name="id" id="id" placeholder="Titulaire De La Carte">
 
+                        <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
+                           
+                            <label for="id"><img class="profil-img" src="header/images/card-profil.png" alt="id"></label>
+                            <input class="champ-text-commande col-12 col-md-12 col-md-12 col-lg-12 col-xl-12" type="text" name="id" id="id" placeholder="Titulaire De La Carte">
+                        </div>
                     <br/>
 
-                    <label for="livraison"><img class="livraison-img" src="header/images/livraison.png" alt="livraison"></label>
-                    <input class="champ-text-commande" type="text" name="livraison" id="livraison" placeholder="Adresse De Livraison">
 
+                        <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
+                           
+                            <label for="livraison"><img class="livraison-img" src="header/images/livraison.png" alt="livraison"></label>
+                            <input class="champ-text-commande col-12 col-md-12 col-md-12 col-lg-12 col-xl-12" type="text" name="livraison" id="livraison" placeholder="Adresse De Livraison">
+                        </div>  
                     <br/>
 
                     <div class="row" style="margin-top: 20px;">
