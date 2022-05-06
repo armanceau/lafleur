@@ -20,6 +20,7 @@ require 'navbarre.php' ?>
             echo "Quantité: ".$ligne["quantite_en_stock"]."<br/>";
         
             echo "<a href=\"Panier.php?ref=".$ligne["reference"]." style=\"color:black;\"><button type=\"submit\" class=\"btn\">Ajouter au panier</button></a><br/></a>";
+    }
 ?>
 <div class="container-fluid">
 
@@ -39,35 +40,32 @@ require 'navbarre.php' ?>
         <br>
 
 
-            <?php
+        <?php
 
-                $sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 6';
-                $table = $connection->query($sql);
-                while ($ligne = $table->fetch()) {
-                        echo "<div class = 'col-4 border border-dark rounded' style ='padding-right : 10px; margin-right : auto; margin-left: auto; background-color : white; margin-bottom : 10px'>";
-                            echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
-                            echo "<div class ='rounded' style = 'background-color : #006430;color: white; margin-bottom : 10px;padding-bottom : 10px;'";
-                                echo "Référence : ".$ligne["reference"]."<br/>";
-                                echo "Nom : ".$ligne["designation"]."<br/>";
-                                echo "Prix : ".$ligne["prix"]."€ <br/>";
-                                echo "Quantité disponible : ".$ligne["quantite_en_stock"]."<br/><br>";
-                                echo "<a href=\"addbag.php?ref=".$ligne["reference"]."\" style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded\">Ajouter au panier</button></a><br/>";
-                                
-                            echo "</div>";
+$sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 6';
+$table = $connection->query($sql);
+while ($ligne = $table->fetch()) {
+        echo "<div class = 'col-4 border border-dark rounded' style ='padding-right : 10px; margin-right : auto; margin-left: auto; background-color : white; margin-bottom : 10px'>";
+            echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
+            echo "<div class ='rounded' style = 'background-color : #006430;color: white; margin-bottom : 10px;padding-bottom : 10px;'";
+                echo "Référence : ".$ligne["reference"]."<br/>";
+                echo "Nom : ".$ligne["designation"]."<br/>";
+                echo "Prix : ".$ligne["prix"]."€ <br/>";
+                echo "Quantité disponible : ".$ligne["quantite_en_stock"]."<br/><br>";
+                echo "<a href=\"addbag.php?ref=".$ligne["reference"]."\" style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded\">Ajouter au panier</button></a><br/>";
+                
+            echo "</div>";
 
-                            
-                            
-                        echo "</div>";
-                }
-                ?>
+            
+            
+        echo "</div>";
+}
+?>
 
-        </div>
-
-        <div class="col-1"></div>
-    </div>
 </div>
 
-
-
+<div class="col-1"></div>
+</div>
+</div>
 
 <?php require 'footer.html';?>
