@@ -1,7 +1,7 @@
 <?php require 'header/header.php'; 
 require 'navbarre.php';?>
 
-<div class="row">
+
 <div class="container-fluid">
 
     <div class="row">
