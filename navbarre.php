@@ -49,11 +49,14 @@
 
                 
                 <div class="col-6 rounded-pill" style="text-align: end;">  
+
+
+                    <form mathod='GET' action="rechercheProduit.php" >
                     <div style="font-size: 15px;font-family: lobster; color : white;background-color: #006430;">                 
                         <input type="text" name="recherche" placeholder="Rechercher :" required >
                         <button type="submit">Rechercher</button>
                     </div>
-                    
+                    </form>
                 </div>
             </div>
 

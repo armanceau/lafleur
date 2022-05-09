@@ -46,40 +46,32 @@ $prix = $ligne['prix'];
                     </div>
                     <div class="com-deroul"> <hr/>
                     <marquee>cettez partie n'est pas finit</marquee>
-                        <div class="row"><div class="col-8">
-                        
-                        <boutton  type="button" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;">Ajouter un commentaire<boutton>
-                        </div></div>
-                                                                                        <div class="commentaire_cont">
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-4">
-                                                                                                    <img src="img/user.jpg" style="height:110px;">
-                                                                                                </div>
-                                                                                                <div class="col-md-4" style="border-left: 1px solid gray;">
-                                                                                            <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
-                                                                                            </div><div class="col-md-4"></div></div>
-                                                                                                <p>locale_fi ter_matchesvnuiqvqivl qilbfd</p>
-                                                                                        </div>
-                                                                                        <div class="commentaire_cont">
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-4">
-                                                                                                    <img src="img/user.jpg" style="height:110px;">
-                                                                                                </div>
-                                                                                                <div class="col-md-4 "style="border-left: 1px solid gray;">
-                                                                                            <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
-                                                                                            </div><div class="col-md-4"></div></div>
-                                                                                                <p>locale_filter _matchesvnuiqvq ivlqilbfd</p>
-                                                                                        </div>
-                                                                                        <div class="commentaire_cont">
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-4">
-                                                                                                    <img src="img/user.jpg" style="height:110px;">
-                                                                                                </div>
-                                                                                                <div class="col-md-4 "style="border-left: 1px solid gray;">
-                                                                                            <p>Nom <br/><span style="color:gray;">poster il y a ...<span> </p>           
-                                                                                            </div><div class="col-md-4"></div></div>
-                                                                                                <p>locale_filter_matchesvnuiqvqivlqilbfd Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed corrupti illo autem assumenda ullam magni iusto dolore nihil excepturi, debitis architecto provident neque eos quibusdam omnis! Enim perferendis impedit magnam?</p>
-                                                                                        </div>
+
+                             
+                             <?php 
+                                $sql = 'SELECT * FROM commentaire inner join utilisateur on commentaire.User_mail = utilisateur.mail_login where idplante like "%'.$ref.'%"';
+                                $table = $connection->query($sql);
+                                while ($ligne = $table->fetch()) {
+                                   ?>
+                                    <div class="commentaire_cont">
+                                     <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="img/user.jpg" style="height:110px;">
+                                        </div>
+                                         <div class="col-md-7" style="border-left: 1px solid gray;">
+                                                <p><?php echo "" .$ligne['nom'] ." " .$ligne["prenom"].""; ?><br/><span style="color:gray;">poster le <?php echo "" .$ligne['DateCommentaire'] . ""; ?><span> </p>           
+                                         </div><div class="col-md-2"></div></div>
+                                        <p><?php echo "".$ligne['contComment']. "";?></p>
+                                        </div><?php } ?>
+                                
+                                <div class="row"><div class="col-8">
+                                    <div class="commentaire_cont text-center">
+                                        <form method="GET" action="Ajouter_com.php">
+                                <label for="comm">votre commentaire</label>
+                                <br/>
+                            <input type="text" style="width:90%; height:150px;" maxlength="500" id="comm" name="comm">
+                        <boutton  type="button" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;">publier<boutton></form>
+                        </div></div></DIV>
                      </div>
                 </div>
 
@@ -87,17 +79,6 @@ $prix = $ligne['prix'];
     </div>
     
 </div>
-<script>
-      function openNav() {
-        document.getElementById("mySidenav").style.display = "block";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.display = "none";
-      }
-      </script>
 <?php 
 include "footer.html";
 ?>
-
-
