@@ -44,7 +44,7 @@ $prix = $ligne['prix'];
                     </div>
 
                     </div>
-                    <div class="com-deroul"> <hr/>
+                    <div class="com-deroul">
                     <marquee>cettez partie n'est pas finit</marquee>
 
                              
@@ -70,7 +70,7 @@ $prix = $ligne['prix'];
                                 <label for="comm">votre commentaire</label>
                                 <br/>
                             <input type="text" style="width:90%; height:150px;" maxlength="500" id="comm" name="comm">
-                        <boutton  type="button" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;">publier<boutton></form>
+                        <input type="submit" values="publier" class="btn btn-secondary" style="margin-left:10px; font-size:20px; background-color:silver; color:black;"></form>
                         </div></div></DIV>
                      </div>
                 </div>
