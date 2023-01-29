@@ -5,11 +5,12 @@ require 'navbarre.php';?>
 
 <div class="container">
 
-    <div class="row">
+    <div class="row rounded" style = "text-align : center; background-color : #C4C4C4; padding-top : 10px; margin-bottom : 30px;">
 
         <div class="col-1"></div>
 
-        <div class="col-10 rounded row" style = "text-align : center; background-color : #C4C4C4; padding-top : 10px; margin-bottom : 30px;">
+        <div class="col-10 rounded row" >
+            
             <div class="col-3"></div>
 
             <div class="col-6">
@@ -17,7 +18,11 @@ require 'navbarre.php';?>
             </div>
 
             <div class="col-3"></div>
-        <br>
+        <div class="col-1"></div>
+
+        <div class="row">
+
+        
 
 
             <?php
@@ -44,10 +49,11 @@ require 'navbarre.php';?>
                         echo "</div>";
                 }
                 ?>
+                </div>
     
         </div>
 
-        <div class="col-1"></div>
+        
     </div>
 </div>
 <?php
