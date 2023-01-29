@@ -1,8 +1,9 @@
 <?php require 'header/header.php'; 
 require 'navbarre.php';?>
 
-<div class="row">
-<div class="container-fluid">
+
+
+<div class="container">
 
     <div class="row">
 
@@ -24,15 +25,20 @@ require 'navbarre.php';?>
                 $sql = 'SELECT * FROM produit  ORDER BY pdt_prix DESC LIMIT 6';
                 $table = $connection->query($sql);
                 while ($ligne = $table->fetch()) {
-                    $ref =$ligne["pdt_ref"];
+
+                    $reference = $ligne["pdt_ref"];
+                    $image = $ligne["pdt_image"];
+                    $designation = $ligne["pdt_designation"];
+                    $prix = $ligne["pdt_prix"];
+
                         echo "<div class = 'col-4 border border-dark rounded' style ='padding-right : 10px; margin-right : auto; margin-left: auto; background-color : white; margin-bottom : 10px'>";
-                            echo "<br/><td><img src=\"IMG/".$ligne["pdt_image"].".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
+                            echo "<br/><td><img src=\"IMG/".$image.".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
                             echo "<div class ='rounded' style = 'background-color : #006430;color: white; margin-bottom : 10px;padding-bottom : 10px;'";
-                                echo "Référence : ".$ligne["pdt_ref"]."<br/>";
-                                echo "Nom : ".$ligne["pdt_designation"]."<br/>";
-                                echo "Prix : ".$ligne["pdt_image"]."€ <br/>";
-                                echo "<a href=\"addbag.php?ref=".$ligne["pdt_ref"]."\" style=\"color:black; margin-right :10px;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Ajouter au panier</button></a>";
-                                echo "<a href='details_produit.php?categ=$ref' style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Détails</button></a><br/>";
+                                echo "Référence : ".$reference."<br/>";
+                                echo "Nom : ".$designation."<br/>";
+                                echo "Prix : ".$prix."€ <br/>";
+                                echo "<a href=\"addbag.php?ref=".$reference."\" style=\"color:black; margin-right :10px;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Ajouter au panier</button></a>";
+                                echo "<a href='details_produit.php?categ=$reference' style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Détails</button></a><br/>";
                             echo "</div>";
 
                         echo "</div>";

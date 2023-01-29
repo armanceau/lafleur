@@ -4,29 +4,30 @@ require 'connection.php';
 include ("header/header.php"); 
 require 'navbarre.php';
 $ref = $_REQUEST['categ'];
-$sql = 'SELECT *  FROM produit WHERE reference like "%' . $ref . '%"' ;
+$sql = 'SELECT *  FROM produit WHERE pdt_ref like "%' . $ref . '%"' ;
 $table = $connection->query($sql);
 $ligne = $table->fetch();
-$photo = $ligne['photo'];
-$titre = $ligne['designation'];
-$prix = $ligne['prix'];
+$reference = $ligne["pdt_ref"];
+$image = $ligne["pdt_image"];
+$designation = $ligne["pdt_designation"];
+$prix = $ligne["pdt_prix"];
 ?>
 <div class="container-fluid detail-container">
 
     <div class="row mx-auto">
     <div class="col-lg-4 col-md-5 col-xs-12 my-auto text-center">
             <div class="photo ">
-                <?php echo "<img src='img/$photo.jpg'>";?>
+                <?php echo "<img src='img/$image.jpg'>";?>
             </div>
             <div class="previ text-center">
-                <?php echo "<img src='img/$photo.jpg'>";
-                echo "<img src='img/$photo.jpg'>";
-                echo "<img src='img/$photo.jpg'>";
-                echo "<img src='img/$photo.jpg'>";?>
+                <?php echo "<img src='img/$image.jpg'>";
+                echo "<img src='img/$image.jpg'>";
+                echo "<img src='img/$image.jpg'>";
+                echo "<img src='img/$image.jpg'>";?>
             </div>
         </div>
         <div class="col-lg-5 col-md-7 col-xs-12"><div class="description">            
-             <h1 style="color: green;"><?php echo "<strong>".$prix ;?>€ - <?php echo "". $titre . "</strong>" ;?></h1>
+             <h1 style="color: green;"><?php echo "<strong>".$prix ;?>€ - <?php echo "". $designation . "</strong>" ;?></h1>
                 <p class="texte-description">
                 <h2>Nos fleurs sont élever et ceuillit dans nos locaux avec le plus grand soins, chaque bouquet est le fruit de plusieur heures de travaille ainsi que la coordination de toute notre équipe afin de vous satisfaire.</h2>
                     <h2>- Nous n'utilison pas de pesticide pour garantir que nos plantes reste natuelle.</h2>
