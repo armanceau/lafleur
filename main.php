@@ -21,18 +21,17 @@ require 'navbarre.php';?>
 
             <?php
 
-                $sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 6';
+                $sql = 'SELECT * FROM produit  ORDER BY pdt_prix DESC LIMIT 6';
                 $table = $connection->query($sql);
                 while ($ligne = $table->fetch()) {
-                    $ref =$ligne["reference"];
+                    $ref =$ligne["pdt_ref"];
                         echo "<div class = 'col-4 border border-dark rounded' style ='padding-right : 10px; margin-right : auto; margin-left: auto; background-color : white; margin-bottom : 10px'>";
-                            echo "<br/><td><img src=\"IMG/".$ligne["photo"].".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
+                            echo "<br/><td><img src=\"IMG/".$ligne["pdt_image"].".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
                             echo "<div class ='rounded' style = 'background-color : #006430;color: white; margin-bottom : 10px;padding-bottom : 10px;'";
-                                echo "Référence : ".$ligne["reference"]."<br/>";
-                                echo "Nom : ".$ligne["designation"]."<br/>";
-                                echo "Prix : ".$ligne["prix"]."€ <br/>";
-                                echo "Quantité disponible : ".$ligne["quantite_en_stock"]."<br/><br>";
-                                echo "<a href=\"addbag.php?ref=".$ligne["reference"]."\" style=\"color:black; margin-right :10px;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Ajouter au panier</button></a>";
+                                echo "Référence : ".$ligne["pdt_ref"]."<br/>";
+                                echo "Nom : ".$ligne["pdt_designation"]."<br/>";
+                                echo "Prix : ".$ligne["pdt_image"]."€ <br/>";
+                                echo "<a href=\"addbag.php?ref=".$ligne["pdt_ref"]."\" style=\"color:black; margin-right :10px;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Ajouter au panier</button></a>";
                                 echo "<a href='details_produit.php?categ=$ref' style=\"color:black;\"><button style = 'background-color : #C4C4C4;' type='submit' class=\"btn rounded-pill\">Détails</button></a><br/>";
                             echo "</div>";
 

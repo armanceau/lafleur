@@ -1,7 +1,7 @@
 <?php 
 
 try {
-    $dns ='mysql:host=localhost;dbname=baselafleur';
+    $dns ='mysql:host=localhost;dbname=lafleur';
     $uttilisateur ='root';
     $motDePasse ='';
     $connection = new PDO( $dns, $uttilisateur, $motDePasse );
