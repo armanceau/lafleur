@@ -1,5 +1,5 @@
 <?php
 
-header("location: main.php");
+header("location: home.php");
 
 ?>
