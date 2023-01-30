@@ -18,7 +18,7 @@
                 <div class="col-1"></div>
                 <div class="col-10">
                     <a href="home.php">
-                        <img class="imgIndex" src="assets\icons\logoLaFleur2.PNG" alt="logo" height="" width="">
+                        <img class="imgIndex" src="assets\icons\logoLaFleur2.PNG" alt="logo">
                     </a>
                 </div>
                 <div class="col-1"></div>
