@@ -1,9 +1,9 @@
 
 <?php 
 require 'connection.php';
-include ("header/header.php"); 
-require 'navbarre.php';
-$ref = $_REQUEST['categ'];
+require 'htmlAssets\header.php'; 
+
+$ref = $_REQUEST['id'];
 $sql = 'SELECT *  FROM produit WHERE pdt_ref like "%' . $ref . '%"' ;
 $table = $connection->query($sql);
 $ligne = $table->fetch();
