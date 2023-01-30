@@ -30,7 +30,7 @@
         <div class="col-6">
             <div class="row">
                 <div class="col-6">
-                    <?php
+                     <?php
                     require "connection.php";
                         $sql=$connection->prepare("SELECT * FROM produit LIMIT 1");
                         $sql->execute();
