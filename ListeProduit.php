@@ -12,8 +12,8 @@
         ?>
         <div>
           <h3><?php echo $produit['designation'];?></h3>
-          <img src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>"> 
-          <a href="details_produit.php?id="<?php echo $produit['reference'];?>><button>-></button></a>
+          <img src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>">
+          <a href="details_produit.html?id="<?php echo $produit['reference'];?>><button>-></button></a>
         </div>
         <?php
     }

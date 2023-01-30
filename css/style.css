@@ -353,72 +353,146 @@
 }
 
 /*details_produit*/
-.detail-container {
-    margin-top: 5%;
-    margin-bottom: 5%;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
-.photo img {
-    width: 90%;
+body,html { 
+    min-height:100% 
 }
-.previ {
- margin-top: 10%;
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(45deg, #131086, #b621f3);
+    padding: 40px;
 }
-.previ img {
-    margin-left: 10px;
-    border: 1px solid black;
-    border-radius: 2px;
-    height: 80px;
+
+.container {
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
 }
-.previ img:hover {
-    box-shadow: 0 0 4px 3px rgba(0, 140, 186, 0.5);
-    background: gray;
+
+.login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    background-color: white;
 }
-.description {
-    border: 1px solid black;
-    height: 100%;
-  
+
+.login-right{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
 }
-.description h1,h2{
-    margin-left:10px;
-    margin-top:10px;
+
+.login-header {
+    margin-bottom: 50px;
 }
-.bouton_produit {
-    border-radius:45px;
-    width:100%;
+
+.login-header>h1{
     font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.commentaire {
-   
-    margin-top: 10%;
-    border: 1px solid black;
-    height:500px;
+.login-header>p{
+        opacity: .7;
+}
 
-}
-.com_titre{
-    background-color: silver ;
-    margin-top: -25px ;
-    font-family: italianno;
-    font-size: 40px;
-    border-radius: 50px;
-    width: 225px;
-
-}
-.com-deroul {
-    height:465px;
-    width: 100%;
-    overflow-y:auto;
-}
-.commentaire_cont {
+.login-form {
     
-    margin-top: 20px;
-    margin-left:10px;
-    font-size: 20px;
-    background-color:silver;
-    height: auto;
-    width:500px;
+    width: 450px;
+
 }
+
+.login-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.login-form-footer {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.login-form-footer>a {
+    flex: 6;
+    gap: 15px;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: .6rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+
+}
+
+.login-form-footer>a:hover {
+    background-color: #eee;
+}
+
+
+
+
+.form-item label:not(.checkboxLabel){
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 10px;
+    transform: translate(30px, -10px);
+    font-size: 14px;
+}
+
+input[type='email'],
+input[type='password'] {
+    border: 1px solid black;
+    height: 55px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18 px;
+    border-radius: 100px;
+}
+
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    accent-color: #131086 ;
+}
+
+button{
+    border: none;
+    background: linear-gradient(45deg, #131086, #b621f3 );
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px){
     .bouton_produit {
   

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='css\style.css' rel='stylesheet'>
+  <title>Document</title>
+</head>
+<body>
+
+  <!--
+  <?php 
+  require 'connection.php';
+  require 'htmlAssets\header.php'; 
+  
+  $ref = $_REQUEST['id'];
+  $sql = 'SELECT *  FROM produit WHERE reference like "%' . $ref . '%"' ;
+  $table = $connection->query($sql);
+  $ligne = $table->fetch();
+  $reference = $ligne["reference"];
+  $image = $ligne["photo"];
+  $designation = $ligne["designation"];
+  $prix = $ligne["prix"];
+  ?> 
+  -->
+  
+  <div class="container">
+    <div class="left-side">
+        <div class="header-side">
+            <h1>Welcome to Our Application</h1>
+            <p>please login to use the platform</p>
+        </div>
+        <form action="" class="form">
+            <div class="login-form-content">
+                <div class="form-item">
+                    <label for="email">Enter Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-item">
+                    <label for="password">Enter password</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-item">
+                    <div class="checkbox">
+                        <input type="checkbox" id="rememberMeCheckbox" checked>
+                        <label for="rememberMeCheckbox" class="checkboxLabel">Remember me</label>
+                    </div>
+                </div>
+                <button type="submit">Sign In</button>
+            </div>
+            <div class="login-form-footer">
+                <a href="#">
+                    <img src="https://logos-marques.com/wp-content/uploads/2020/09/Instagram-logo.jpg" width="30" alt="logo instagram"> Instagram Login
+                </a>
+                <a href="#">
+                    <img src="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_1280.png" width="30" alt="logo google"> Google Login
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="login-right">
+        <img src="IMG-japon.jpg"  alt="image de remplissage" width="100%">
+    </div>
+</div>
+  
+  
+  
+  
+  <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.display = "block";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.display = "none";
+        }
+        </script>
+  
+  <?php 
+  include "footer.html";
+  ?>
+  
+</body>
+</html>
+
+  
+
+
