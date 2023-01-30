@@ -353,33 +353,17 @@
 }
 
 /*details_produit*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 
-* {
-    box-sizing: border-box;
-}
 
-body,html { 
-    min-height:100% 
-}
-
-body{
-    padding: 0;
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    background: linear-gradient(45deg, #131086, #b621f3);
-    padding: 40px;
-}
-
-.container {
+.container_detail_produit{
     min-height: calc(100vh - 40px * 2);
     display: grid;
     grid-template-columns: 50% 50%;
-    border-radius: 10px;
     overflow: hidden;
 }
 
-.login-left{
+.left-side{
+    border: solid 2px red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -387,111 +371,13 @@ body{
     background-color: white;
 }
 
-.login-right{
-    background-color: #eee;
-    display: flex;
-    justify-content: center;
-}
-
-.login-header {
-    margin-bottom: 50px;
-}
-
-.login-header>h1{
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.login-header>p{
-        opacity: .7;
-}
-
-.login-form {
-    
-    width: 450px;
-
-}
-
-.login-form-content {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.login-form-footer {
-    display: flex;
-    gap: 30px;
-    margin-top: 70px;
-}
-
-.login-form-footer>a {
-    flex: 6;
-    gap: 15px;
-    border: 1px solid black;
-    border-radius: 100px;
-    padding: .6rem;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    color: black;
-    text-decoration: none;
-
-}
-
-.login-form-footer>a:hover {
-    background-color: #eee;
-}
-
-
-
-
-.form-item label:not(.checkboxLabel){
-    display: inline-block;
+.right-side{
+    border: solid 2px greenyellow;
     background-color: white;
-    margin-bottom: 10px;
-    position: absolute;
-    padding: 0 10px;
-    transform: translate(30px, -10px);
-    font-size: 14px;
-}
-
-input[type='email'],
-input[type='password'] {
-    border: 1px solid black;
-    height: 55px;
-    padding: 0 2rem;
-    width: 100%;
-    outline: none;
-    transition: background .5s;
-    font-size: 18 px;
-    border-radius: 100px;
-}
-
-
-.checkbox{
     display: flex;
-    align-items: center;
-    gap: 7px;
+    justify-content: center;
 }
 
-input[type='checkbox']{
-    width: 20px;
-    height: 20px;
-    accent-color: #131086 ;
-}
-
-button{
-    border: none;
-    background: linear-gradient(45deg, #131086, #b621f3 );
-    color: white;
-    padding: 1rem;
-    border-radius: 100px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    height: 55px;
-    cursor: pointer;
-}
 
 @media screen and (max-width: 1200px){
     .bouton_produit {
