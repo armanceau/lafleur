@@ -40,10 +40,20 @@
 /* FIN HEADER ET NAVBAR */
 
 
-
-footer {
-    margin-top:auto; 
+.footer{
+    font-family: 'Amatic SC';
+    border-top: 1px solid #000;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0
 }
+
+.footer, h1{
+    font-size: xx-large;
+}
+
+
     
 .main_color{
     color : #006430;

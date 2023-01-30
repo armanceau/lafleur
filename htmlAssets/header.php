@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="col-10" id="colDescend">
-                        <div class="row link">
+                        <div class="row">
                             <div class="col-3">
                                 <a class="link" href="#">
                                     <h2>Accueil</h2> 
