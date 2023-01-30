@@ -5,6 +5,7 @@
 
 
 
+/* HEADER ET NAVBAR */
 
 .header{
     font-family: 'Amatic SC';
@@ -12,15 +13,31 @@
     border-bottom: 1px solid #000;
 }
 
-.header > h1{
+.header, h1{
     font-size: xx-large;
 }
 
-.header > a{
+.header , a{
     text-decoration: none;
     color: #000;
 }
 
+.link{
+    color: #1E1E1E;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #88B494;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+#colDescend{
+    margin-top: 9px;
+}
+
+/* FIN HEADER ET NAVBAR */
 
 
 
