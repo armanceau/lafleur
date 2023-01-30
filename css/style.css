@@ -5,7 +5,7 @@
 
 
 
-/* HEADER ET NAVBAR */
+/* HEADER */
 
 .header{
     font-family: 'Amatic SC';
@@ -37,8 +37,9 @@
     margin-top: 9px;
 }
 
-/* FIN HEADER ET NAVBAR */
+/* FIN HEADER */
 
+/* FOOTER */
 
 .footer{
     font-family: 'Amatic SC';
@@ -53,6 +54,7 @@
     font-size: xx-large;
 }
 
+/* FIN FOOTER */
 
     
 .main_color{
