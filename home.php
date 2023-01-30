@@ -1,5 +1,7 @@
-<?php require 'header/header.php'; 
-require 'navbarre.php';?>
+<?php 
+    require 'htmlAssets\header.php'; 
+    require 'htmlAssets\navbarre.php';
+?>
 
 
 
@@ -27,14 +29,15 @@ require 'navbarre.php';?>
 
             <?php
 
-                $sql = 'SELECT * FROM produit  ORDER BY pdt_prix DESC LIMIT 6';
+                $sql = 'SELECT * FROM produit  ORDER BY prix DESC LIMIT 6';
                 $table = $connection->query($sql);
                 while ($ligne = $table->fetch()) {
 
-                    $reference = $ligne["pdt_ref"];
-                    $image = $ligne["pdt_image"];
-                    $designation = $ligne["pdt_designation"];
-                    $prix = $ligne["pdt_prix"];
+                    $reference = $ligne["reference"];
+                    $image = $ligne["photo"];
+                    $designation = $ligne["designation"];
+                    $prix = $ligne["prix"];
+                    $quantite = $ligne["quantite_en_stock"];
 
                         echo "<div class = 'col-4 border border-dark rounded' style ='padding-right : 10px; margin-right : auto; margin-left: auto; background-color : white; margin-bottom : 10px'>";
                             echo "<br/><td><img src=\"IMG/".$image.".jpg\" alt=\"Photo Inexistante\" height=\"180px\" width=\"290px\" style = 'border-radius : 10px;'> "."<br><br>";
@@ -56,9 +59,7 @@ require 'navbarre.php';?>
         
     </div>
 </div>
+
 <?php
-
-
-
-
-require 'footer.html';
+    require 'htmlAssets\footer.html';
+?>

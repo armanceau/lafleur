@@ -1,14 +1,28 @@
-/* Police italiano */
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+/* Police Amatic SC */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
-body{
-    /* font-family: 'italianno';  */
 
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    
+
+
+
+
+.header{
+    font-family: 'Amatic SC';
+    margin-top: 10px;
+    border-bottom: 1px solid #000;
 }
+
+.header > h1{
+    font-size: xx-large;
+}
+
+.header > a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
 
 footer {
     margin-top:auto; 
