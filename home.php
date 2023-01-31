@@ -15,7 +15,7 @@
                     <div class="row" id="formSearchHome">
                         <div class="col-2"></div>
                         <div class="col-8">
-                            <form class="inputSearch" method="GET" action="ListeProduit.php">
+                            <form class="inputSearch" method="GET" action="rechercheProduit.php">
                                 <input type="text" name="recherche" placeholder="Déja une idée ?">
                                 <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
                             </form> 
