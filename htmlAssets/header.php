@@ -32,25 +32,25 @@
                         </div>
                     </div>
 
-                    <div class="col-10">
-                        <div class="row link">
+                    <div class="col-10" id="colDescend">
+                        <div class="row">
                             <div class="col-3">
-                                <a href="#">
+                                <a class="link" href="#">
                                     <h2>Accueil</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a href="#">
+                                <a class="link" href="#">
                                     <h2>Shop</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a href="#">
+                                <a class="link" href="#">
                                     <h2>Profil</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a href="#">
+                                <a class="link" href="#">
                                     <h2>Panier</h2> 
                                 </a>
                             </div>

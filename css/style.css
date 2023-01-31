@@ -1,10 +1,14 @@
 /* Police Amatic SC */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
+/* Police Belgrano */
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
 
 
 
 
+
+/* HEADER */
 
 .header{
     font-family: 'Amatic SC';
@@ -12,22 +16,134 @@
     border-bottom: 1px solid #000;
 }
 
-.header > h1{
-    font-size: xx-large;
+.header, h1{
+    font-size: 50px;
 }
 
-.header > a{
+.header , a{
     text-decoration: none;
     color: #000;
 }
 
-
-
-
-footer {
-    margin-top:auto; 
+.link{
+    color: #1E1E1E;
+    text-decoration: none;
+    text-align: center;
 }
+
+.link:hover{
+    color: #88B494;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+#colDescend{
+    margin-top: 9px;
+}
+
+/* FIN HEADER */
+
+
+
+/* FOOTER */
+
+.footer{
+    font-family: 'Amatic SC';
+    border-top: 1px solid #000;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0
+}
+
+.footer > h1{
+    font-size: xx-large;
+}
+
+/* FIN FOOTER */
+
     
+
+/* INDEX LOADER */
+
+.imgIndex{
+    margin-top: 30%;
+    width: 30%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FIN INDEX LOADER */
+
+
+/* HOME */
+
+.home{
+    margin-top: 5%;
+}
+
+#homePresentation{
+    font-family: 'Belgrano', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.spanGreen{
+    color: #88B494;
+}
+
+.inputSearch{
+
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(15, 15, 51, 0.4);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+.inputSearch > input{
+    outline: none;
+    border: none;
+    margin-left: 15%;
+}
+
+.inputSearch > input:hover{
+    border: none;
+    outline: none;
+    border: none;
+}
+
+#formSearchHome{
+    margin-top: 15%;
+}
+
+
+.arrowButton{
+    height: 50px;
+    width: 50px;
+}
+
+.buttonSubmitArrow{
+    outline: none;
+    border: none;
+    background-color: #88B494;
+    margin-left: 21.5px;
+    border-radius: 15px 15px 15px 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.divGreenHome{
+    background-color: #88B494;
+}
+
+/* FIN HOME */
+
+
+
 .main_color{
     color : #006430;
 }
