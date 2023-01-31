@@ -29,7 +29,7 @@
                 <div class="col-6">
                      <?php
                     require "connection.php";
-                        $sql=$connection->prepare("SELECT * FROM produit ORDER BY prix LIMIT 1");
+                        $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='Bonzai' ORDER BY prix LIMIT 1 ");
                         $sql->execute();
                         $ligne = $sql->fetchall();
 
@@ -37,7 +37,7 @@
                             $photo = $produit['photo'];
                             ?>
                                 <div>
-                                    <img src="assets/images/<?php echo $produit['photo'];?>.jpg" alt="<?php echo $produit['designation'];?>">
+                                    <img src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="531" width="427">
                                     <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
                                 </div>
                             <?php
