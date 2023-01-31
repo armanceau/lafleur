@@ -35,22 +35,22 @@
                     <div class="col-10" id="colDescend">
                         <div class="row">
                             <div class="col-3">
-                                <a class="link" href="#">
+                                <a class="link" href="home.php">
                                     <h2>Accueil</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="link" href="#">
+                                <a class="link" href="shop.php">
                                     <h2>Shop</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="link" href="#">
+                                <a class="link" href="Authentification.php">
                                     <h2>Profil</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="link" href="#">
+                                <a class="link" href="affichier_panier.php">
                                     <h2>Panier</h2> 
                                 </a>
                             </div>

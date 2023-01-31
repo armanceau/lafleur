@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 30 jan. 2023 à 14:39
+-- Généré le : mar. 31 jan. 2023 à 16:32
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -141,6 +141,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `prix` float NOT NULL,
   `quantite_en_stock` int(11) NOT NULL,
   `code_de_la_categorie` char(20) COLLATE utf8_bin NOT NULL,
+  `description` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`reference`),
   KEY `produit_categorie_FK` (`code_de_la_categorie`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -149,17 +150,17 @@ CREATE TABLE IF NOT EXISTS `produit` (
 -- Déchargement des données de la table `produit`
 --
 
-INSERT INTO `produit` (`reference`, `designation`, `photo`, `prix`, `quantite_en_stock`, `code_de_la_categorie`) VALUES
-('b01', '3 bulbes de bégonias', 'bulbes_begonia', 6, 100, 'bul'),
-('b02', '10 bulbes de dahlias', 'bulbes_dahlia', 13, 100, 'bul'),
-('b03', '50 glaïeuls', 'bulbes_glaieuil', 10, 100, 'bul'),
-('m01', 'Lot de 3 marguerites', 'massif_marguerite', 16, 100, 'mas'),
-('m02', 'Pour un bouquet de 6 pensées', 'massif_pensee', 7, 100, 'mas'),
-('m03', 'Mélange varié de 10 plantes', 'massif_melange', 16, 100, 'mas'),
-('r01', '1 pied spécial grandes fleurs', 'rosier_gdefleur', 21, 100, 'ros'),
-('r02', 'Une variété sélectionné', 'rosiers_parfum', 10, 100, 'ros'),
-('r03', 'Rosier arbuste', 'rosiers_arbuste', 9, 100, 'ros'),
-('r44', 'roses exceptionnelles', 'X', 45.25, 5, 'ros');
+INSERT INTO `produit` (`reference`, `designation`, `photo`, `prix`, `quantite_en_stock`, `code_de_la_categorie`, `description`) VALUES
+('b01', '3 bulbes de bégonias', 'bulbes_begonia', 6, 100, 'bul', ''),
+('b02', '10 bulbes de dahlias', 'bulbes_dahlia', 13, 100, 'bul', ''),
+('b03', '50 glaïeuls', 'bulbes_glaieuil', 10, 100, 'bul', ''),
+('m01', 'Lot de 3 marguerites', 'massif_marguerite', 16, 100, 'mas', ''),
+('m02', 'Pour un bouquet de 6 pensées', 'massif_pensee', 7, 100, 'mas', ''),
+('m03', 'Mélange varié de 10 plantes', 'massif_melange', 16, 100, 'mas', ''),
+('r01', '1 pied spécial grandes fleurs', 'rosier_gdefleur', 21, 100, 'ros', ''),
+('r02', 'Une variété sélectionné', 'rosiers_parfum', 10, 100, 'ros', ''),
+('r03', 'Rosier arbuste', 'rosiers_arbuste', 9, 100, 'ros', ''),
+('r44', 'roses exceptionnelles', 'X', 45.25, 5, 'ros', '');
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ INSERT INTO `produit` (`reference`, `designation`, `photo`, `prix`, `quantite_en
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `mail_login` char(100) COLLATE utf8_bin NOT NULL,
-  `mot_de_passe_user` char(64) COLLATE utf8_bin NOT NULL,
+  `mot_de_passe_user` char(255) COLLATE utf8_bin NOT NULL,
   `nom` char(50) COLLATE utf8_bin NOT NULL,
   `prenom` char(50) COLLATE utf8_bin NOT NULL,
   `adresse` char(100) COLLATE utf8_bin NOT NULL,
@@ -183,8 +184,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`mail_login`, `mot_de_passe_user`, `nom`, `prenom`, `adresse`, `tel`) VALUES
-('lucas.arredondo@test.com', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'arredondo', 'lucas', '55 rue du faubourg Saint-Honoré, 75008, Paris', '01 42 92 81 00'),
-('test.test@test.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Test', 'test', '4 rue Neuve Saint-Aignan, 45000 Orléans', '02 38 78 13 00');
+('test2@test2.test2', '$2y$10$/JGEOKirXk47ViC6TmV9pOhC3QhxEXEBigUL.AMFZUQMOWtvREXmS', 'test2', 'test2', 'test2', '0102030102');
 
 --
 -- Contraintes pour les tables déchargées
