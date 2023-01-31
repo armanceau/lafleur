@@ -54,11 +54,27 @@
                 </div>
                 
             </div>
-            <div class="row">
-                <div class="col-6"></div>
 
-                <div class="col-6" class="desgProduit">
-                    <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
+            <div class="row">
+                <div class="col-4">
+                    
+                </div>
+
+                <div class="col-8 desgProduit">
+                    
+                        <div class="row">
+                            <div class="col-3 desgProduitDiv">
+                                <a class="link"href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                                    <?php echo $produit['designation'];?>
+                                </a> 
+                            </div>
+                            <div class="col-3 desgProduitDiv right">
+                                <a class="link" href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                                    <img class="arrowButton" src="assets\icons\arrow.png" alt="flèche">
+                                </a> 
+                            </div>
+                        <div class="col-6"></div> 
+                    </a>    
                 </div>
             </div>
             
