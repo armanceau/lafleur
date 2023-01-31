@@ -9,73 +9,55 @@
 <head>
 
 <body>
-    <div class="container-fluid" style = "padding-top: 90px;">
-        <div class="row">
 
-            <div class="col-3"></div>
+    <form method='GET' action='verification.php'>
+        <div class="container_login">
 
-            <div class="col-6 rounded row" style = "text-align : center; background-color : #C4C4C4; padding-top : 50px;">
- 
-                <div class="col-1"></div>
-                    
-
-                <div class="col-10">
-
-                    <form method='GET' action='verification.php'>
-
-                        <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
-                            <label>Entrez votre identifiant :
-                                <br>
-                                <div class ="rounded" style="font-size: 15px;  padding-bottom : 10px;">
-                                    <input style = "text-align: center;" type="text" name="login"  placeholder="Votre identifiant" required>
-                                
-                                </div>
-                            </label>
-                        </div>
-                        
-                        </br>
-                        </br>
-
-
-                        <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
-                            <label>Entrez votre mot de passe :
-                                <br>
-
-                                <div class ="rounded" style="font-size: 15px;  padding-bottom : 10px;" >
-                                    <input  style = "text-align: center;"type="password" name="mdp" placeholder="Entrez votre mot de passe" required>
-                                    
-                                </div>
-                            </label>
-                        </div>
-
-                        </br>
-                        </br>
-
-                    
-                        <input type="submit" value="S'identifier">
-                        <input type ="reset" value ="Annuler">
-                    
-                    </form>
-                    <br>
-                    <p>Si vous n'avez pas encore de compte, nous vous invitons à vous inscrire.</p>
-
-                    <button class="rounded-pill" style = "background-color: #006430;">
-                        <a href="inscription.php" style = "color : white;">  S'inscrire </a>
-                    </button>
-
-                    </br>
-                    </br>
-
-                    <button class="rounded-pill" style = "margin-bottom : 20px;background-color: #006430;">
-                        <a href="AuthentificationAdmin.php" style = "color : white;"> S'identifier en tant qu'administrateur </a>
-                    </button>
-                </div>
-                
-                <div class="col-1"></div>
+            <div class="logo_login_right">
+                <img src="./assets/icons/rmbg_logoLaFleur.png" alt="logo right" >
             </div>
 
-            <div class="col-3"></div>
+            <div class="id_login">
+
+                <p id="libelle_id_login">
+                    IDENTIFIANT
+                </p>
+
+                <input type="text" id="input_id_login"> 
+
+            </div>
+
+            <div class="mdp_login">
+
+                <p id="libelle_mdp_login">
+                    MOT DE PASSE
+                </p>
+
+                <input type="text" id="input_mdp_login"> 
+
+            </div>
+
+            
+            <button class="validation_login" type="submit"> <img src="./assets/icons/arrow.png" alt="flèche" style="width: 50px; height: 50px;" ></button>
+            
+
+            <div class="option_login">
+                <div class="inscription_login">
+                    <a href="inscription.php">S'inscrire</a>
+                </div>
+
+                <div class="admin_login">
+                    <a href="AuthentificationAdmin.php">S'identifier <br> en tant qu'administrateur</a>
+                </div>
+            </div>
+            
+
+            <div class="logo_login_left">
+                <img src="./assets/icons/rmbg_logoLaFleur.png" alt="logo left">
+            </div>
+
         </div>
-    </div>
+    </form>
+    
 </body>
 <?php require 'htmlAssets\footer.html';?>
