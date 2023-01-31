@@ -4,13 +4,17 @@ require 'connection.php';
 require 'htmlAssets\header.php'; 
 
 $ref = $_REQUEST['id'];
-$sql = 'SELECT *  FROM produit WHERE pdt_ref like "%' . $ref . '%"' ;
-$table = $connection->query($sql);
-$ligne = $table->fetch();
-$reference = $ligne["pdt_ref"];
-$image = $ligne["pdt_image"];
-$designation = $ligne["pdt_designation"];
-$prix = $ligne["pdt_prix"];
+$sql=$connection->prepare("SELECT * FROM produit WHERE reference = ".$_REQUEST['id'].";");
+$sql->execute();
+$ligne = $sql->fetchall();
+
+foreach($ligne as $produit){
+    $reference = $ligne["ref"];
+    $image = $ligne["photo"];
+    $designation = $ligne["designation"];
+    $prix = $ligne["prix"];
+
+    e
 ?>
 <div class="container-fluid detail-container">
 
@@ -98,7 +102,8 @@ $prix = $ligne["pdt_prix"];
       }
       </script>
 <?php 
-include "footer.html";
+}
+require 'htmlAssets\footer.html';
 ?>
 
 
