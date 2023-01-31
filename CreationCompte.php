@@ -1,11 +1,13 @@
 <?php
-include "header/header.php";
+require 'htmlAssets/header.php';
 require "connection.php" ;
 
 $sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel) ');
 
+$psw = password_hash($_REQUEST['motDePasse'],PASSWORD_DEFAULT);
+
 $sql->bindParam(':mail_login', $_REQUEST['email']);
-$sql->bindParam(':motDePasse', SHA1($motDePasse));
+$sql->bindParam(':motDePasse', $psw);
 $sql->bindParam(':nom', $_REQUEST['nom']);
 $sql->bindParam(':prenom', $_REQUEST['prenom']);
 $sql->bindParam(':adresse', $_REQUEST['adresse']);
@@ -38,4 +40,4 @@ $sql->execute();
 
             </div>
         </div>
-<?php include "footer.html";?>
+<?php require 'htmlAssets/footer.html';?>

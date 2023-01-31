@@ -45,12 +45,12 @@
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="link" href="#">
+                                <a class="link" href="Authentification.php">
                                     <h2>Profil</h2> 
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="link" href="#">
+                                <a class="link" href="affichier_panier.php">
                                     <h2>Panier</h2> 
                                 </a>
                             </div>
