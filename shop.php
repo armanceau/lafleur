@@ -1,46 +1,78 @@
 <?php 
-    require 'htmlAssets\header.php'; 
-?>
+require 'htmlAssets/header.php';
+require 'connection.php';
 
-<div class="container">
-    <form method="GET">
-        <?php
-            require 'sqlconnect.php';
 
-            $sql = 'SELECT * 
-                FROM produit          
-            ';
-            echo "<div class=\"row\">";
-            $table = $connection->query($sql);
-            while ($ligne = $table->fetch()) {
-                    $title = $ligne['projet_title'];
-                    $annee = $ligne['projet_annee'];
+$sql=$connection->prepare("SELECT * FROM categorie ");
+    $sql->execute();
+    $ligne = $sql->fetchall();
 
-                    
-                        echo "<div class=\"col-4\">";
-
-                            echo "<div class=\"card\" style=\"width: 25rem;\">";
-                                echo '<img class=\"card-img-top\" src="'.$ligne["projet_photo"].'"/>';
-                                echo "<div class=\"card-body\">";
-                                    echo "<p class=\"card-text\">".$ligne["projet_type"]."</p>";
-                                    echo "<div class=\"card-title row\">";
-
-                                        echo "<div class=\"col-8\" style=\"font-weight: bold\">".$ligne["projet_title"];
-                                        echo "</div>";
-
-                                        echo "<div class=\"col-4\" style=\"font-weight: bold\">".$ligne["projet_annee"];
-                                        echo "</div>";
-                                    echo "</div>";
-                                echo "</div>";
-                            echo "</div>";
-                            echo "<br>";
-                    echo "</div>";
-            
-            }
+    foreach($ligne as $categorie){
         ?>
-    </form>
-</div>
+        <div>
+            <a href="shop.php?categorie=<?php echo $categorie['code_de_la_categorie']?>"><?php echo $categorie['nom_de_la_categorie']?></a>
+        </div>
+        <?php
+    }
+        ?>
+
+<form class="inputSearch" method="GET" action="rechercheProduit.php">
+    <input type="text" name="recherche" placeholder="Déja une idée ?">
+    <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
+</form> 
 
 <?php
-    require 'htmlAssets\footer.html';
+if(!isset($_REQUEST['categorie'])){
+    $sql=$connection->prepare("SELECT * FROM produit ORDER BY prix DESC LIMIT 3 ");
+    $sql->execute();
+    $ligne = $sql->fetchall();
+
+    foreach($ligne as $produit){
+        ?>
+        <div>
+            <div>
+                <h2><?php echo $produit['designation'];?></h2>
+            </div>
+            <div>
+            <img src="assets/images/<?php echo $produit['photo'];?>.jpg" alt="<?php echo $produit['designation'];?>">
+            </div>
+            <div>
+                <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
+            </div>
+        </div>
+
+        <?php
+    }
+}else{
+    $sql=$connection->prepare("SELECT * FROM produit WHERE code_de_la_categorie='".$_REQUEST['categorie']."'");
+    $sql->execute();
+    $ligne = $sql->fetchall();
+
+    foreach($ligne as $produit){
+        ?>
+        <div>
+            <div>
+                <h2><?php echo $produit['designation'];?></h2>
+            </div>
+            <div>
+                <img src="assets/images/<?php echo $produit['photo'];?>.jpg" alt="<?php echo $produit['designation'];?>">
+            </div>
+            <div>
+                <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
+            </div>
+        </div>
+
+        <?php
+    }
+    ?>
+
+
+
+
+
+
+    <?php
+    }
+require 'htmlAssets/footer.html';
 ?>
+
