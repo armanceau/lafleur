@@ -112,7 +112,6 @@
 .inputSearch > input:hover{
     border: none;
     outline: none;
-    border: none;
 }
 
 #formSearchHome{
@@ -167,7 +166,7 @@
     z-index: 5;
     display: flex;
     right: 50%;
-    top: 22%;
+    top: 21%;
     left: 49%;
     /* right: 50%; */
     /* top: -68px; */
@@ -178,7 +177,25 @@
   }
 
 .desgProduit{
+    margin-top: -50px; 
+    margin-left: -10px;
+    font-family: 'Amatic SC';
+    font-size: 40px;
+}
 
+.desgProduitDiv{
+    background-color: #fff;
+}
+
+.right{
+    border-radius: 0px 90px 0px 0px;
+}
+
+.buttonDesgProduit {
+    border: none;
+    outline: none;
+    background-color: #006430;
+    padding-right: 20%;
 }
 
 
