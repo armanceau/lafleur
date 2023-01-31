@@ -12,7 +12,7 @@
                     <div class="row" id="formSearchHome">
                         <div class="col-2"></div>
                         <div class="col-8">
-                            <form class="inputSearch" method="GET" action="ListeProduit.php">
+                            <form class="inputSearch" method="GET" action="rechercheProduit.php">
                                 <input type="text" name="recherche" placeholder="Déja une idée ?">
                                 <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
                             </form> 
@@ -29,14 +29,17 @@
                 <div class="col-6">
                      <?php
                     require "connection.php";
-                        $sql=$connection->prepare("SELECT * FROM produit LIMIT 1");
+                        $sql=$connection->prepare("SELECT * FROM produit ORDER BY prix LIMIT 1");
                         $sql->execute();
                         $ligne = $sql->fetchall();
 
                         foreach($ligne as $produit){
                             $photo = $produit['photo'];
                             ?>
-                           
+                                <div>
+                                    <img src="assets/images/<?php echo $produit['photo'];?>.jpg" alt="<?php echo $produit['designation'];?>">
+                                    <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
+                                </div>
                             <?php
                         }
                     ?>
