@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 31 jan. 2023 à 16:32
+-- Généré le : mar. 31 jan. 2023 à 18:45
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -77,10 +77,10 @@ CREATE TABLE IF NOT EXISTS `categorie` (
 --
 
 INSERT INTO `categorie` (`code_de_la_categorie`, `nom_de_la_categorie`) VALUES
+('arbuste', 'arb'),
 ('bul', 'Bulbes'),
 ('mas', 'Plantes à massif'),
-('ros', 'Rosiers'),
-('test', 'test');
+('ros', 'Rosiers');
 
 -- --------------------------------------------------------
 
@@ -151,6 +151,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
 --
 
 INSERT INTO `produit` (`reference`, `designation`, `photo`, `prix`, `quantite_en_stock`, `code_de_la_categorie`, `description`) VALUES
+('a01', 'Bonzai', 'assets\\images\\bonzai.png', 45, 5, 'arbuste', 'Arbre cultivé en pot auquel des soins particuliers sont apportés en vue de lui conserver des proportions considérablement réduites par rapport à celles qui résulteraient d\'une croissance naturelle.'),
 ('b01', '3 bulbes de bégonias', 'bulbes_begonia', 6, 100, 'bul', ''),
 ('b02', '10 bulbes de dahlias', 'bulbes_dahlia', 13, 100, 'bul', ''),
 ('b03', '50 glaïeuls', 'bulbes_glaieuil', 10, 100, 'bul', ''),
