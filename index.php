@@ -12,14 +12,19 @@
         <title>LaFleur</title>
     </head>
 
-    <body>
+    <script type="text/javascript">
+      function RedirectionJavascript(){
+        document.location.href="home.php";
+      }
+   </script>
+   
+    <body onLoad="setTimeout('RedirectionJavascript()', 1000)">
         <div class="container">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-10">
-                    <a href="home.php">
+
                         <img class="imgIndex" src="assets\icons\logoLaFleur2.PNG" alt="logo">
-                    </a>
                 </div>
                 <div class="col-1"></div>
             </div>
