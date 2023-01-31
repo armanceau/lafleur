@@ -185,31 +185,134 @@
 
 /* FIN HOME */
 
+/* LOGIN */ 
+
+.container_login{
+    width: 971px;
+    height: 671px;
+    margin-top: 5rem;
+    margin-left: 30rem;
+
+    background: #88B494;
+    border-radius: 180px 0px;
+}
+
+.id_login{
+    margin-top: 0rem;
+    margin-left: 13rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+.id_login>#libelle_id_login{
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    color: #000000;
+    margin-bottom: 0rem;
+}
+
+.id_login>#input_id_login{
+    width: 516px;
+    height: 50px;
+    margin-top: 0rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.mdp_login{
+    margin-top: 4rem;
+    margin-left: 13rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+.mdp_login>#libelle_mdp_login{
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    color: #000000;
+    margin-bottom: 0rem;
+}
+
+.mdp_login>#input_mdp_login{
+    width: 516px;
+    height: 50px;
+    margin-top: 0rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.validation_login{
+    width: 129px;
+    height: 50px;
+    margin-top: 3rem;
+    margin-left: 25rem;
+    background: #FFFFFF;
+    border-radius: 30px;
+}
+
+.option_login{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.option_login>.inscription_login>a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Amatic SC';
+    font-size: 1.8rem;
+}
+
+.option_login>.inscription_login{
+    margin-top: 1rem;
+}
+
+.option_login>.admin_login>a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Amatic SC';
+    font-size: 1.8rem;
+}
+
+.logo_login_right{
+    height: 6rem;
+}
+
+.logo_login_right>img{
+    width: 13rem;
+    height: 8rem;
+    margin-left: 49rem;
+    margin-bottom: 0rem;
+} 
+
+.logo_login_left{
+    height: 6rem;
+    width: fit-content;
+}
+
+.logo_login_left>img{
+    width: 13rem;
+    height: 8rem;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    
+} 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* FIN LOGIN */ 
 
 
 

@@ -1,9 +1,11 @@
 <?php
+session_start();
+
+require "connection.php" ;
 
 try{
-    session_start();
-    require "connection.php" ;
-   
+    
+
     $sql= $connection->prepare("SELECT * FROM utilisateur WHERE mail_login = :mail LIMIT 1") ;
 
     $sql->bindParam(':mail', $_REQUEST["login"], PDO::PARAM_STR);
