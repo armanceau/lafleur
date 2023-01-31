@@ -41,7 +41,7 @@
                         }
                     ?>
                 </div>
-                <div class="col-6" class="divGreenHome">
+                <div class="col-6">
 
 
                 </div>
