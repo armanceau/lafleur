@@ -1,4 +1,4 @@
-<?php include "header/header.php"; ?>
+<?php require 'htmlAssets\header.php';  ?>
 
 <head>
 <meta charset="UTF-8">
@@ -78,4 +78,4 @@
         </div>
     </div>
 </body>
-<?php include "footer.html";?>
+<?php require 'htmlAssets\footer.html';?>
