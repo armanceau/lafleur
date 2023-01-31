@@ -2,6 +2,19 @@
 require 'htmlAssets/header.php';
 require 'connection.php';
 
+
+$sql=$connection->prepare("SELECT * FROM categorie ");
+    $sql->execute();
+    $ligne = $sql->fetchall();
+
+    foreach($ligne as $categorie){
+        ?>
+        <div>
+            <a href="shop.php?categorie=<?php echo $categorie['code_de_la_categorie']?>"><?php echo $categorie['nom_de_la_categorie']?></a>
+        </div>
+        <?php
+    }
+
 if(!isset($_REQUEST['categorie'])){
     $sql=$connection->prepare("SELECT * FROM produit ORDER BY prix DESC LIMIT 3 ");
     $sql->execute();
