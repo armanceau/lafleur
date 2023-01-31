@@ -2,9 +2,6 @@
     require 'htmlAssets\header.php'; 
 ?>
 
-
-
-
 <div class="container home">
     <div class="row">
         <div class="col-6">
@@ -52,11 +49,6 @@
         </div>
     </div>
 </div>
-
-<div>
-       
-</div>
-
 
 <?php
     require 'htmlAssets\footer.html';
