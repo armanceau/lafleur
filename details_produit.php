@@ -22,7 +22,11 @@ foreach($ligne as $produit){
 </div>
 
 <div>
-    <?php echo '<a href="addbag.php?ref='.$reference.'"> <button type="button" class="btn btn-success btn-lg btn-block mx-auto bouton_produit" >';?><p>Ajoutez au panier </p></button></a>
+   <img src="assets/images/<?php echo $image;?>.jpg" alt="<?php echo $designation;?>">
+</div>
+
+<div>
+    <?php echo '<a href="addbag.php?ref='.$reference.'"> <button type="button">';?><p>Ajoutez au panier </p></button></a>
 </div>
 
 

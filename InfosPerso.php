@@ -1,6 +1,6 @@
 <?php 
 
-require 'header/header.php';
+//require 'header/header.php';
 
 ?>
 <script>
@@ -174,4 +174,4 @@ require 'header/header.php';
     </div>
 </main>
 
-<?php require 'footer.html'; ?>
+<?php //require 'footer.html'; ?>
