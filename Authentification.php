@@ -21,7 +21,7 @@
 
                 <div class="col-10">
 
-                    <form method='GET' action='vérification.php'>
+                    <form method='GET' action='verification.php'>
 
                         <div class ="rounded-pill" style="font-size: 30px;font-family: lobster; color : white;background-color: #006430;">
                             <label>Entrez votre identifiant :

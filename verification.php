@@ -13,7 +13,7 @@ $sql->bindParam('[{.$login}]', $login, PDO::PARAM_INT) ;
 
 $sql->execute();
 
-$ligne = $sql->fetch();
+$ligne = $sql->fetchall();
      
 if ($login==$ligne['mail_login'] && $mdp==$ligne['mot_de_passe_user'] ) {
     
