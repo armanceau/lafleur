@@ -173,7 +173,6 @@
     bottom: 129px;
     position: fixed;
     vertical-align: bottom;
-      
   }
 
 .desgProduit{
@@ -549,15 +548,14 @@
 
 
 .container_detail_produit{
-    min-height: calc(100vh - 40px * 2);
+    width: fit-content;
     display: grid;
     grid-template-columns: 50% 50%;
     overflow: hidden;
-    
+    margin-left: 10rem;
 }
 
 .left-side{
-    border: solid 2px red;
     display: flex;
     flex-direction: column;
     padding-left: 150px;
@@ -571,7 +569,7 @@
     border-radius: 30px;
     margin-top: 8rem;
     margin-left: 4rem;
-    width: 516px;
+    width: 526px;
     height: 67px;
     border-radius: 30px;
     display: grid;
@@ -585,14 +583,15 @@
     line-height: 76px;
     letter-spacing: 0em;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-top: -0.5rem;
 }
 
 .info_detail_produit>.prix_detail_produit{
-    width: 105px;
+    width: 125px;
     height: 67px;
-    left: 585px;
-    top: 256px;
+    margin-left: -0.6rem;
+    
+    
 
     background: #88B494;
     border-radius: 30px 30px 30px 0px;
@@ -605,6 +604,11 @@
     text-align: center;
 }
 
+.info_detail_produit>.prix_detail_produit>p{
+    margin-top: -0.3rem;
+}
+
+
 .description_detail_produit{
     margin-top: 7.5rem;
     height: 304px;
@@ -612,7 +616,6 @@
     left: 160px;
     top: 466px;
     border-radius: nullpx;
-
 }
 
 .description_detail_produit>p{
@@ -650,27 +653,55 @@
 }
 
 .ajout_produit_panier>.bouton_ajout_panier{
-    border: solid 2px pink ;
     width: 105px;
     height: 67px;
-    left: 585px;
-    top: 256px;
-
+    
     background: #88B494;
     border-radius: 30px 30px 30px 0px;
 }
 
 .ajout_produit_panier>.bouton_ajout_panier>a{
     right: 5rem;
-    border: solid 2px purple;
 }
 
-
 .right-side{
-    border: solid 2px greenyellow;
-    background-color: white;
-    display: flex;
-    justify-content: center;
+    width: fit-content;
+    margin-block-end: 5rem;
+    height: 100%;
+    width: 90%;
+    border-radius: 20px;
+    align-items: center;
+    display: table;
+    margin-left: 11.3rem;
+    margin-top: -0.8rem;
+
+}
+
+#product {
+    width: 500px;
+    height: 400px;
+    position: relative;
+}
+  
+#img_detail_produit {
+   
+    height: 32.7rem;
+    width: 27rem;
+    z-index: 5;
+    top: 12.8rem;
+    margin-left: -15rem;
+    margin-top: 2rem;
+}
+  
+.div_green_detail_produit{
+    
+    width: 25rem;
+    height: 38.5rem;
+    margin-left: 6.5rem;
+    margin-top: 6.5rem;
+
+    background: #88B494;
+    border-radius: 188px 188px 188px 0px;
 }
 
 

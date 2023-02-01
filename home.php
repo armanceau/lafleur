@@ -42,7 +42,6 @@
                         ?>
                             <div>
                                 <img class="imgProfil" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="531" width="427">
-                                
                             </div>
                         <?php
                     }
