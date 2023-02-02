@@ -91,7 +91,7 @@
 /* HOME */
 
 .home{
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 #homePresentation{
@@ -176,7 +176,7 @@
     z-index: 5;
     display: flex;
     right: 50%;
-    top: 17%;
+    top: 19%;
     left: 49%;
     /* right: 50%; */
     /* top: -68px; */
