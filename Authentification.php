@@ -60,4 +60,4 @@
     </form>
     
 </body>
-<?php require 'htmlAssets\footer.html';?>
+<?php require 'htmlAssets\footer2.html';?>
