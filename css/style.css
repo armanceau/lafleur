@@ -211,6 +211,9 @@
 
 /* FIN HOME */
 
+
+
+
 /* LOGIN */ 
 
 .container_login{
@@ -348,13 +351,55 @@
 } 
 
 
-
-
 /* FIN LOGIN */ 
 
-.main_color{
-    color : #006430;
+
+
+
+
+
+
+
+/*DETAIL PRODUIT*/
+
+
+#detailPresentation{
+    font-family: 'Belgrano', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
 }
+
+.cardTitle{
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(15, 15, 51, 0.4);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Amatic SC';
+    text-align: center;
+}
+
+.TitlteDetailProd{
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.priceDetailProd{
+    background-color: #88B494;
+    border-radius: 15px 15px 15px 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+/*FIN DETAIL PRODUIT*/
+
+
+
+
 
 /* Panier */
 
@@ -560,165 +605,9 @@
     }
 }
 
-/*details_produit*/
 
 
-.container_detail_produit{
-    width: fit-content;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    overflow: hidden;
-    margin-left: 10rem;
-}
 
-.left-side{
-    display: flex;
-    flex-direction: column;
-    padding-left: 150px;
-    background-color: white;
-}
-
-
-.info_detail_produit{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    margin-top: 8rem;
-    margin-left: 4rem;
-    width: 526px;
-    height: 67px;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: 80% 20%;
-}
-
-.info_detail_produit>.nom_detail_produit{
-    font-family: Amatic SC;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 76px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-top: -0.5rem;
-}
-
-.info_detail_produit>.prix_detail_produit{
-    width: 125px;
-    height: 67px;
-    margin-left: -0.6rem;
-    
-    
-
-    background: #88B494;
-    border-radius: 30px 30px 30px 0px;
-
-    font-family: Amatic SC;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 76px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-.info_detail_produit>.prix_detail_produit>p{
-    margin-top: -0.3rem;
-}
-
-
-.description_detail_produit{
-    margin-top: 7.5rem;
-    height: 304px;
-    width: 628px;
-    left: 160px;
-    top: 466px;
-    border-radius: nullpx;
-}
-
-.description_detail_produit>p{
-    font-family: Belgrano;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 38px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-.ajout_produit_panier{
-    display: grid;
-    grid-template-columns: 80% 20%;
-    width: 516px;
-    height: 67px;
-    left: 206px;
-    top: 853px;
-    margin-left: 4rem;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-
-.ajout_produit_panier>.text_bouton{
-    font-family: 'Belgrano';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 38px;
-    color: #000000;
-    padding-left: 55px;
-    padding-top: 20px;
-}
-
-.ajout_produit_panier>.bouton_ajout_panier{
-    width: 105px;
-    height: 67px;
-    
-    background: #88B494;
-    border-radius: 30px 30px 30px 0px;
-}
-
-.ajout_produit_panier>.bouton_ajout_panier>a{
-    right: 5rem;
-}
-
-.right-side{
-    width: fit-content;
-    margin-block-end: 5rem;
-    height: 100%;
-    width: 90%;
-    border-radius: 20px;
-    align-items: center;
-    display: table;
-    margin-left: 11.3rem;
-    margin-top: -0.8rem;
-
-}
-
-#product {
-    width: 500px;
-    height: 400px;
-    position: relative;
-}
-  
-#img_detail_produit {
-   
-    height: 32.7rem;
-    width: 27rem;
-    z-index: 5;
-    top: 12.8rem;
-    margin-left: -15rem;
-    margin-top: 2rem;
-}
-  
-.div_green_detail_produit{
-    
-    width: 25rem;
-    height: 38.5rem;
-    margin-left: 6.5rem;
-    margin-top: 6.5rem;
-
-    background: #88B494;
-    border-radius: 188px 188px 188px 0px;
-}
 
 
 
