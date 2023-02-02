@@ -50,8 +50,7 @@
 .footer{
     font-family: 'Amatic SC';
     border-top: 1px solid #000;
-    position: static; 
-    bottom: 0; 
+    margin-top: 3rem;
 }
 
 .footer > h1{
@@ -79,7 +78,7 @@
 /* HOME */
 
 .home{
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 #homePresentation{
@@ -164,7 +163,7 @@
     z-index: 5;
     display: flex;
     right: 50%;
-    top: 21%;
+    top: 17%;
     left: 49%;
     /* right: 50%; */
     /* top: -68px; */
@@ -205,10 +204,10 @@
 /* LOGIN */ 
 
 .container_login{
-    width: 971px;
-    height: 671px;
-    margin-top: 5rem;
-    margin-left: 30rem;
+    width: 951px;
+    height: 651px;
+    margin-top: 3rem;
+    margin-left: 24rem;
 
     background: #88B494;
     border-radius: 180px 0px;
@@ -241,6 +240,10 @@
     border-radius: 30px;
     outline: none;
     border: none;
+    margin-bottom: -1rem;
+    font-family: 'Belgrano';
+    text-align: center;
+    font-size:larger;
 }
 
 .mdp_login{
@@ -270,6 +273,7 @@
     border-radius: 30px;
     outline: none;
     border: none;
+    text-align: center;
 }
 
 .validation_login{
@@ -295,10 +299,11 @@
     color: black;
     font-family: 'Amatic SC';
     font-size: 1.8rem;
+    
 }
 
 .option_login>.inscription_login{
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .option_login>.admin_login>a{
