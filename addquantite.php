@@ -28,6 +28,10 @@ if (isset($quantite)){
 
         if ($quantite > $ligne['quantite_en_stock']) {
             $quantite -=1;
+        }else{
+            $sql = "UPDATE `pannier` SET `quantite_d_article`= ".$quantite."
+            WHERE mail_login = '".$user."' AND reference = '".$ref."'";
+            $connection->exec($sql);
         }
     }
 }
