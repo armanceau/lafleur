@@ -54,11 +54,11 @@ foreach($ligne as $produit){
                             <div class="col-2"></div>
                             <div class="col-8">                                
                                 <!-- Changer la redirection  -->
-                                    <form class="inputSearch" method="GET" action="addbag.php">
-                                        <input type="text" name="recherche" placeholder="Ajouter au panier" disabled>
-                                        <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
-                                    </form> 
-                                
+                                <form class="inputSearch" method="GET" action="addbag.php">
+                                    <input type="text" name="recherche" placeholder="Ajouter au panier" disabled>
+                                    <input type="text" name="ref" value="<?php echo $produit['reference'];?>" hidden>
+                                    <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
+                                </form> 
                             </div>
                             <div class="col-2"></div>
                         </div>
