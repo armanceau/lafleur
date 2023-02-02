@@ -13,58 +13,108 @@ foreach($ligne as $produit){
     $description = $produit["description"];
     $prix = $produit["prix"];
 ?>
-        <div class="container_detail_produit">
+    <div class="container home">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="description_detail_produit">
+                                    <p id="detailPresentation"><?php echo $produit['description'];?></p>              
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        
+                        <div class="row" id="formSearchHome">
+                            <div class="col-2"></div>
+                            <div class="col-8">
 
-            <div class="left-side">
-                <div class="info_detail_produit">
-                    <div class="nom_detail_produit">
-                        <p><?php echo $produit['designation'];?></p>
-                    </div>
-                    <div class="prix_detail_produit">
-                        <p><?php echo $produit['prix'];?> $</p>
-                    </div>
-                </div>
-                
-                <div class="description_detail_produit">
-                    <p><?php echo $produit['description'];?></p>              
-                </div>
 
-                <div class="ajout_produit_panier">
-                    <div class="text_bouton">
-                        <p>Ajouter au panier</p>
+                                <div class="nom_detail_produit">
+                                    <p><?php echo $produit['designation'];?></p>
+                                </div>
+
+                                <div class="prix_detail_produit">
+                                    <p><?php echo $produit['prix'];?> $</p>
+                                </div>
+                                    
+                                
+                                <!-- Changer la redirection  -->
+                                <a href="">
+                                    <form class="inputSearch" method="GET" action="rechercheProduit.php">
+                                        
+                                            
+                                        
+                                        <input type="text" name="recherche" placeholder="Ajouter au panier" disabled>
+                                        <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
+                                    </form> 
+                                </a>
+                                
+                            </div>
+                            <div class="col-2"></div>
+
+                        </div>
                     </div>
-                    <div class="bouton_ajout_panier">
-                        <a href="#"><img src="./assets/icons/arrow.png" alt="" style="width:5rem; margin-left:0.8rem; margin-top:-0.2rem;" ></a>
-                    </div>
+                    <div class="col-1"></div>                    
                 </div>
             </div>
 
-            <div class="right-side">
+            <div class="col-6">
+                <div class="cont">
+                    <div class="div_white div_block" >
 
-                <div class="div_green_detail_produit">
+                    
+                    </div>
+
                     <?php
                     require "connection.php";
-                        $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='".$designation."'");
+                        $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='Bonsai1' ORDER BY prix LIMIT 1 ");
                         $sql->execute();
                         $ligne = $sql->fetchall();
 
                         foreach($ligne as $produit){
                             $photo = $produit['photo'];
                             ?>
-                            <div>
-                                <div id="product">
-                                    <img id="img_detail_produit" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>">
+                                <div>
+                                    <img class="imgProfil" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="531" width="427">
                                 </div>
                             <?php
                         }
                     ?>
 
-                </div>
+
+                    <div class="div_green div_block">
                     
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+            <div class="col-4">
+                
             </div>
 
+            <div class="col-8 desgProduit">
+                
+                <div class="row">
+                    <div class="col-3 desgProduitDiv">
+                        <a class="link"href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                            <?php echo $produit['designation'];?>
+                        </a> 
+                    </div>
+                    <div class="col-3 desgProduitDiv right">
+                        
+                    </div>
+                <div class="col-6"></div>   
+            </div>
         </div>
-
+    </div>
+</div>
+    
 <?php 
 }
 require 'htmlAssets\footer.html';
