@@ -38,7 +38,7 @@ if(isset($_SESSION['login'])){
                     MOT DE PASSE
                 </p>
 
-                <input type="password" id="input_mdp_login"> 
+                <input type="password" name="mdp" id="input_mdp_login"> 
 
             </div>
 
