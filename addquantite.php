@@ -18,14 +18,18 @@ while ($ligne = $table->fetch()){
 }
 
 
-$sql = "SELECT quantite_d_article FROM produit WHERE reference = '".$ref."'";
+$sql = "SELECT quantite_en_stock FROM produit WHERE reference = '".$ref."'";
 
 $table = $connection->query($sql);
 echo $sql;
 
 if (isset($quantite)){
+    while ($ligne = $table->fetch()){
 
-    
+        if ($quantite > $ligne['quantite_en_stock']) {
+            $quantite -=1;
+        }
+    }
 }
 
 
