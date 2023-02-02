@@ -422,7 +422,14 @@
 
 
 /* Panier */
-
+.poubelle-panier{
+    width: 35px;
+    height: auto;
+}
+.quantite-control{
+    width: 25px;
+    height: auto;
+}
 
 
 /* InfosPerso */
