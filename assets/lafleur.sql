@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 31 jan. 2023 à 18:45
+-- Généré le : mer. 01 fév. 2023 à 19:46
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -78,9 +78,9 @@ CREATE TABLE IF NOT EXISTS `categorie` (
 
 INSERT INTO `categorie` (`code_de_la_categorie`, `nom_de_la_categorie`) VALUES
 ('arbuste', 'arb'),
-('bul', 'Bulbes'),
-('mas', 'Plantes à massif'),
-('ros', 'Rosiers');
+('bamb', 'Bambou'),
+('bons', 'Bonsai'),
+('palm', 'Palmier');
 
 -- --------------------------------------------------------
 
@@ -151,17 +151,15 @@ CREATE TABLE IF NOT EXISTS `produit` (
 --
 
 INSERT INTO `produit` (`reference`, `designation`, `photo`, `prix`, `quantite_en_stock`, `code_de_la_categorie`, `description`) VALUES
-('a01', 'Bonzai', 'assets\\images\\bonzai.png', 45, 5, 'arbuste', 'Arbre cultivé en pot auquel des soins particuliers sont apportés en vue de lui conserver des proportions considérablement réduites par rapport à celles qui résulteraient d\'une croissance naturelle.'),
-('b01', '3 bulbes de bégonias', 'bulbes_begonia', 6, 100, 'bul', ''),
-('b02', '10 bulbes de dahlias', 'bulbes_dahlia', 13, 100, 'bul', ''),
-('b03', '50 glaïeuls', 'bulbes_glaieuil', 10, 100, 'bul', ''),
-('m01', 'Lot de 3 marguerites', 'massif_marguerite', 16, 100, 'mas', ''),
-('m02', 'Pour un bouquet de 6 pensées', 'massif_pensee', 7, 100, 'mas', ''),
-('m03', 'Mélange varié de 10 plantes', 'massif_melange', 16, 100, 'mas', ''),
-('r01', '1 pied spécial grandes fleurs', 'rosier_gdefleur', 21, 100, 'ros', ''),
-('r02', 'Une variété sélectionné', 'rosiers_parfum', 10, 100, 'ros', ''),
-('r03', 'Rosier arbuste', 'rosiers_arbuste', 9, 100, 'ros', ''),
-('r44', 'roses exceptionnelles', 'X', 45.25, 5, 'ros', '');
+('bamb1', 'Bambou1', 'assets\\images\\bambou1.png', 23, 7, 'bamb', 'A changer'),
+('bamb2', 'Bambou2', 'assets\\images\\bambou2.png', 18.9, 20, 'bamb', 'bzrevoa fez'),
+('bamb3', 'Bambou3', 'assets\\images\\bambou3.png', 27.2, 6, 'bamb', 'fvzevuzievbzevvevezvz'),
+('bons1', 'Bonsai1', 'assets\\images\\bonsai1.png', 45, 5, 'bons', 'Arbre cultivé en pot auquel des soins particuliers sont apportés en vue de lui conserver des proportions considérablement réduites par rapport à celles qui résulteraient d\'une croissance naturelle.'),
+('bons2', 'Bonsai2', 'assets\\images\\bonsai2.png', 58.2, 12, 'bons', 'gezgzggz'),
+('bons3', 'Bonsai3', 'assets\\images\\bonsai3.png', 32, 3, 'bons', 'vgzhjabvjrzejv'),
+('palm1', 'Palmier1', 'assets\\images\\palmier1.png', 50, 6, 'palm', 'kjvrzeiovarnhjianjvg '),
+('palm2', 'Palmier2', 'assets\\images\\palmier2.png', 64.5, 12, 'palm', 'hjvrekgvreioa vahvjarejkon vreanvirnaev'),
+('palm3', 'Palmier3', 'assets\\images\\palmier3.png', 78.9, 15, 'palm', 'fezghjfez fezfio');
 
 -- --------------------------------------------------------
 

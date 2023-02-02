@@ -50,10 +50,8 @@
 .footer{
     font-family: 'Amatic SC';
     border-top: 1px solid #000;
-    position: absolute; 
+    position: static; 
     bottom: 0; 
-    left: 0; 
-    right: 0
 }
 
 .footer > h1{

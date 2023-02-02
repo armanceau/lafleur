@@ -33,7 +33,7 @@
 
                 <?php
                 require "connection.php";
-                    $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='Bonzai' ORDER BY prix LIMIT 1 ");
+                    $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='Bonsai1' ORDER BY prix LIMIT 1 ");
                     $sql->execute();
                     $ligne = $sql->fetchall();
 
