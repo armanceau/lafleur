@@ -402,6 +402,24 @@
 
 
 
+.cardShop{
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(15, 15, 51, 0.4);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Amatic SC';
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
 
 /* Panier */
 
