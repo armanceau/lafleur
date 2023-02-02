@@ -46,14 +46,14 @@ foreach($ligne as $produit){
                         <div class="row">
                             <div class="col-2"></div>
                             <div class="col-8">
-                                <div class="description_detail_produit">
+                                <div>
                                     <p id="detailPresentation"><?php echo $produit['description'];?></p>              
                                 </div>
                             </div>
                             <div class="col-2"></div>
                         </div>
                         
-                        <div class="row" id="formSearchHome">
+                        <div class="row" id="formSearchDetailProd">
                             <div class="col-2"></div>
                             <div class="col-8">                                
                                 <!-- Changer la redirection  -->

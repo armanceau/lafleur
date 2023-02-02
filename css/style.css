@@ -354,7 +354,7 @@
     font-family: 'Belgrano', serif;
     font-size: 20px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 15%;
 }
 
 .cardTitle{
@@ -377,6 +377,10 @@
     border-radius: 15px 15px 15px 0px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#formSearchDetailProd{
+    margin-top: 5%;
 }
 
 
