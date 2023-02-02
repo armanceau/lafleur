@@ -12,6 +12,7 @@ foreach($ligne as $produit){
     $designation = $produit["designation"];
     $description = $produit["description"];
     $prix = $produit["prix"];
+    $quantite = $produit["quantite_en_stock"];
 ?>
     <div class="container home">
         <div class="row">
@@ -114,13 +115,13 @@ foreach($ligne as $produit){
             <div class="col-8 desgProduit">
                 
                 <div class="row">
-                    <div class="col-3 desgProduitDiv">
-                        <a class="link"href="details_produit.php?id=<?php echo $produit['reference'];?>">
-                            <?php echo $produit['designation'];?>
+                    <div class="col-4 desgProduitDiv">
+                        <a class="link" id="quantiteDetailProduit" href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                            Quantité : 
                         </a> 
                     </div>
-                    <div class="col-3 desgProduitDiv right">
-                        
+                    <div class="col-2 desgProduitDiv right">
+                        <?php echo $quantite;?>
                     </div>
                     <div class="col-6"></div>   
                 </div>
