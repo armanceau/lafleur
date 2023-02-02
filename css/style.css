@@ -44,13 +44,12 @@
 /* FIN HEADER */
 
 
-
 /* FOOTER */
 
 .footer{
     font-family: 'Amatic SC';
     border-top: 1px solid #000;
-    margin-top: 3rem;
+    margin-top: 8rem;
 }
 
 .footer > h1{
@@ -58,6 +57,20 @@
 }
 
 /* FIN FOOTER */
+
+/* FOOTER2 (login) */
+
+.footer2{
+    font-family: 'Amatic SC';
+    border-top: 1px solid #000;
+    margin-top: 5rem;
+}
+
+.footer2 > h1{
+    font-size: xx-large;
+}
+
+/* FIN FOOTER2 (login) */
 
     
 
@@ -204,10 +217,10 @@
 /* LOGIN */ 
 
 .container_login{
-    width: 951px;
-    height: 651px;
-    margin-top: 3rem;
-    margin-left: 24rem;
+    width: 971px;
+    height: 671px;
+    margin-top: 4rem;
+    margin-left: 30rem;
 
     background: #88B494;
     border-radius: 180px 0px;

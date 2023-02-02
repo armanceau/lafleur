@@ -70,24 +70,18 @@ $sql=$connection->prepare("SELECT * FROM categorie ");
                         <?php
                     }
                     ?>
-
             </div>
         </div>
     </div>
 </div>
 
-
 <br>
 <br>
 <br>
 <br>
-
-
-
-
 
     <?php
-    }
-require 'htmlAssets/footer.html';
+}
+require 'htmlAssets/footer2.html';
 ?>
 
