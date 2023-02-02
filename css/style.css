@@ -413,11 +413,40 @@
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 30px;
+    padding-top: 20px;
 }
 
 .cardGreen{
     background-color: #88B494;
-size: 10px;
+    height: 400px;
+    border-radius: 180px 180px 180px 0px;
+}
+
+.colImgShop{
+    z-index: 5;
+}
+
+.imgShop{
+    margin-left: -20px;
+    margin-top: 20px;
+}
+
+.desgProduitShop{
+    margin-top: -50px; 
+    margin-left: -10px;
+    font-family: 'Amatic SC';
+    font-size: 40px;
+    background-color: #fff;
+    padding-right: 30px;
+}
+
+.linkShop{
+    font-size: 40px;
+}
+
+
+.right{
+    border-radius: 0px 90px 0px 0px;
 }
 
 

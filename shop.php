@@ -43,19 +43,46 @@ $sql=$connection->prepare("SELECT * FROM categorie ");
                 foreach($ligne as $produit){
                     ?>
                     <div class="col-3 cardShop">
+
                         <div class="row">
-                        <img class="imgShop" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="300" width="200">
-                            <div class="col-4"></div>
+                        
+                            <div class="col-4 colImgShop">
+                                <img class="imgShop" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="300" width="240">
+                            </div>
+
                             <div class="col-7 cardGreen">
                                 
                             </div>
+
                             <div class="col-1"></div>
                         </div>
 
-                        <div>
-                            <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
+
+                        <div class="row">
+                            <div class="col-4"></div>
+
+                            <div class="col-7">
+            
+                                <div class="row">
+                                    <div class="col-8 desgProduitShop right">
+                    
+                                        <div class="row">
+                                            <div class="col-6 desgProduitDivShop">
+                                                <a class="linkShop"href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                                                    <?php echo $produit['designation'];?>
+                                                </a> 
+                                            </div>
+                                            
+                                        <div class="col-6"></div> 
+                                    </div>    
+                                </div>
+                                <div class="col-6"></div>     
+                            </div>
+                            
+                            <div class="col-1"> </div>
                         </div>
                     </div>
+                </div>
 
 
                     <?php
