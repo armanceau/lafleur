@@ -354,6 +354,48 @@
 /* FIN LOGIN */ 
 
 
+/* DEBUT INSCRIPTION */
+
+.insInput{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 3rem;
+    border-radius: 30px;
+}
+
+.insLibelle{
+    background: #88B494;
+    color: black;
+    width: 15rem;
+    height: 3.5rem;
+    font-family: 'Amatic SC';
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 30px 30px 0px 30px;
+}
+
+.inscriptionInput{
+    text-align: center;
+    width: 100%;
+}
+
+.inscriptionInput>input{
+    margin-left: 6.8rem;
+    width: 58rem;
+    height: 3.5rem;
+    border-style: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Belgrano';
+}
+
+.insValidation{
+    text-align: center;
+    background: #88B494;
+    border-radius: 30px 30px 30px 0px;
+}
 
 
 
