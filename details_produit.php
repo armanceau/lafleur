@@ -10,56 +10,60 @@ foreach($ligne as $produit){
     $reference = $produit["reference"];
     $image = $produit["photo"];
     $designation = $produit["designation"];
+    $description = $produit["description"];
     $prix = $produit["prix"];
-
 ?>
         <div class="container_detail_produit">
 
-        <div class="left-side">
-            <div class="info_detail_produit">
-                <div class="nom_detail_produit">
-                    <p>BONSAI</p>
+            <div class="left-side">
+                <div class="info_detail_produit">
+                    <div class="nom_detail_produit">
+                        <p><?php echo $produit['designation'];?></p>
+                    </div>
+                    <div class="prix_detail_produit">
+                        <p><?php echo $produit['prix'];?> $</p>
+                    </div>
                 </div>
-                <div class="prix_detail_produit">
-                    <p>45 $</p>
+                
+                <div class="description_detail_produit">
+                    <p><?php echo $produit['description'];?></p>              
+                </div>
+
+                <div class="ajout_produit_panier">
+                    <div class="text_bouton">
+                        <p>Ajouter au panier</p>
+                    </div>
+                    <div class="bouton_ajout_panier">
+                        <a href="#"><img src="./assets/icons/arrow.png" alt="" style="width:5rem; margin-left:0.8rem; margin-top:-0.2rem;" ></a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="description_detail_produit">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius officia, voluptate repellat quas ex necessitatibus neque exercitationem obcaecati culpa incidunt cum! Accusantium aliquam delectus blanditiis ex magnam esse libero labore.</p>
+
+            <div class="right-side">
+
+                <div class="div_green_detail_produit">
+                    <?php
+                    require "connection.php";
+                        $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='".$designation."'");
+                        $sql->execute();
+                        $ligne = $sql->fetchall();
+
+                        foreach($ligne as $produit){
+                            $photo = $produit['photo'];
+                            ?>
+                            <div>
+                                <div id="product">
+                                    <img id="img_detail_produit" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>">
+                                </div>
+                            <?php
+                        }
+                    ?>
+
+                </div>
+                    
             </div>
 
-            <div class="ajout_produit_panier">
-                <div class="text_bouton">
-                    <p>Ajouter au panier</p>
-                </div>
-                <div class="bouton_ajout_panier">
-                    <a href="#"><img src="./assets/images/flèche.png" alt=""></a>
-                </div>
-            </div>
         </div>
-
-        <div class="right-side">
-            <img src="./assets/images/plantes-removebg-preview 1.png"  alt="image de remplissage">
-        </div>
-
-        </div>
-        <!--
-<div>
-    <h2><?php //echo $designation." ".$prix."€"; ?></h2>
-</div>
-<div>
-    <p>description</p>
-</div>
-
-<div>
-   <img src="assets/images/<?php //echo $image;?>.jpg" alt="<?php //echo $designation;?>">
-</div>
-
-<div>
-    <?php //echo '<a href="addbag.php?ref='.$reference.'"> <button type="button">';?><p>Ajoutez au panier </p></button></a>
-</div>
--->
 
 <?php 
 }
