@@ -19,30 +19,43 @@ foreach($ligne as $produit){
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-10">
+
+                        <div class="row" id="formSearchHome">
+                            <div class="col-2"></div>
+                            <div class="col-8 cardTitle">                                
+                                <!-- Changer la redirection  -->
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h2 class="TitlteDetailProd"><?php echo $produit['designation'];?></h2>
+                                    </div>
+
+                                    <div class="col-4 priceDetailProd">
+                                        <h2 class="TitlteDetailProd "><?php echo $produit['prix'];?> $</h2>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                            <div class="col-2"></div>
+                        </div>              
+                                    
+                            
+
+
+                        
                         <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10">
+                            <div class="col-2"></div>
+                            <div class="col-8">
                                 <div class="description_detail_produit">
                                     <p id="detailPresentation"><?php echo $produit['description'];?></p>              
                                 </div>
                             </div>
-                            <div class="col-1"></div>
+                            <div class="col-2"></div>
                         </div>
                         
                         <div class="row" id="formSearchHome">
                             <div class="col-2"></div>
-                            <div class="col-8">
-
-
-                                <div class="nom_detail_produit">
-                                    <p><?php echo $produit['designation'];?></p>
-                                </div>
-
-                                <div class="prix_detail_produit">
-                                    <p><?php echo $produit['prix'];?> $</p>
-                                </div>
-                                    
-                                
+                            <div class="col-8">                                
                                 <!-- Changer la redirection  -->
                                 <a href="">
                                     <form class="inputSearch" method="GET" action="rechercheProduit.php">
@@ -56,8 +69,8 @@ foreach($ligne as $produit){
                                 
                             </div>
                             <div class="col-2"></div>
-
                         </div>
+
                     </div>
                     <div class="col-1"></div>                    
                 </div>
@@ -72,7 +85,7 @@ foreach($ligne as $produit){
 
                     <?php
                     require "connection.php";
-                        $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='Bonsai1' ORDER BY prix LIMIT 1 ");
+                        $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='".$produit['designation']."' ORDER BY prix LIMIT 1 ");
                         $sql->execute();
                         $ligne = $sql->fetchall();
 
@@ -109,11 +122,11 @@ foreach($ligne as $produit){
                     <div class="col-3 desgProduitDiv right">
                         
                     </div>
-                <div class="col-6"></div>   
+                    <div class="col-6"></div>   
+                </div>
             </div>
         </div>
     </div>
-</div>
     
 <?php 
 }

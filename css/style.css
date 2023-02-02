@@ -347,54 +347,46 @@
 
 
 
-/*details_produit*/
+/*DETAIL PRODUIT*/
 
 
 #detailPresentation{
     font-family: 'Belgrano', serif;
     font-size: 20px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+.cardTitle{
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(15, 15, 51, 0.4);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Amatic SC';
+    text-align: center;
+}
+
+.TitlteDetailProd{
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.priceDetailProd{
+    background-color: #88B494;
+    border-radius: 15px 15px 15px 0px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
 
 
-
-#product {
-    width: 500px;
-    height: 400px;
-    position: relative;
-}
-  
-#img_detail_produit {
-   
-    height: 32.7rem;
-    width: 27rem;
-    z-index: 5;
-    top: 12.8rem;
-    margin-left: -15rem;
-    margin-top: 2rem;
-}
-  
-.div_green_detail_produit{
-    
-    width: 25rem;
-    height: 38.5rem;
-    margin-left: 6.5rem;
-    margin-top: 6.5rem;
-
-    background: #88B494;
-    border-radius: 188px 188px 188px 0px;
-}
+/*FIN DETAIL PRODUIT*/
 
 
 
 
-
-.main_color{
-    color : #006430;
-}
 
 /* Panier */
 
