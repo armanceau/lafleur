@@ -40,10 +40,6 @@ foreach($ligne as $produit){
                             <div class="col-2"></div>
                         </div>              
                                     
-                            
-
-
-                        
                         <div class="row">
                             <div class="col-2"></div>
                             <div class="col-8">
@@ -59,9 +55,6 @@ foreach($ligne as $produit){
                             <div class="col-8">                                
                                 <!-- Changer la redirection  -->
                                     <form class="inputSearch" method="GET" action="addbag.php">
-                                        
-                                            
-                                        
                                         <input type="text" name="recherche" placeholder="Ajouter au panier" disabled>
                                         <button class="buttonSubmitArrow" type="submit"><img class="arrowButton" src="assets\icons\arrow.png" alt="flèche"></button>
                                     </form> 
