@@ -23,13 +23,14 @@ try{
         $_SESSION['tel']=$ligne['tel'];
         $_SESSION['livraison']=$ligne['adresse'];
         $_SESSION['mdp/']=$ligne['mot_de_passe_user'];
-        header("Location: InfosPerso.php");
+        echo "success";
+        //header("Location: InfosPerso.php");
 
  
     }else{
 
         echo "failed";
-        header("Location: Authentification.php");
+        //header("Location: Authentification.php");
         
         }
 

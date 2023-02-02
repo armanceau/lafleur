@@ -23,7 +23,7 @@
                     IDENTIFIANT
                 </p>
 
-                <input type="text" id="input_id_login"> 
+                <input type="text" name="login" id="input_id_login"> 
 
             </div>
 
@@ -33,7 +33,7 @@
                     MOT DE PASSE
                 </p>
 
-                <input type="text" id="input_mdp_login"> 
+                <input type="text" name="mdp" id="input_mdp_login"> 
 
             </div>
 
