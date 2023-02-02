@@ -50,7 +50,7 @@
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="link" href="affichier_panier.php">
+                                <a class="link" href="afficher_panier.php">
                                     <h2>Panier</h2> 
                                 </a>
                             </div>

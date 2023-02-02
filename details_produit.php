@@ -34,7 +34,7 @@ foreach($ligne as $produit){
                         <p>Ajouter au panier</p>
                     </div>
                     <div class="bouton_ajout_panier">
-                        <a href="#"><img src="./assets/icons/arrow.png" alt="" style="width:5rem; margin-left:0.8rem; margin-top:-0.2rem;" ></a>
+                        <a href="addbag.php?ref=<?php echo $produit['reference'];?>"><img src="./assets/icons/arrow.png" alt="" style="width:5rem; margin-left:0.8rem; margin-top:-0.2rem;" ></a>
                     </div>
                 </div>
             </div>

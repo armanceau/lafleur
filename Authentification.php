@@ -1,5 +1,6 @@
 <?php require 'htmlAssets\header.php';  
 
+
 if(isset($_SESSION['login'])){
     header("Location: InfosPerso.php");
 }else{
