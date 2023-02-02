@@ -401,24 +401,27 @@
 
 
 
+/* DEBUT SHOP */
+
 
 .cardShop{
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(15, 15, 51, 0.4);
-    outline: none;
-    border: none;
     border-radius: 15px;
     font-family: 'Amatic SC';
     text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.cardGreen{
+    background-color: #88B494;
+size: 10px;
 }
 
 
-
-
+/* FIN SHOP */
 
 
 /* Panier */
