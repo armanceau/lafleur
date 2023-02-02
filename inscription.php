@@ -14,80 +14,107 @@
 
 <body>
 
-        <div class="container Inscription">
+        <form action="CreationCompte.php">
+                <div class="container Inscription">
 
-                <div class="insInput">
-                        <div class="insLibelle">
-                                <p>NOM</p>
+                        <div class="insInput">
+                                <div class="insLibelle">
+                                        <p>NOM</p>
+                                </div>
+
+                                <div class="inscriptionInput">
+                                        <input type="text" class="insInputNom" required>
+                                </div>  
+
+                                <div class="insValidation">
+                                        <img src="./assets/icons/validation.png" alt="validation">
+                                </div>
                         </div>
 
-                        <div class="inscriptionInput">
-                                <input type="text" class="insInputNom">
-                        </div>  
+                        <div class="insInput">
+                                <div class="insLibelle">
+                                        <p>PRÉNOM</p>
+                                </div>
 
-                        <div class="insValidation">
-                                <img src="./assets/icons/validation.png" alt="">
+                                <div class="inscriptionInput">
+                                        <input type="text" class="insInputPrenom"  required>
+                                </div>
+
+                                <div class="insValidation">
+                                        <img src="./assets/icons/validation.png" alt="validation">
+                                </div>
                         </div>
+
+                        <div class="insInput">
+                                <div class="insLibelle">
+                                        <p>NUMERO DE TÉLÉPHONE</p>
+                                </div>
+
+                                <div class="inscriptionInput">
+                                        <input type="text" class="insInputTel" id="phoneNumber" maxlength="14" required>
+                                </div>
+
+                                <div class="insValidation">
+                                        <img src="./assets/icons/validation.png" alt="validation">
+                                </div>
+                        </div>
+
+                        <div class="insInput">
+                                <div class="insLibelle">
+                                        <p>ADRESSE EMAIL</p>
+                                </div>
+
+                                <div class="inscriptionInput">
+                                        <input type="email" class="insInputEmail"  required>
+                                </div>
+
+                                <div class="insValidation">
+                                        <img src="./assets/icons/validation.png" alt="validation">
+                                </div>
+                        </div>
+
+                        <div class="insInput">
+                                <div class="insLibelle">
+                                        <p>MOT DE PASSE</p>
+                                </div>
+
+                                <div class="inscriptionInput">
+                                        <input type="password" class="insInputMdp"  required>
+                                </div>
+
+                                <div class="insValidation">
+                                        <img src="./assets/icons/validation.png" alt="validation">
+                                </div>
+                        </div>
+
+                        <div class="insInput">
+                                <div class="insLibelle">
+                                        <p>ADRESSE DE LIVRAISON</p>
+                                </div>
+
+                                <div class="inscriptionInput">
+                                        <input type="text" class="insInputAdresse"  required>
+                                </div>
+
+                                <div class="insValidation">
+                                        <img src="./assets/icons/validation.png" alt="validation">
+                                </div>
+                        </div>
+
+                        <button class="insBouton">
+                                <div class="btnLibelle">
+                                        <p>S'INSCRIRE</p>
+                                </div>
+                                <div class="btnFleche">
+                                        <img src="./assets/icons/arrow.png" alt="Flèche">
+                                </div>
+                        </button>
                 </div>
-
-                <div class="insInput">
-                        <div class="insLibelle">
-                                <p>PRENOM</p>
-                        </div>
-
-                        <div class="inscriptionInput">
-                                <input type="text" class="insInputPrenom">
-                        </div>
-
-                        <div class="insValidation">
-                                <img src="./assets/icons/validation.png" alt="">
-                        </div>
-                </div>
-
-                <div class="insInput">
-                        <div class="insLibelle">
-                                <p>ADRESSE EMAIL</p>
-                        </div>
-
-                        <div class="inscriptionInput">
-                                <input type="email" class="insInputEmail">
-                        </div>
-
-                        <div class="insValidation">
-                                <img src="./assets/icons/validation.png" alt="">
-                        </div>
-                </div>
-
-                <div class="insInput">
-                        <div class="insLibelle">
-                                <p>MOT DE PASSE</p>
-                        </div>
-
-                        <div class="inscriptionInput">
-                                <input type="password" class="insInputMdp">
-                        </div>
-
-                        <div class="insValidation">
-                                <img src="./assets/icons/validation.png" alt="">
-                        </div>
-                </div>
-
-                <div class="insInput">
-                        <div class="insLibelle">
-                                <p>ADRESSE DE LIVRAISON</p>
-                        </div>
-
-                        <div class="inscriptionInput">
-                                <input type="text" class="insInputAdresse">
-                        </div>
-
-                        <div class="insValidation">
-                                <img src="./assets/icons/validation.png" alt="">
-                        </div>
-                </div>
-        </div>
+        </form>
 
 
 </body>
 
-<?php require 'htmlAssets/footer2.html';?>
+<script type="text/javascript" src="./JS/scriptNumTel.js"></script>
+
+<?php require 'htmlAssets/footer3.html';?>
