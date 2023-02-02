@@ -23,7 +23,7 @@
                     IDENTIFIANT
                 </p>
 
-                <input type="email" id="input_id_login"> 
+                <input type="email" name="mail" id="input_id_login"> 
 
             </div>
 
@@ -33,7 +33,7 @@
                     MOT DE PASSE
                 </p>
 
-                <input type="password" id="input_mdp_login"> 
+                <input type="password" name="psw" id="input_mdp_login"> 
 
             </div>
 
