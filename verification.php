@@ -12,7 +12,7 @@ try{
 
     $sql->execute();
     $ligne = $sql->fetch();
-    var_dump($ligne);
+
     if(!empty($ligne) && password_verify($_REQUEST['mdp'],$ligne['mot_de_passe_user']))
     {
         $_SESSION['login'] = $_REQUEST["login"];
@@ -24,13 +24,13 @@ try{
         $_SESSION['livraison']=$ligne['adresse'];
         $_SESSION['mdp/']=$ligne['mot_de_passe_user'];
         echo "success";
-        //header("Location: InfosPerso.php");
+        header("Location: InfosPerso.php");
 
  
     }else{
 
         echo "failed";
-        //header("Location: Authentification.php");
+        header("Location: Authentification.php");
         
         }
 
