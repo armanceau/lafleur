@@ -33,7 +33,7 @@
                     MOT DE PASSE
                 </p>
 
-                <input type="password" name="psw" id="input_mdp_login"> 
+                <input type="password" name="mdp" id="input_mdp_login"> 
 
             </div>
 
