@@ -1,4 +1,9 @@
-<?php require 'htmlAssets\header.php';  ?>
+<?php require 'htmlAssets\header.php';  
+
+if(isset($_SESSION['login'])){
+    header("Location: InfosPerso.php");
+}else{
+?>
 
 <head>
 <meta charset="UTF-8">
@@ -60,4 +65,8 @@
     </form>
     
 </body>
-<?php require 'htmlAssets\footer.html';?>
+
+<?php 
+}
+require 'htmlAssets\footer.html';
+?>
