@@ -13,6 +13,7 @@ $sql->bindParam(':prenom', $_REQUEST['prenom']);
 $sql->bindParam(':adresse', $_REQUEST['adresse']);
 $sql->bindParam(':tel', $_REQUEST['tel']);
 
+$sql->execute();
 echo $sql->debugDumpParams();
 ?>
 
