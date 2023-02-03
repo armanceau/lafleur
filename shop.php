@@ -17,7 +17,7 @@ $sql=$connection->prepare("SELECT * FROM categorie ");
     }
         ?>
 
-    <div class="container">
+    <div class="container" id="maxContainer">
         <div class="row" id="formSearchDetailProd">
             <div class="col-2"></div>
             <div class="col-8">                                
@@ -42,54 +42,47 @@ $sql=$connection->prepare("SELECT * FROM categorie ");
 
                 foreach($ligne as $produit){
                     ?>
-                    <div class="col-4">
-                        <div class="card" style="width: 25rem;">
+                    <div class="col-3 cardShop">
 
-                        <div class="cont">
+                        <div class="row">
+                        
+                            <div class="col-4 colImgShop">
+                                <img class="imgShop" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="300" width="240">
+                            </div>
+
+                            <div class="col-7 cardGreen">
+                                
+                            </div>
+
+                            <div class="col-1"></div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-4"></div>
+
+                            <div class="col-7">
+            
+                                <div class="row">
+                                    <div class="col-8 desgProduitShop right">
+                    
+                                        <div class="row">
+                                            <div class="col-6 desgProduitDivShop">
+                                                <a class="linkShop"href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                                                    <?php echo $produit['designation'];?>
+                                                </a> 
+                                            </div>
+                                            
+                                        <div class="col-6"></div> 
+                                    </div>    
+                                </div>
+                                <div class="col-6"></div>     
+                            </div>
                             
-                        </div>
-                            <div>
-                                <img src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="400" width="300">
-                            </div>
-                            <div>
-                                <a href="details_produit.php?id=<?php echo $produit['reference'];?>"><button><?php echo $produit['designation'];?> -></button></a>
-                            </div>
-                    
+                            <div class="col-1"> </div>
                         </div>
                     </div>
-
-                    <div class="cont">
-                        <div class="div_white div_block" >
-
-                    
-                        </div>
-
-                        <?php
-                        require "connection.php";
-                            $sql=$connection->prepare("SELECT * FROM produit WHERE produit.designation='".$produit['designation']."' ORDER BY prix LIMIT 1 ");
-                            $sql->execute();
-                            $ligne = $sql->fetchall();
-
-                            foreach($ligne as $produit){
-                                $photo = $produit['photo'];
-                                ?>
-                                    <div>
-                                        <img class="imgProfil" src="<?php echo $produit['photo'];?>" alt="<?php echo $produit['designation'];?>" height="531" width="427">
-                                    </div>
-                                <?php
-                            }
-                        ?>
-
-
-                        <div class="div_green div_block">
-                        
-                        </div>
-                    
-                    </div>
-
-
-                        
-                    
+                </div>
 
 
                     <?php
