@@ -72,6 +72,20 @@
 
 /* FIN FOOTER2 (login) */
 
+/* DEBUT FOOTER3 (inscription) */
+
+.footer3{
+    font-family: 'Amatic SC';
+    border-top: 1px solid #000;
+    margin-top: 3.5rem;
+}cj
+
+.footer3 > h1{
+    font-size: xx-large
+}
+
+/* FIN FOOTER3 (inscription) */
+
     
 
 /* INDEX LOADER */
@@ -354,9 +368,99 @@
 /* FIN LOGIN */ 
 
 
+/* DEBUT INSCRIPTION */
+
+.Inscription{
+    margin-top: 4rem;
+}
+
+.insInput{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 3rem;
+    border-radius: 30px;
+}
+
+.insLibelle{
+    background: #88B494;
+    color: black;
+    width: 15rem;
+    height: 3.5rem;
+    font-family: 'Amatic SC';
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 30px 30px 0px 30px;
+}
+
+.insLibelle>p{
+    margin-top: 0.5rem;
+}
+
+.inscriptionInput{
+    text-align: center;
+    width: 100%;
+}
+
+.inscriptionInput>input{
+    margin-left: 6.8rem;
+    width: 58rem;
+    height: 3.5rem;
+    border-style: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Belgrano';
+}
+
+.insValidation{
+    text-align: center;
+    background: #88B494;
+    border-radius: 30px 30px 30px 0px;
+}
+
+.insValidation>img{
+  margin-top: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.insBouton{
+    display: grid;
+    grid-template-columns: 70% 30% ;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 30px;
+    margin-top: 4rem;
+    border-style: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btnLibelle{
+    color: black;
+    width: 12rem;
+    font-family: 'Amatic SC';
+}
+
+.btnFleche{
+    background: #88B494;
+    border-radius: 30px 30px 30px 0px;
+    height: 3.5rem;
+    width: 5.7rem;
+}
+
+.btnFleche>img{
+    width: 50px;
+    height: 50px;
+}
 
 
 
+
+/* FIN INSCRIPTION */
 
 
 
