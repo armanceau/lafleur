@@ -14,7 +14,7 @@
 
 <body>
 
-        <form action="CreationCompte.php">
+        <form action="CreationCompte.php" method="GET">
                 <div class="container Inscription">
 
                         <div class="insInput">
@@ -23,7 +23,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputNom" required>
+                                        <input type="text" class="insInputNom" name="nom" required>
                                 </div>  
 
                                 <div class="insValidation">
@@ -37,7 +37,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputPrenom"  required>
+                                        <input type="text" class="insInputPrenom" name="prenom"  required>
                                 </div>
 
                                 <div class="insValidation">
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputTel" id="phoneNumber" maxlength="14" required>
+                                        <input type="text" class="insInputTel" id="phoneNumber" maxlength="14" name="tel" required>
                                 </div>
 
                                 <div class="insValidation">
@@ -65,7 +65,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="email" class="insInputEmail"  required>
+                                        <input type="email" class="insInputEmail" name="email"  required>
                                 </div>
 
                                 <div class="insValidation">
@@ -79,7 +79,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="password" class="insInputMdp"  required>
+                                        <input type="password" class="insInputMdp" name="motDePasse"  required>
                                 </div>
 
                                 <div class="insValidation">
@@ -93,7 +93,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputAdresse"  required>
+                                        <input type="text" class="insInputAdresse" name="adresse" required>
                                 </div>
 
                                 <div class="insValidation">
