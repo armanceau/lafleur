@@ -49,7 +49,7 @@
 .footer{
     font-family: 'Amatic SC';
     border-top: 1px solid #000;
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 .footer > h1{
@@ -78,7 +78,7 @@
     font-family: 'Amatic SC';
     border-top: 1px solid #000;
     margin-top: 3.5rem;
-}cj
+}
 
 .footer3 > h1{
     font-size: xx-large
@@ -548,9 +548,23 @@
     font-size: 40px;
 }
 
-
 .right{
     border-radius: 0px 90px 0px 0px;
+}
+
+.priceShopDiv{
+    background-color: #88B494;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.priceShop{
+    color: #1E1E1E;
+}
+
+.navCateg{
+    background-color: #88B494;
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
 }
 
 

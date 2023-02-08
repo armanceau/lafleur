@@ -59,5 +59,5 @@ if(isset($_SESSION['login'])){
 
 <?php 
 }
-require 'htmlAssets\footer.html';
+require 'htmlAssets\footer2.html';
 ?>
