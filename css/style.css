@@ -545,7 +545,17 @@
 }
 
 .linkShop{
+    color: #1E1E1E;
+    text-decoration: none;
+    text-align: center;
     font-size: 40px;
+}
+
+
+.linkShop:hover{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s;
 }
 
 .right{
@@ -565,7 +575,14 @@
     background-color: #88B494;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 15px;
 }
+
+
+
+
 
 
 /* FIN SHOP */

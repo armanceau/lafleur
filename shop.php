@@ -6,8 +6,8 @@ require 'connection.php';
 
     <br>
     <div class="container" id="maxContainer">
-        <div class="row">
-            <div class="col-2"></div>
+        <div class="row cardShop">
+            <div class="col-1"></div>
             <?php
                 $sql=$connection->prepare("SELECT * FROM categorie ");
                 $sql->execute();
@@ -15,13 +15,13 @@ require 'connection.php';
 
                 foreach($ligne as $categorie){
                     ?>
-                    <div class="col-1 navCateg">
-                        <a href="shop.php?categorie=<?php echo $categorie['code_de_la_categorie']?>"><?php echo $categorie['nom_de_la_categorie']?></a>
+                    <div class="col-2 navCateg">
+                        <a class="linkShop" href="shop.php?categorie=<?php echo $categorie['code_de_la_categorie']?>"><?php echo $categorie['nom_de_la_categorie']?></a>
                     </div>
-                    <div class="col-1"></div>
                     <?php
                 }
             ?>
+            <div class="col-1"></div>
         </div>
     
         <div class="row">
@@ -87,7 +87,7 @@ require 'connection.php';
                     
                                         <div class="row">
                                             <div class="col-6 desgProduitDivShop">
-                                                <a class="linkShop"href="details_produit.php?id=<?php echo $produit['reference'];?>">
+                                                <a class="link"href="details_produit.php?id=<?php echo $produit['reference'];?>">
                                                     <?php echo $produit['designation'];?>
                                                 </a> 
                                             </div>
