@@ -1,10 +1,10 @@
 <?php
-include 'header/header.php';
+include 'htmlAssets/header.php';
 include 'check-connection.php';
 include 'connection.php';
 
 if (!isset($_REQUEST['total'])){
-    header("location: afficher_panier.php");
+    //header("location: afficher_panier.php");
 }
 
 
@@ -82,4 +82,4 @@ if (!empty($ligne)){
     </div>
 </main>
 
-<?php include 'footer.html'; ?>
+<?php include 'htmlAssets/footer.html'; ?>

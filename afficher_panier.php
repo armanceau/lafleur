@@ -36,7 +36,7 @@ if (!isset($_SESSION['login'])){
                         <br/>
                         <div class="row">
                             <div class="col-2-md col-3">
-                                <img class="photo_produit_panier" src="IMG/'.$ligne['photo'].'.jpg" alt="'.$ligne['photo'].'">
+                                <img class="photo_produit_panier" src="'.$ligne['photo'].'" alt="'.$ligne['photo'].'">
                             </div>
                             <div class="col-8-md col-7">
                                 <figure>
@@ -50,9 +50,9 @@ if (!isset($_SESSION['login'])){
                             <div class="col-2-md col-2">
                                 <h4 class="main_color title_prod">'.number_format($ligne['prix'], 2, ',', ' ').' €</h4>
                                 <input class="number_bag" type="text" value="'.$liste_produit[$i+1].'" style="text-align: right; border-radius: 20px;" disabled>
-                                <br/><a href="delquantite.php?ref='.$ligne['reference'].'" class="btn"><img class="quantite-control" src="header/images/moins.png"></a>
-                                <a href="addquantite.php?ref='.$ligne['reference'].'" class="btn"><img class="quantite-control" src="header/images/plus.png"></a><br/>
-                                <a class="btn" href="destroy-bag.php?ref='.$ligne['reference'].'"><img class="poubelle-panier" src="header/images/poubelle.png"></a>
+                                <br/><a href="delquantite.php?ref='.$ligne['reference'].'" class="btn"><img class="quantite-control" src="assets/icons/moins.png"></a>
+                                <a href="addquantite.php?ref='.$ligne['reference'].'" class="btn"><img class="quantite-control" src="assets/icons/plus.png"></a><br/>
+                                <a class="btn" href="destroy-bag.php?ref='.$ligne['reference'].'"><img class="poubelle-panier" src="assets/icons/poubelle.png"></a>
                             </div>
                         </div>
                         <br/>
@@ -66,12 +66,13 @@ if (!isset($_SESSION['login'])){
                 echo '
                 
                 <form action="commande.php" method="post">
+                    <input type="text" name="total" value="'.$price.'" hidden>
                     <div class="row">
                         <div class="col-9-sm col-10">
                         </div>
                         <div class="col-3-sm col-2">
                             <p class="title_prod">Total : <b>'.number_format($price, 2, ',', ' ').' €</b></p>
-                            <input type="text" name="total" value="'.$price.'" hidden>
+                            
                         </div>
                         <div class="col-9-sm col-10">
                         </div>
