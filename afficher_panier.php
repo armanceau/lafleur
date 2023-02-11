@@ -4,7 +4,7 @@ require 'htmlAssets\header.php';
 include "connection.php";
 
 if (!isset($_SESSION['login'])){
-    //header("location: Authentification.php");
+    header("location: Authentification.php");
     echo "here";
 } else{
 
