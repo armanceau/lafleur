@@ -127,10 +127,105 @@ require 'htmlAssets/header.php';
 </script>
 <main>
 
+<div class="container_info">
 
-<form action="deconnect.php" method="post">
-  <input type="submit" value="Déconnexion">
-</form>
+  <div class="header_info">
+
+    <img id="icon_infoPerso" src="./assets/icons/id-card.png" alt="icon infoPerso">
+
+    <div class="logout">
+      <form action="deconnect.php" method="post">
+        <button class="logout_btn"type="submit"><img class="logout_icon" src="./assets/icons/logout.png" alt=""></button>
+      </form>
+    </div>
+
+  </div>
+
+  
+  
+
+  <div class="msg_info">
+    <p>
+        Bonjour <?php echo $_SESSION['prenom']; ?>, bienvenue sur votre page de profil ! Vous pouvez ci-dessous gérer votre compte en modifiant vos informations ou en vous déconnectant.  
+    </p>
+  </div>
+
+  <form action="#" method="GET">
+    <div class="container_infoPerso">
+
+        <div class="infoInput">
+          <div class="infoLibelle">
+                  <p>NOM :</p>
+          </div>
+
+          <div class="informationInput">
+                  <input type="text" name="nom" value="<?php echo $_SESSION['nom'] ?>" required>
+          </div>  
+
+        </div>
+
+        <div class="infoInput">
+
+          <div class="infoLibelle">
+                  <p>PRÉNOM :</p>
+          </div>
+
+          <div class="informationInput">
+                  <input type="text"  name="prenom" value="<?php echo $_SESSION['prenom'] ?>" required>
+          </div>
+
+        </div>
+
+        <div class="infoInput">
+
+          <div class="infoLibelle">
+                  <p>NUMERO DE TÉLÉPHONE :</p>
+          </div>
+
+          <div class="informationInput">
+                  <input type="text"   id="phoneNumber" maxlength="14" name="tel" value="<?php echo $_SESSION['tel'] ?>" required>
+          </div>
+        </div>
+
+        <div class="infoInput">
+
+          <div class="infoLibelle">
+                  <p>ADRESSE EMAIL :</p>
+          </div>
+
+          <div class="informationInput">
+                  <input type="email"  name="email" value="<?php echo $_SESSION['email'] ?>" required>
+          </div>
+        </div>
+
+        <div class="infoInput">
+          <div class="infoLibelle">
+                  <p>MOT DE PASSE :</p>
+          </div>
+          
+          <div class="informationInput">
+                  <input type="password"  name="motDePasse" value="<?php echo $_SESSION['motDePasse'] ?>" required>
+          </div>
+        </div>
+
+        <div class="infoInput">
+
+          <div class="infoLibelle">
+                  <p>ADRESSE DE LIVRAISON :</p>
+          </div>
+
+          <div class="informationInput">
+                  <input type="text"  name="adresse" value="<?php echo $_SESSION['adresse'] ?>" required>
+          </div>
+
+        </div>
+
+    </div>
+    <button type="submit">Valider mes modifications </button>
+  </form>
+</div>
+
+
 </main>
 
-<?php require 'htmlAssets/footer.html'; ?>
+<?php require 'htmlAssets/footer2.html'; ?>

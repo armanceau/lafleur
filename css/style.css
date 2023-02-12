@@ -743,6 +743,107 @@ a, .dot {
 /* FIN INSCRIPTION */
 
 
+/* DEBUT INFO PERSO */
+
+.container_info{
+    width: 971px;
+    height: 671px;
+    margin-top: 4rem;
+    margin-left: 30rem;
+
+    background: #88B494;
+    border-radius: 180px 0px;
+}
+
+.header_info{
+    display: grid;
+    grid-template-columns: 80% 20% ;
+}
+
+.logout_btn{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    margin-top: 1rem;
+    margin-left: 8rem;
+}
+
+.logout_icon{
+    width: 3rem;
+    height: 3rem;
+}
+
+#icon_infoPerso{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin-left: 27rem;
+}
+
+.msg_info{
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Belgrano', serif;
+}
+
+.container_infoPerso{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Amatic SC', serif;
+}
+
+.infoInput{
+    display: grid;
+    grid-template-columns: 30% 70% ;
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    border-radius: 30px;
+}
+
+.infoLibelle{
+    background: #88B494;
+    color: black;
+    width: 15rem;
+    height: 2.5rem;
+    font-family: 'Belgrano', serif;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 30px 30px 0px 30px;
+}
+
+.infoLibelle>p{
+    width: 18rem;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.informationInput{
+    width: 45rem;
+    height: 2.5rem;
+}
+
+.informationInput>input{
+    width: 35rem;
+    height: 2.5rem;
+    margin-left: -2.5rem;
+    border-radius: 30px;
+    border-style: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Belgrano';
+}
+
+
+
+
+/* FIN INFO PERSO */
+
 
 /*DETAIL PRODUIT*/
 
@@ -874,19 +975,6 @@ a, .dot {
 }
 
 
-/* InfosPerso */
-
-.container-info{
-    margin-top: 60px;
-    /* border: solid red; */
-    width: 700px;
-    margin-left: 600px;
-    border: solid red;
-    width: 300px;
-    margin-left: 800px;
-    margin-top: 100px;
-}
-
 
 .line{
     display: flex;
@@ -912,7 +1000,6 @@ a, .dot {
     padding-bottom: 10px;
     width: 400px;
 }
-
 
 
 .crayon
