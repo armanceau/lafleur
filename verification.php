@@ -26,13 +26,11 @@ try{
         $_SESSION["adresse"]=$ligne['adresse'];
         $_SESSION["tel"]=$ligne['tel'];
         
-        echo 'if';
         header("Location: InfosPerso.php");
 
  
     }else{
 
-        echo 'else';
         header("Location: home.php");
         
         }
