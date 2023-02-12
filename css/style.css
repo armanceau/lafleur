@@ -479,16 +479,15 @@
   width: 43rem;
   height: 27rem;
   border-radius: 20px;
-  border: solid 2px blue;
 }
 
 .green {
   color: #4da070;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: 'Belgrano', serif;
   font-weight: 100;
   letter-spacing: 3px;
-  padding-top: 20px;
+  padding-top: 13px;
   padding-bottom: 5px;
   text-transform: uppercase;
 }
@@ -523,6 +522,15 @@
   font-weight: 100;
   color: darken(#777777, 10%);
   letter-spacing: 1px;
+}
+
+.msg-succes-insc {
+    margin-top: 1rem;
+    font-family: 'Belgrano', serif;
+    font-size: 0.7em;
+    font-weight: 100;
+    color: darken(#777777, 10%);
+    letter-spacing: 1px;
 }
 
 a, .dot {
