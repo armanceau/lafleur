@@ -1,11 +1,16 @@
 <?php
+session_start() ;
 require 'htmlAssets/header.php';
 require "connection.php" ;
 
 try{
     $sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel);');
 
-    $psw = password_hash($_REQUEST['motDePasse'],PASSWORD_DEFAULT);
+    $options = [
+        'cost' => 12,
+    ];
+
+    $psw = password_hash($_REQUEST['motDePasse'],PASSWORD_BCRYPT,$options);
 
     $sql->bindParam(':mail_login', $_REQUEST['email']);
     $sql->bindParam(':motDePasse', $psw);
@@ -16,6 +21,13 @@ try{
 
     $sql->execute();
     //echo $sql->debugDumpParams();
+    $_SESSION["nom"]=$_REQUEST['nom'];
+    $_SESSION["prenom"]=$_REQUEST['prenom'];
+    $_SESSION["tel"]=$_REQUEST['tel'];
+    $_SESSION["email"]=$_REQUEST['email'];
+    $_SESSION["motDePasse"]=$psw;
+    $_SESSION["adresse"]=$_REQUEST['adresse'];
+    
     include "./htmlAssets/msg-succes-register.html";
 }catch(Exception $e){
     include "./htmlAssets/msg-error-register.html";
