@@ -203,8 +203,8 @@ require 'htmlAssets/header.php';
                   <p>MOT DE PASSE :</p>
           </div>
           
-          <div class="informationInput">
-                  <input type="password"  name="motDePasse" value="<?php echo $_SESSION['motDePasse'] ?>" required>
+          <div id="informationInput__mdp" class="informationInput">
+                  <input type="text"  name="motDePasse" placeholder="Modifier votre mot de passe">
           </div>
         </div>
 
@@ -221,7 +221,7 @@ require 'htmlAssets/header.php';
         </div>
 
     </div>
-    <button type="submit">Valider mes modifications </button>
+    <button class="validation__modifInfo" type="submit">Valider mes modifications </button>
   </form>
 </div>
 

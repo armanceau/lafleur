@@ -9,11 +9,9 @@ try{
     $options = [
         'cost' => 12,
     ];
-
-    $psw = password_hash($_REQUEST['motDePasse'],PASSWORD_BCRYPT,$options);
-
+    
     $sql->bindParam(':mail_login', $_REQUEST['email']);
-    $sql->bindParam(':motDePasse', $psw);
+    $sql->bindParam(':motDePasse', password_hash($_REQUEST['motDePasse'],PASSWORD_BCRYPT,$options););
     $sql->bindParam(':nom', $_REQUEST['nom']);
     $sql->bindParam(':prenom', $_REQUEST['prenom']);
     $sql->bindParam(':adresse', $_REQUEST['adresse']);
@@ -25,7 +23,7 @@ try{
     $_SESSION["prenom"]=$_REQUEST['prenom'];
     $_SESSION["tel"]=$_REQUEST['tel'];
     $_SESSION["email"]=$_REQUEST['email'];
-    $_SESSION["motDePasse"]=$psw;
+    $_SESSION["motDePasse"]=$_REQUEST['motDePasse'];
     $_SESSION["adresse"]=$_REQUEST['adresse'];
     
     include "./htmlAssets/msg-succes-register.html";

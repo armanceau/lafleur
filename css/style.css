@@ -786,15 +786,17 @@ a, .dot {
 }
 
 .msg_info{
+    margin-left: 3rem;
+    width: 55rem;
     text-align: center;
     margin-top: 1rem;
     font-family: 'Belgrano', serif;
+    font-size: 1.1em;
 }
 
 .container_infoPerso{
     text-align: center;
     font-size: 1.5em;
-    font-family: 'Amatic SC', serif;
 }
 
 .infoInput{
@@ -837,9 +839,32 @@ a, .dot {
     text-align: center;
     font-size: 1.1rem;
     font-family: 'Belgrano';
+    transition: transform .6s;
 }
 
+.informationInput>input:hover{
+    transform: scale(1.1);
+}
 
+/* actif pour tout les inputs*/
+input:focus::placeholder{ 
+    color: transparent;
+}
+
+.validation__modifInfo{
+    height: 2.5rem;
+    text-align: center;
+    font-family: 'Belgrano' ;
+    margin-left: 23rem;
+    margin-top: 2rem;
+    border-radius: 30px;
+    transition: transform .6s;
+    border: none;
+}
+
+.validation__modifInfo:hover{
+    transform: scale(1.1);
+}
 
 
 /* FIN INFO PERSO */

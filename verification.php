@@ -33,7 +33,7 @@ try{
 
         header("Location: home.php");
         
-        }
+    }
 
 }catch (PDOException $pdo){
     echo "Erreur: ".$pdo->getMessage();
