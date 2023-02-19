@@ -27,7 +27,7 @@ if(isset($_SESSION['email'])){
                 MOT DE PASSE
             </p>
 
-            <input type="password" name="mdp" id="input_mdp_login" required> 
+            <input type="password" name="mdp" id="input_mdp_login" > 
 
         </div>
 
