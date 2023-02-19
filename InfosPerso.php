@@ -150,7 +150,7 @@ require 'htmlAssets/header.php';
     </p>
   </div>
 
-  <form action="#" method="GET">
+  <form action="update__infoPerso.php" method="GET">
     <div class="container_infoPerso">
 
         <div class="infoInput">
