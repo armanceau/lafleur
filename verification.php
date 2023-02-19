@@ -14,6 +14,7 @@ try{
     $ligne = $sql->fetch();
 
     var_dump($_REQUEST['mdp']);
+    var_dump($_SESSION["motDePasse"]);
     var_dump($ligne ['mot_de_passe_user']); 
 
     if(!empty($ligne) && password_verify($_REQUEST['mdp'],$ligne ['mot_de_passe_user']))
@@ -26,12 +27,12 @@ try{
         $_SESSION["adresse"]=$ligne['adresse'];
         $_SESSION["tel"]=$ligne['tel'];
         
-        header("Location: InfosPerso.php");
+        //header("Location: InfosPerso.php");
 
  
     }else{
 
-        header("Location: home.php");
+        //header("Location: home.php");
         
     }
 
