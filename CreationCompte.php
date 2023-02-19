@@ -9,9 +9,11 @@ try{
     $options = [
         'cost' => 12,
     ];
+
+    $motDePasseHash = password_hash($_REQUEST['motDePasse'],PASSWORD_BCRYPT,$options) ;
     
     $sql->bindParam(':mail_login', $_REQUEST['email']);
-    $sql->bindParam(':motDePasse', password_hash($_REQUEST['motDePasse'],PASSWORD_BCRYPT,$options));
+    $sql->bindParam(':motDePasse', $motDePasseHash);
     $sql->bindParam(':nom', $_REQUEST['nom']);
     $sql->bindParam(':prenom', $_REQUEST['prenom']);
     $sql->bindParam(':adresse', $_REQUEST['adresse']);

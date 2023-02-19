@@ -10,19 +10,9 @@ $emailUpdated = $_REQUEST['email'] ;
 $motDePasseUpdated = $_REQUEST['motDePasse'] ;
 $adresseUpdated = $_REQUEST['adresse'] ;
 
-var_dump($nomUpdated);
-var_dump($prenomUpdated);
-var_dump($telUpdated);
-var_dump($emailUpdated);
-var_dump($motDePasseUpdated);
-var_dump($adresseUpdated);
-
-var_dump($_SESSION["email"]);
-
-
 
 try{
-    $sql=$connection ->prepare("UPDATE utilisateur SET mail_login=':mail_login', mot_de_passe_user=':motDePasse', nom=':nom', prenom=':prenom', adresse=':adresse', tel=':tel' WHERE mail_login = '".$_SESSION["email"]."'");
+    $sql=$connection->prepare("UPDATE utilisateur SET mail_login=:mail_login, mot_de_passe_user=:motDePasse, nom=:nom, prenom=:prenom, adresse=:adresse, tel=:tel WHERE mail_login =:actual_mail_login");
 
     $options = [
         'cost' => 12,
@@ -31,7 +21,7 @@ try{
     $motDePasseUpdatedHash = password_hash($motDePasseUpdated,PASSWORD_BCRYPT,$options);
 
     
-    
+    $sql->bindParam(':actual_mail_login', $_SESSION["email"]);
     $sql->bindParam(':mail_login', $emailUpdated);
     $sql->bindParam(':motDePasse', $motDePasseUpdatedHash);
     $sql->bindParam(':nom', $nomUpdated);
@@ -48,14 +38,10 @@ try{
     $_SESSION["motDePasse"]=$motDePasseUpdated;
     $_SESSION["adresse"]= $adresseUpdated;
     
-    echo 'ok' ;
-    //include "./htmlAssets/msg-succes-register.html";
+    include "./htmlAssets/msg-succes-modifInfo.html";
 }catch(Exception $e){
     
-    echo $sql->debugDumpParams() ;
-    echo 'nop' ;
-    echo $_SESSION["email"] ;
-    //include "./htmlAssets/msg-error-register.html";
+    include "./htmlAssets/msg-error-register.html";
 }
 
 ?>

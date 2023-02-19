@@ -825,14 +825,15 @@ a, .dot {
 }
 
 .informationInput{
-    width: 45rem;
+    width: fit-content;
     height: 2.5rem;
+    
 }
 
 .informationInput>input{
     width: 35rem;
     height: 2.5rem;
-    margin-left: -2.5rem;
+    margin-left: 2.5rem;
     border-radius: 30px;
     border-style: none;
     outline: none;

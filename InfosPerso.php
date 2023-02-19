@@ -150,7 +150,7 @@ require 'htmlAssets/header.php';
     </p>
   </div>
 
-  <form action="update__infoPerso.php" method="GET">
+  <form action="update__infoPerso.php" method="GET" id="modif__infoPerso">
     <div class="container_infoPerso">
 
         <div class="infoInput">
@@ -203,8 +203,8 @@ require 'htmlAssets/header.php';
                   <p>MOT DE PASSE :</p>
           </div>
           
-          <div id="informationInput__mdp" class="informationInput">
-                  <input type="text"  name="motDePasse" placeholder="Modifier votre mot de passe">
+          <div class="informationInput">
+                  <input type="password" id="password"  name="motDePasse" placeholder="Modifier votre mot de passe">
           </div>
         </div>
 
@@ -227,5 +227,8 @@ require 'htmlAssets/header.php';
 
 
 </main>
+
+<script type="text/javascript" src="./JS/scriptNumTel.js"></script>
+<script type="text/javascript" src="./JS/verif__modifInfo.js"></script>
 
 <?php require 'htmlAssets/footer2.html'; ?>
