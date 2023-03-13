@@ -23,7 +23,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputNom" name="nom" required>
+                                        <input type="text" class="insInputNom" name="nom" required placeholder="Renseigner Votre Nom">
                                 </div>  
 
                                 <div class="insValidation">
@@ -37,7 +37,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputPrenom" name="prenom"  required>
+                                        <input type="text" class="insInputPrenom" name="prenom"  required placeholder="Renseigner Votre Prénom">
                                 </div>
 
                                 <div class="insValidation">
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputTel" id="phoneNumber" maxlength="14" name="tel" required>
+                                        <input type="text" class="insInputTel" id="phoneNumber" maxlength="14" name="tel" required placeholder="Renseigner Votre Numéro De Téléphone">
                                 </div>
 
                                 <div class="insValidation">
@@ -65,7 +65,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="email" class="insInputEmail" name="email"  required>
+                                        <input type="email" class="insInputEmail" name="email"  required placeholder="Renseigner Votre Adresse Email">
                                 </div>
 
                                 <div class="insValidation">
@@ -79,7 +79,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="password" class="insInputMdp" name="motDePasse"  required>
+                                        <input type="password" class="insInputMdp" name="motDePasse"  required placeholder="Choissisez Un Mot De Passe ">
                                 </div>
 
                                 <div class="insValidation">
@@ -93,7 +93,7 @@
                                 </div>
 
                                 <div class="inscriptionInput">
-                                        <input type="text" class="insInputAdresse" name="adresse" required>
+                                        <input type="text" class="insInputAdresse" name="adresse" required placeholder="Renseigner Une Adresse de Livraison">
                                 </div>
 
                                 <div class="insValidation">

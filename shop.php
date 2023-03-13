@@ -15,9 +15,9 @@ require 'connection.php';
 
                 foreach($ligne as $categorie){
                     ?>
-                    <div class="col-2 navCateg">
-                        <a class="linkShop" href="shop.php?categorie=<?php echo $categorie['code_de_la_categorie']?>"><?php echo $categorie['nom_de_la_categorie']?></a>
-                    </div>
+                        <a class="col-2 navCateg" href="shop.php?categorie=<?php echo $categorie['code_de_la_categorie']?>">
+                            <?php echo $categorie['nom_de_la_categorie']?>
+                        </a>
                     <?php
                 }
             ?>

@@ -1,43 +1,38 @@
 <?php
+session_start() ;
 require 'htmlAssets/header.php';
 require "connection.php" ;
 
-$sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel);');
+try{
+    $sql=$connection ->prepare('INSERT INTO utilisateur VALUES(:mail_login, :motDePasse, :nom, :prenom, :adresse,:tel);');
 
-$psw = password_hash($_REQUEST['motDePasse'],PASSWORD_DEFAULT);
+    $options = [
+        'cost' => 12,
+    ];
 
-$sql->bindParam(':mail_login', $_REQUEST['email']);
-$sql->bindParam(':motDePasse', $psw);
-$sql->bindParam(':nom', $_REQUEST['nom']);
-$sql->bindParam(':prenom', $_REQUEST['prenom']);
-$sql->bindParam(':adresse', $_REQUEST['adresse']);
-$sql->bindParam(':tel', $_REQUEST['tel']);
+    $motDePasseHash = password_hash($_REQUEST['motDePasse'],PASSWORD_BCRYPT,$options) ;
+    
+    $sql->bindParam(':mail_login', $_REQUEST['email']);
+    $sql->bindParam(':motDePasse', $motDePasseHash);
+    $sql->bindParam(':nom', $_REQUEST['nom']);
+    $sql->bindParam(':prenom', $_REQUEST['prenom']);
+    $sql->bindParam(':adresse', $_REQUEST['adresse']);
+    $sql->bindParam(':tel', $_REQUEST['tel']);
 
-$sql->execute();
-echo $sql->debugDumpParams();
+    $sql->execute();
+    //echo $sql->debugDumpParams();
+    $_SESSION["nom"]=$_REQUEST['nom'];
+    $_SESSION["prenom"]=$_REQUEST['prenom'];
+    $_SESSION["tel"]=$_REQUEST['tel'];
+    $_SESSION["email"]=$_REQUEST['email'];
+    $_SESSION["motDePasse"]=$_REQUEST['motDePasse'];
+    $_SESSION["adresse"]=$_REQUEST['adresse'];
+    
+    include "./htmlAssets/msg-succes-register.html";
+}catch(Exception $e){
+    include "./htmlAssets/msg-error-register.html";
+}
+
 ?>
 
-<html>
-    <body>
-        <div class="container-fluid" style = "padding-top: 230px;">
-            <div class="row">
-
-                <div class="col-2"></div>
-
-                <div class="col-8 rounded row" style = "text-align : center; background-color : #C4C4C4; padding-top : 20px; padding-bottom : 20px;">
-                    <div class="col-1"></div>
-
-                    <div class="col-10" >
-                        <p>Vos informations ont bien été ajoutées à notre base de données, vous êtes maintenant inscris !</p>
-                        <button class="rounded-pill" style = "background-color: #006430; ">
-                            <a href="Authentification.php" style = "color : white;font-family: lobster;" >Je me connecte avec mon compte</a> 
-                        </button>
-                    </div>
-
-                </div>
-
-                <div class="col-2"></div>
-
-            </div>
-        </div>
 <?php require 'htmlAssets/footer.html';?>

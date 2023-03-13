@@ -13,26 +13,28 @@ try{
     $sql->execute();
     $ligne = $sql->fetch();
 
-    if(!empty($ligne) && password_verify($_REQUEST['mdp'],$ligne['mot_de_passe_user']))
+    var_dump($_REQUEST['mdp']);
+    var_dump($_SESSION["motDePasse"]);
+    var_dump($ligne ['mot_de_passe_user']); 
+
+    if(!empty($ligne) && password_verify($_REQUEST['mdp'],$ligne ['mot_de_passe_user']))
     {
-        $_SESSION['login'] = $_REQUEST["login"];
-        $_SESSION['mdp'] = $_REQUEST['mdp'];
-        $_SESSION['nom']=$ligne['nom'];
-        $_SESSION['prenom']=$ligne['prenom'];
-        $_SESSION['mail']=$ligne['mail_login'];
-        $_SESSION['tel']=$ligne['tel'];
-        $_SESSION['livraison']=$ligne['adresse'];
-        $_SESSION['mdp/']=$ligne['mot_de_passe_user'];
-        echo "success";
-        header("Location: InfosPerso.php");
+
+        $_SESSION["email"]=$ligne['mail_login'];
+        $_SESSION["motDePasse"]=$ligne['mot_de_passe_user'];
+        $_SESSION["nom"]=$ligne['nom'];
+        $_SESSION["prenom"]=$ligne['prenom'];
+        $_SESSION["adresse"]=$ligne['adresse'];
+        $_SESSION["tel"]=$ligne['tel'];
+        
+        //header("Location: InfosPerso.php");
 
  
     }else{
 
-        echo "failed";
-        header("Location: Authentification.php");
+        //header("Location: home.php");
         
-        }
+    }
 
 }catch (PDOException $pdo){
     echo "Erreur: ".$pdo->getMessage();
