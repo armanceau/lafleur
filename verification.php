@@ -5,8 +5,6 @@ require "connection.php" ;
 
 try{
     
-
-    
     $sql= $connection->prepare("SELECT * FROM utilisateur WHERE mail_login = :mail LIMIT 1") ;
     $sql->bindParam(':mail', $_REQUEST["login"], PDO::PARAM_STR);
 
