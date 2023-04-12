@@ -30,7 +30,7 @@ try{
  
     }else{
 
-        //header("Location: home.php");
+        header("Location: home.php");
         
     }
 
