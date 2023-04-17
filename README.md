@@ -24,3 +24,6 @@ Ce projet est un projet d'école reutilisant toutes les connaissances acquises d
 | Noir | ![#1E1E1E](https://via.placeholder.com/10/1E1E1E?text=+) #1E1E1E |
 
 
+![Logo](assets\icons\logoLaFleur2.PNG)
+
+
