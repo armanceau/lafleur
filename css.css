@@ -1,0 +1,306 @@
+/* Police italiano */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+body{
+    
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+footer {
+    margin-top:auto; 
+}
+    
+
+.main_color{
+    color : #006430;
+}
+
+/* Panier */
+
+@media screen and (max-width: 576px){
+    .photo_produit_panier {
+        width: 75px;
+        height: auto;
+        border: solid;
+    }
+    .panier-content{
+        margin-right: 20px;
+    }
+    .title_prod{
+        font-size: 14px;
+    }
+    .number_bag{
+        width: 24px;
+        font-size: 10px;
+    }
+    .poubelle-panier{
+        width: 15px;
+        height: auto;
+    }
+    .quantite-control{
+        width: 10px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .photo_produit_panier {
+        width: 125px;
+        height: auto;
+        border: solid;
+    }
+    .panier-content{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .title_prod{
+        font-size: 24px;
+    }
+    .number_bag{
+        width: 50px;
+        font-size: 18px;
+    }
+    .poubelle-panier{
+        width: 25px;
+        height: auto;
+    }
+    .quantite-control{
+        width: 15px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .photo_produit_panier {
+        width: 200px;
+        height: auto;
+        border: solid;
+    }
+    .panier-content{
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+    .title_prod{
+        font-size: 24px;
+    }
+    .number_bag{
+        width: 70px;
+        font-size: 18px;
+    }
+    .poubelle-panier{
+        width: 35px;
+        height: auto;
+    }
+    .quantite-control{
+        width: 25px;
+        height: auto;
+    }
+}
+
+/* Validation commande */
+
+.champ-text-commande{
+        text-align: center;
+        border-radius: 5px;
+        border: solid 1px;
+}
+
+@media screen and (max-width: 576px){
+
+    .card-img {
+        height: 50px;
+        width: auto;
+        margin-left: 150%;
+    }
+
+    .ccv-img {
+        height: 45px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+        padding-left: 5px;
+    }
+
+    .profil-img{
+        height: 50px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+    }
+
+    .livraison-img{
+        height: 50px;
+        width: auto;
+        margin-top: 30px;
+        margin-left: 150%;
+    }
+
+    .total-price{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 576px){
+
+    .card-img {
+        height: 75px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .ccv-img {
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .profil-img{
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .livraison-img{
+        height: 70px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+    }
+
+    .champ-text-commande{
+        width: 250px;
+    }
+
+    .total-price{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    .card-img {
+        height: 100px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .ccv-img {
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .profil-img{
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .livraison-img{
+        height: 90px;
+        width: auto;
+        margin-right: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .champ-text-commande{
+        width: 500px;
+    }
+
+    .total-price{
+        font-size: 24px;
+    }
+}
+
+/*details_produit*/
+
+.photo {
+    margin-top: 15%;
+}
+.photo img {
+    width: 90%;
+}
+.previ {
+ margin-top: 10%;
+}
+.previ img {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 80px;
+}
+.previ img:hover {
+    box-shadow: 0 0 4px 3px rgba(0, 140, 186, 0.5);
+    background: gray;
+}
+.description {
+    margin-top: 4%;
+    border: 1px solid black;
+    height: 700px;
+}
+.btn-test {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-size: 40px;
+}
+.commentaire {
+    margin-top: 10%;
+    border: 1px solid black;
+    height :60%;
+}
+.com_titre{
+background-color: silver;
+margin-top: -20px;
+margin-left: 25%;
+font-size: 40px;
+border-radius: 50px;
+width: 250px;
+
+}
+.commentaire_cont {
+    
+    background-color: silver;
+    height: auto;
+    width: 95%; 
+}
+
+
+
+/* InfosPerso */
+
+.container-info{
+    border: solid red;
+    width: 300px;
+    margin-left: 800px;
+    margin-top: 100px;
+}
+
+
+.line{
+    display: flex;
+    /* margin-top: 20px; */
+    /* border: solid green; */
+}
+.line p{
+    margin-top: 25px;
+    margin-left: 25px;
+    /* border: solid yellow; */
+}
+.line input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    /* border: solid yellow; */
+}
+
+
+
