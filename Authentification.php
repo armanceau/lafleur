@@ -6,7 +6,7 @@ if(isset($_SESSION['email'])){
 }else{
 ?>
 <div class="container_login">
-    <form method='GET' action='verification.php'>
+    <form class="form_login"  method='GET' action='verification.php'>
         <div class="logo_login_right">
             <img src="./assets/icons/rmbg_logoLaFleur.png" alt="logo right" >
         </div>

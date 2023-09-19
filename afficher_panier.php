@@ -3,14 +3,14 @@
 require 'htmlAssets\header.php'; 
 include "connection.php";
 
-if (!isset($_SESSION['login'])){
+if (!isset($_SESSION['email'])){
     header("location: Authentification.php");
     echo "here";
 } else{
 
     $liste_produit = array();
     
-    $sql = "SELECT `reference`,`quantite_d_article` FROM pannier WHERE mail_login = '".$_SESSION['login']."'";
+    $sql = "SELECT `reference`,`quantite_d_article` FROM pannier WHERE mail_login = '".$_SESSION['email']."'";
     $table = $connection->query($sql);
 
     while ($ligne = $table->fetch()){

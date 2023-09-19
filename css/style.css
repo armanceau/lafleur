@@ -4,10 +4,6 @@
 /* Police Belgrano */
 @import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
 
-
-
-
-
 /* HEADER */
 
 .header{
@@ -118,7 +114,14 @@
     color: #88B494;
 }
 
+.container_recherche{
+    margin: auto;
+    width: 90%;
+}
+
 .inputSearch{
+    display: flex;
+    justify-content: space-between;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(15, 15, 51, 0.4);
     outline: none;
@@ -129,7 +132,7 @@
 .inputSearch > input{
     outline: none;
     border: none;
-    margin-left: 15%;
+    margin-left: 5%;
 }
 
 .inputSearch > input:hover{
@@ -159,7 +162,7 @@
 
 .cont{
     height: 100%;
-    width: 90%;
+    width: 85%;
     border-radius: 20px;
     align-items: center;
     display: table;
@@ -170,6 +173,10 @@
     display: table-cell;
     height: 600px;
     width: 400px;
+}
+
+.imgProfil{
+    position: absolute;
 }
 
 .div_green{
@@ -185,29 +192,35 @@
     padding-top: 1%;
 }
 
-.imgProfil {
-    z-index: 5;
-    display: flex;
-    right: 50%;
-    top: 19%;
-    left: 49%;
-    /* right: 50%; */
-    /* top: -68px; */
-    bottom: 129px;
-    position: fixed;
-    vertical-align: bottom;
-  }
+.container_img_home{
+    position: absolute;
+}
 
 .desgProduit{
-    margin-top: -50px; 
-    margin-left: -10px;
+    width: 60%;
+    margin-top: -60px;
+    margin-left: 55px;
     font-family: 'Amatic SC';
     font-size: 40px;
 }
 
+@media (max-width: 1400px){
+
+    .desgProduit{
+        margin-top: -60px;
+        margin-left: 45px;
+        font-family: 'Amatic SC';
+        font-size: 40px;
+    }
+   
+}
+    
+
 .desgProduitDiv{
     background-color: #fff;
+    width: 50%;
 }
+
 
 .right{
     border-radius: 0px 90px 0px 0px;
@@ -221,7 +234,6 @@
 }
 
 
-
 /* FIN HOME */
 
 
@@ -230,18 +242,22 @@
 /* LOGIN */ 
 
 .container_login{
-    width: 971px;
-    height: 671px;
+    width: 55%;
+    margin: auto;
     margin-top: 4rem;
-    margin-left: 30rem;
-
     background: #88B494;
     border-radius: 180px 0px;
 }
 
+.form_login{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
 .id_login{
-    margin-top: 0rem;
-    margin-left: 13rem;
+    margin: auto;
     height: fit-content;
     width: fit-content;
 }
@@ -273,8 +289,7 @@
 }
 
 .mdp_login{
-    margin-top: 4rem;
-    margin-left: 13rem;
+    margin: auto;
     height: fit-content;
     width: fit-content;
 }
@@ -305,8 +320,7 @@
 .validation_login{
     width: 129px;
     height: 50px;
-    margin-top: 3rem;
-    margin-left: 25rem;
+    margin: auto;
     background: #FFFFFF;
     border-radius: 30px;
     outline: none;
@@ -346,8 +360,6 @@
 .logo_login_right>img{
     width: 13rem;
     height: 8rem;
-    margin-left: 49rem;
-    margin-bottom: 0rem;
 } 
 
 .logo_login_left{
@@ -473,8 +485,7 @@
 
 #container {
   position: relative;
-  margin-left: 37rem;
-  margin-top: 10rem;
+  margin: 5rem auto;
   overflow: hidden;
   width: 43rem;
   height: 27rem;
@@ -746,18 +757,18 @@ a, .dot {
 /* DEBUT INFO PERSO */
 
 .container_info{
-    width: 971px;
-    height: 671px;
+    width: 60%;
     margin-top: 4rem;
-    margin-left: 30rem;
-
+    margin: 4rem auto;
     background: #88B494;
     border-radius: 180px 0px;
 }
 
 .header_info{
-    display: grid;
-    grid-template-columns: 80% 20% ;
+    display: flex;
+    align-items: center;
+    margin-left: 45%;
+    justify-content: space-between;    
 }
 
 .logout_btn{
@@ -768,8 +779,7 @@ a, .dot {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-    margin-top: 1rem;
-    margin-left: 8rem;
+    margin-right: 2rem;
 }
 
 .logout_icon{
@@ -778,39 +788,64 @@ a, .dot {
 }
 
 #icon_infoPerso{
-    width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    margin-top: 1rem;
-    margin-left: 28rem;
+}
+
+@media (max-width: 1280px){
+    #icon_infoPerso{
+        height: 5rem;
+    }
 }
 
 .msg_info{
     margin-left: 3rem;
-    width: 55rem;
     text-align: center;
     margin-top: 1rem;
     font-family: 'Belgrano', serif;
     font-size: 1.1em;
 }
 
+@media (max-width: 1280px){
+    .msg_info{
+        margin-left: 3rem;
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        margin-top: 1rem;
+        font-family: 'Belgrano', serif;
+        font-size: 1em;
+    }
+}
+
 .container_infoPerso{
     text-align: center;
     font-size: 1.5em;
+    
 }
 
 .infoInput{
     display: grid;
-    grid-template-columns: 30% 70% ;
-    margin-top: 1.5rem;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4.5rem;
     height: 2.5rem;
     border-radius: 30px;
 }
 
+@media (max-width: 1280px){
+    .infoInput{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0rem;
+        height: 6rem;
+        border-radius: 30px;
+        justify-content: center;
+    }
+}
+
 .infoLibelle{
-    background: #88B494;
     color: black;
-    width: 15rem;
     height: 2.5rem;
     font-family: 'Belgrano', serif;
     font-size: 1.1rem;
@@ -819,21 +854,33 @@ a, .dot {
 }
 
 .infoLibelle>p{
-    width: 18rem;
     margin-top: 0.5rem;
     margin-left: 1.5rem;
+}
+
+@media (max-width: 1280px){
+    .infoLibelle>p{
+        width: 100%;
+        font-size: 0.9em;
+        margin-left: 0rem;
+    }
 }
 
 .informationInput{
     width: fit-content;
     height: 2.5rem;
-    
+}
+
+@media (max-width: 1280px){
+    .informationInput{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .informationInput>input{
     width: 35rem;
     height: 2.5rem;
-    margin-left: 2.5rem;
     border-radius: 30px;
     border-style: none;
     outline: none;
@@ -841,6 +888,13 @@ a, .dot {
     font-size: 1.1rem;
     font-family: 'Belgrano';
     transition: transform .6s;
+}
+
+@media (max-width: 1280px){
+    .informationInput>input{
+        font-size: 0.7em;
+        margin-left: 0;
+    }
 }
 
 .informationInput>input:hover{
@@ -855,13 +909,19 @@ input:focus::placeholder{
 .validation__modifInfo{
     height: 2.5rem;
     text-align: center;
-    font-family: 'Belgrano' ;
-    margin-left: 23rem;
-    margin-top: 2rem;
+    font-family: 'Belgrano';
+    font-size: smaller;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 30px;
     transition: transform .6s;
     border: none;
-    padding: 8px;
+}
+
+@media (max-width: 1280px){
+    .validation__modifInfo{
+        margin-left: none;
+    }
 }
 
 .validation__modifInfo:hover{
@@ -926,6 +986,18 @@ input:focus::placeholder{
     margin-right: 50px;
     margin-top: 30px;
     padding-top: 20px;
+}
+
+@media (max-width: 1400px){
+    .cardShop{
+        margin-right: 45px;
+    }
+}
+
+@media (max-width: 1200px){
+    .cardShop{
+        margin-right: 30px;
+    }
 }
 
 .cardGreen{

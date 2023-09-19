@@ -4,7 +4,7 @@ include 'connection.php';
 
 session_start();
 
-$user = $_SESSION['login'];
+$user = $_SESSION['email'];
 $quantite = 0;
 $ref = $_REQUEST['ref'];
 

@@ -1,131 +1,9 @@
 <?php 
-
-require 'htmlAssets/header.php';
-
-?>
-<script>
-
- 
-    function OnclickCrayon1(Status)
-{   
-
-    let name
-    let imgUrl
-    let type
-
-    switch (Status) {
-  case "#a":
-    name="<?php echo $_SESSION['nom']?>"
-    imgUrl="assets/icons/.png"
-    type='type="text"'
-    id="a"
-    break;
-  case "#b":
-    name="<?php echo $_SESSION['prenom'] ?>"
-    imgUrl="assets/icons/.png"
-    type='type="text"'
-    id="b"
-    break;
-  case "#c":
-    name="<?php echo $_SESSION['email'] ?>"
-    imgUrl="assets/icons/.png"
-    type='type="text"'
-    id="c"
-    break;
-  case "#d":
-    name="secret"
-    imgUrl="assets/icons/Icone_Mot_De_Passe.png"
-    type='type="password"'
-    id="d"
-    break;
-  case "#e":
-    name="<?php echo $_SESSION['tel'] ?>"
-    imgUrl="assets/icons/.png"
-    type='type="text"'
-    id="e"
-    break;
-  case "#f":
-    name="<?php echo $_SESSION['adresse'] ?>"
-    imgUrl="assets/icons/.png"
-    type='type="text"'
-    id="f"
-    break;
-
-}
+session_start();
+require './htmlAssets/header.php';
 
 
-
-
-    element='<div class="line" id="'+id+'"><img src="'+imgUrl+'" width="70" height="70"><input class="info" '+type+' placeholder="'+name+'"><img class="crayon" src="./IMG/Icone_validé.png" width="80" height="70" onclick="valide(\''+Status+'\')" ></div>'
-
-    
-    
-    $( Status ).replaceWith(element);
-  
-
-}
-
- function valide(data){
-
-  switch (data) {
-  case "#a":
-    name="<?php echo $_SESSION['nom']?>"
-    imgUrl="assets/icons/Icone_Profil.png"
-    type='type="text"'
-    id="a"
-    categ="nom"
-    break;
-  case "#b":
-    name="<?php echo $_SESSION['prenom'] ?>"
-    imgUrl="assets/icons/Icone_Profil.png"
-    type='type="text"'
-    id="b"
-    categ="prenom"
-    break;
-  case "#c":
-    name="<?php echo $_SESSION['email'] ?>"
-    imgUrl="assets/icons/Icone_Mail.png"
-    type='type="text"'
-    id="c"
-    categ="mail"
-    break;
-  case "#d":
-    name="secret"
-    imgUrl="assets/icons/Icone_Mot_De_Passe.png"
-    type='type="password"'
-    id="d"
-    categ="secret"
-    break;
-  case "#e":
-    name="<?php echo $_SESSION['tel'] ?>"
-    imgUrl="assets/icons/Icone_Telephone.png"
-    type='type="text"'
-    id="e"
-    categ="tel"
-    break;
-  case "#f":
-    name="<?php echo $_SESSION['adresse'] ?>"
-    imgUrl="assets/icons/Icone_Livraison.png"
-    type='type="text"'
-    id="f"
-    categ="livraison"
-    break;
-
-}
-    
-  
-
-    
-    $(data).replaceWith('<div class="line" id="'+id+'"><img src="'+imgUrl+'" width="70" height="70"><p>'+name+'</p><img class="crayon" src="./IMG/Icone_Crayon.png" width="80" height="70" onclick="OnclickCrayon1(\''+data+'\') "</div>');
-    
-   
-}
-
-
-             
-   
-</script>
-<main>
+echo '<main>
 
 <div class="container_info">
 
@@ -141,12 +19,9 @@ require 'htmlAssets/header.php';
 
   </div>
 
-  
-  
-
   <div class="msg_info">
     <p>
-        Bonjour <?php echo $_SESSION['prenom']; ?>, bienvenue sur votre page de profil ! Vous pouvez ci-dessous gérer votre compte en modifiant vos informations ou en vous déconnectant.  
+        Bonjour '. $_SESSION["prenom"] .', bienvenue sur votre page de profil ! Vous pouvez ci-dessous gérer votre compte en modifiant vos informations ou en vous déconnectant.  
     </p>
   </div>
 
@@ -159,7 +34,7 @@ require 'htmlAssets/header.php';
           </div>
 
           <div class="informationInput">
-                  <input type="text" name="nom" value="<?php echo $_SESSION['nom'] ?>" required>
+                  <input type="text" name="nom" value="'. $_SESSION["nom"] .'" required>
           </div>  
 
         </div>
@@ -171,7 +46,7 @@ require 'htmlAssets/header.php';
           </div>
 
           <div class="informationInput">
-                  <input type="text"  name="prenom" value="<?php echo $_SESSION['prenom'] ?>" required>
+                  <input type="text"  name="prenom" value="'. $_SESSION["prenom"] .'" required>
           </div>
 
         </div>
@@ -183,7 +58,7 @@ require 'htmlAssets/header.php';
           </div>
 
           <div class="informationInput">
-                  <input type="text"   id="phoneNumber" maxlength="14" name="tel" value="<?php echo $_SESSION['tel'] ?>" required>
+                  <input type="text"   id="phoneNumber" maxlength="14" name="tel" value="'. $_SESSION["tel"] .'" required>
           </div>
         </div>
 
@@ -194,7 +69,7 @@ require 'htmlAssets/header.php';
           </div>
 
           <div class="informationInput">
-                  <input type="email"  name="email" value="<?php echo $_SESSION['email'] ?>" required>
+                  <input type="email"  name="email" value="'. $_SESSION["email"] .'" required>
           </div>
         </div>
 
@@ -215,13 +90,13 @@ require 'htmlAssets/header.php';
           </div>
 
           <div class="informationInput">
-                  <input type="text"  name="adresse" value="<?php echo $_SESSION['adresse'] ?>" required>
+                  <input type="text"  name="adresse" value="'. $_SESSION["adresse"] .'" required>
           </div>
 
         </div>
-
+        <button class="validation__modifInfo" type="submit">Valider mes modifications </button>
     </div>
-    <button class="validation__modifInfo" type="submit">Valider mes modifications </button>
+    
   </form>
 </div>
 
@@ -229,6 +104,10 @@ require 'htmlAssets/header.php';
 </main>
 
 <script type="text/javascript" src="./JS/scriptNumTel.js"></script>
-<script type="text/javascript" src="./JS/verif__modifInfo.js"></script>
+<script type="text/javascript" src="./JS/verif__modifInfo.js"></script>';
 
-<?php require 'htmlAssets/footer2.html'; ?>
+require './htmlAssets/footer2.html';
+
+?>
+
+
